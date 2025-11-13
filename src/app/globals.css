@@ -175,7 +175,7 @@ body::before{
   cursor: pointer;
   box-shadow: 0 10px 22px rgba(13, 38, 76, .25);
   transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
-  margin-top: 5px;
+  /* margin-top: 5px; */
 }
 
 .primary:hover {
@@ -241,12 +241,6 @@ body::before{
   border-radius: 16px;
   box-shadow: var(--shadow);
   border: 1px solid rgba(0, 0, 0, .06);
-}
-
-/* Цвета для прежних элементов (если остались) */
-.wordsTitle,
-.catalogTitle {
-  color: #eaf2ff
 }
 
 
@@ -342,14 +336,16 @@ body::before{
   background: #f7f9fc
 }
 
-.dualRow:nth-child(odd)
+/* .dualRow:nth-child(odd) */
 
 /* слова */
 .wordsTitle {
+    
   font-weight: 700;
   margin: 12px 0 6px;
   color: #1e3f6e;
   font-size: 17px;
+  text-align: center;
 }
 
 .wordsGrid {
@@ -483,3 +479,13 @@ body::before{
 @media (max-width: 900px){
   .pairsGrid{ grid-template-columns: 1fr; }
 }
+
+
+.slot { transition: background 0.2s, border-color 0.2s; }
+.slot.filled { background: var(--ok-bg, #d8f5d0); border-color: var(--ok, #58a55c); }
+@keyframes slot-shake {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+.slot.shake { animation: slot-shake 180ms linear; }

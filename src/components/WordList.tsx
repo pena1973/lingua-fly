@@ -9,6 +9,10 @@ export const WordList: React.FC<{ words: WordPair[]; onLearn: () => void }> = ({
     return (
         <div>
             <div className="wordsTitle">{t("words_title")}</div>
+            <div className="wordsTitle">
+                <button className="primary" onClick={onLearn}>{t("learn_btn")}
+                </button>
+            </div>
             <div className="wordsGrid">
                 {words.map((w) => (
                     <div className="wordItem" key={w.id}>
@@ -17,7 +21,7 @@ export const WordList: React.FC<{ words: WordPair[]; onLearn: () => void }> = ({
                     </div>
                 ))}
             </div>
-            <button className="primary" onClick={onLearn}>{t("learn_btn")}</button>
+
         </div>
     );
 };
