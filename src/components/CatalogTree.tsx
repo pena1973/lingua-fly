@@ -11,7 +11,7 @@ export const CatalogTree: React.FC<{
 }> = ({ lib, onSelect, selectedTextId }) => {
     const { uiLang, t } = useLang();
     const pick = (s: Section) => (uiLang === "ru" ? s.title_native : s.title_target);
-    const pickText = (x: TextItem) => (uiLang === "ru" ? x.title_native : x.title_target);
+    const pickText = (x: TextItem) => (uiLang === "ru" ? x.title : x.title_target);
 
 
     return (

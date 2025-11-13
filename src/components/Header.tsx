@@ -20,7 +20,7 @@ export default function Header() {
         <div className="headerSpacer" />
 
         <nav className="navRight">
-          <Link className="pill" href="/profile">Профиль</Link>
+          {/* <Link className="pill" href="/profile">Профиль</Link> */}
 
           <div className="langWrap">
             <select
@@ -34,12 +34,12 @@ export default function Header() {
             </select>
           </div>
 
-          <button
+          {/* <button
             className="pill"
             onClick={() => { alert("logout"); router.push("/"); }}
           >
             Выйти
-          </button>
+          </button> */}
         </nav>
       </div>
     </header>
