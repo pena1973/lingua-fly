@@ -847,6 +847,196 @@ export const demoLibraryPT: Library = {
                         { id: "w50", native: "pensar", target: "думать" },
                     ],
                 },
+                {
+                    id: "perguntas_interrogativas",
+                    title: "Тренировка вопросительных слов",
+                    title_native: "Утро Иво, полное вопросов",
+                    title_target: "A manhã do Ivo cheia de perguntas",
+                    sentences: [
+                        {
+                            native: "Почему Иво просыпается так рано утром?",
+                            target: "Por que o Ivo acorda tão cedo de manhã?",
+                        },
+                        {
+                            native: "Что он слышит первым делом, когда открывает глаза?",
+                            target: "O que ele ouve primeiro quando abre os olhos?",
+                        },
+                        {
+                            native: "Кто звонит ему так рано — сосед или курьер?",
+                            target: "Quem lhe liga tão cedo — o vizinho ou o estafeta?",
+                        },
+                        {
+                            native: "Где его телефон, если он не лежит на столе?",
+                            target: "Onde está o telemóvel dele, se não está na mesa?",
+                        },
+                        {
+                            native: "Куда он кладёт свои вещи каждую ночь?",
+                            target: "Aonde ele põe as suas coisas todas as noites?",
+                        },
+                        {
+                            native: "Откуда приходит этот странный шум в коридоре?",
+                            target: "De onde vem esse barulho estranho no corredor?",
+                        },
+                        {
+                            native: "Когда он успевает сделать кофе, если уже опаздывает?",
+                            target: "Quando ele consegue fazer café, se já está atrasado?",
+                        },
+                        {
+                            native: "Как он остаётся спокойным, если всё вокруг спешит?",
+                            target: "Como ele fica calmo se tudo à volta tem pressa?",
+                        },
+                        {
+                            native: "Для чего Иво открывает окно каждое утро?",
+                            target: "Para que o Ivo abre a janela todas as manhãs?",
+                        },
+                        {
+                            native: "Который автобус приходит первым сегодня?",
+                            target: "Qual autocarro chega primeiro hoje?",
+                        },
+                        {
+                            native: "Какие маршруты проходят рядом с его домом?",
+                            target: "Quais rotas passam perto da casa dele?",
+                        },
+                        {
+                            native: "Сколько времени у него остаётся до выхода?",
+                            target: "Quanto tempo lhe resta até sair?",
+                        },
+                        {
+                            native: "Сколько чашек кофе он обычно пьёт по утрам?",
+                            target: "Quantas chávenas de café ele bebe normalmente de manhã?",
+                        },
+                        {
+                            native: "Почему у него сегодня так мало энергии?",
+                            target: "Por que ele tem tão pouca energia hoje?",
+                        },
+                        {
+                            native: "С кем он завтракает в будние дни?",
+                            target: "Com quem ele toma o pequeno-almoço nos dias úteis?",
+                        },
+                        {
+                            native: "О чём он думает, когда смотрит в окно?",
+                            target: "De que ele pensa quando olha pela janela?",
+                        },
+                        {
+                            native: "В каком настроении он выходит из дома?",
+                            target: "Em que humor ele sai de casa?",
+                        },
+                        {
+                            native: "В какой магазин он заходит каждое утро?",
+                            target: "Em que loja ele entra todas as manhãs?",
+                        },
+                        {
+                            native: "Что он покупает — хлеб или фрукты?",
+                            target: "O que ele compra — pão ou fruta?",
+                        },
+                        {
+                            native: "Почему продавщица улыбается ему каждый день?",
+                            target: "Por que a empregada lhe sorri todos os dias?",
+                        },
+                        {
+                            native: "Кого он встречает по дороге на работу?",
+                            target: "Quem ele encontra no caminho para o trabalho?",
+                        },
+                        {
+                            native: "Где работают все эти люди, которых он видит утром?",
+                            target: "Onde trabalham todas essas pessoas que ele vê de manhã?",
+                        },
+                        {
+                            native: "Когда он успевает поговорить с ними?",
+                            target: "Quando ele consegue falar com eles?",
+                        },
+                        {
+                            native: "Почему одна женщина всегда спешит?",
+                            target: "Por que uma mulher está sempre com pressa?",
+                        },
+                        {
+                            native: "Что делает мужчина, который стоит у остановки?",
+                            target: "O que faz o homem que está na paragem?",
+                        },
+                        {
+                            native: "Кто из них ждёт первый автобус?",
+                            target: "Qual deles espera o primeiro autocarro?",
+                        },
+                        {
+                            native: "Сколько людей стоит в очереди?",
+                            target: "Quantas pessoas estão na fila?",
+                        },
+                        {
+                            native: "Почему автобус всегда приходит поздно?",
+                            target: "Por que o autocarro chega sempre atrasado?",
+                        },
+                        {
+                            native: "Куда водитель смотрит, когда подъезжает?",
+                            target: "Aonde o motorista olha quando chega?",
+                        },
+                        {
+                            native: "Как Иво находит место, если автобус переполнен?",
+                            target: "Como o Ivo encontra lugar se o autocarro está cheio?",
+                        },
+                        {
+                            native: "С кем он разговаривает по дороге?",
+                            target: "Com quem ele fala durante o caminho?",
+                        },
+                        {
+                            native: "О чём спрашивает его сосед по сиденью?",
+                            target: "De que o vizinho de assento lhe pergunta?",
+                        },
+                        {
+                            native: "Почему этот мужчина хочет знать, где Иво работает?",
+                            target: "Por que esse homem quer saber onde o Ivo trabalha?",
+                        },
+                        {
+                            native: "Что Иво отвечает, когда его спрашивают?",
+                            target: "O que o Ivo responde quando lhe perguntam?",
+                        },
+                        {
+                            native: "Когда он наконец выходит на своей остановке?",
+                            target: "Quando ele finalmente sai na sua paragem?",
+                        },
+                        {
+                            native: "Куда он идёт после выхода из автобуса?",
+                            target: "Aonde ele vai depois de sair do autocarro?",
+                        },
+                        {
+                            native: "Почему его коллеги стоят у двери офиса?",
+                            target: "Por que os colegas estão à porta do escritório?",
+                        },
+                        {
+                            native: "Кого они ждут — шефа или курьера?",
+                            target: "Quem eles esperam — o chefe ou o estafeta?",
+                        },
+                        {
+                            native: "Что Иво говорит, когда подходит ближе?",
+                            target: "O que o Ivo diz quando se aproxima?",
+                        },
+                        {
+                            native: "Как коллеги реагируют на его вопросы?",
+                            target: "Como os colegas reagem às perguntas dele?",
+                        },
+                    ],
+
+                    words: [
+                        { id: "w1", native: "por que", target: "почему, зачем (вопрос)" },
+                        { id: "w2", native: "o que", target: "что" },
+                        { id: "w3", native: "quem", target: "кто" },
+                        { id: "w4", native: "onde", target: "где" },
+                        { id: "w5", native: "aonde", target: "куда (с движением)" },
+                        { id: "w6", native: "de onde", target: "откуда" },
+                        { id: "w7", native: "quando", target: "когда" },
+                        { id: "w8", native: "como", target: "как" },
+                        { id: "w9", native: "para que", target: "для чего, с какой целью" },
+                        { id: "w10", native: "qual", target: "который, какой (из вариантов)" },
+                        { id: "w11", native: "quais", target: "какие (множественное)" },
+                        { id: "w12", native: "quanto", target: "сколько (м.р.)" },
+                        { id: "w13", native: "quanta", target: "сколько (ж.р.)" },
+                        { id: "w14", native: "quantos", target: "сколько (мн.ч. м.р.)" },
+                        { id: "w15", native: "quantas", target: "сколько (мн.ч. ж.р.)" },
+                        { id: "w16", native: "em que", target: "в каком, в какой" },
+                        { id: "w17", native: "de que", target: "о чём, из чего" },
+                        { id: "w18", native: "com quem", target: "с кем" }
+                    ]
+                }
+
             ],
 
         },
