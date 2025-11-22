@@ -1,6 +1,6 @@
 export type SentencePair = { native: string; target: string };
 export type WordPair = { native: string; target: string; id: string };
-export type TextItem = { id: string; title: string; title_native: string; title_target: string; sentences: SentencePair[]; words: WordPair[] };
+export type TextItem = { id: string; rule: string; title: string; title_native: string; title_target: string; sentences: SentencePair[]; words: WordPair[] };
 export type Section = { id: string; title_native: string; title_target: string; texts: TextItem[] };
 
 
@@ -10,16 +10,17 @@ export type Library = {
 };
 
 
-export const demoLibraryEN: Library = {
+export const libraryEN: Library = {
     learningLang: "en",
     sections: [
         {
-            id: "daily",
-            title_native: "Повседневность",
-            title_target: "Daily life",
+            id: "A2",
+            title_native: "A2",
+            title_target: "A2",
             texts: [
                 {
                     id: "coffee",
+                    rule: "Правило",
                     title: "Утро и кофе",
                     title_native: "Утро и кофе",
                     title_target: "Morning and coffee",
@@ -58,16 +59,22 @@ export const demoLibraryEN: Library = {
     ],
 };
 
-export const demoLibraryPT: Library = {
+export const libraryPT: Library = {
     learningLang: "pt",
     sections: [
         {
-            id: "vida",
-            title_native: "А2",
+            id: "A2",
+            title_native: "A2",
             title_target: "A2",
             texts: [
                 {
                     id: "laura",
+                    rule: [
+                        "ser: sou, és, é, somos, sois, são",
+                        "ter: tenho, tens, tem, temos, tendes, têm",
+                        "ver: vejo, vês, vê, vemos, vedes, veem",
+                        "fazer: faço, fazes, faz, fazemos, fazeis, fazem",
+                    ].join("\n"),
                     title: "Тренировка спряжений глаголов ser ter ver fazer",
                     title_native: ":Жизнь Лауры",
                     title_target: "A vida de Laura",
@@ -221,6 +228,15 @@ export const demoLibraryPT: Library = {
                 },
                 {
                     id: "cores_lisboa",
+                    rule: [
+                        "–m: jovem, jovem, jovens, jovens",
+                        "-z: feliz, feliz, felizes, felizes",
+                        "–ês: português, portuguesa, portugueses, portuguesas",
+                        "simples: simples, simples, simples, simples",
+                        "-o: preto, preta, pretos, pretas",
+                        "-e: verde, verde, verdes, verdes",
+                        "-l: azul, azul, azuis, azuis",
+                    ].join("\n"),
                     title: "Тренировка прилагательных по окончаниям",
                     title_native: "Цветной день в Лиссабоне",
                     title_target: "Um dia colorido na cidade",
@@ -385,6 +401,11 @@ export const demoLibraryPT: Library = {
                 },
                 {
                     id: "alguem_nenhum",
+                    rule: [
+                        "algum(какой-то): algum, alguma, alguns, algumas + algo(что-то) + alguém(кто-то)",
+                        "nenhum(никакой): nenhum, nenhuma, nenhuns, nenhumas + nada(ничто) + ninguém(никто)",
+                    ].join("\n"),
+
                     title: "Тренировка местоимений algum / nenhum / alguém / ninguém",
                     title_native: "Обычный день Анны",
                     title_target: "Um dia normal da Ana",
@@ -545,6 +566,12 @@ export const demoLibraryPT: Library = {
                 },
                 {
                     id: "todo_bom_mau",
+                    rule: [
+                        "todo(весь): todo o dia, toda a noite, todos os dias, todas as noites + tudo(всё)",
+                        "bom(хороший): bom, boa, bons, boas + bem(хорошо)",
+                        "mau(плохой): mau, má, maus, más + mal(плохо)",
+                    ].join("\n"),
+
                     title: "Тренировка todo / bom / mau",
                     title_native: "Один день в кафе",
                     title_target: "Um dia no café",
@@ -697,6 +724,12 @@ export const demoLibraryPT: Library = {
                 },
                 {
                     id: "muito_pouco_tanto",
+                    rule: [
+                        "muito: muito vinho, muita água, muitos meninos, muitas meninas // muito simpático, muito simpática, muito simpáticos, muito simpáticas // falo muito",
+                        "pouco: pouco vinho, pouca água, poucos meninos, poucas meninas // pouco simpático, pouco simpática, pouco simpáticos, pouco simpáticas // falo pouco // um pouco de 🍷",
+                        "tanto: tanto vinho, tanta água, tantos meninos, tantas meninas // tão alto, tão alta, tão altos, tão altas // falo tanto",
+                    ].join("\n"),
+
                     title: "Тренировка muito / pouco / tanto",
                     title_native: "Утро у Марии",
                     title_target: "A manhã da Maria",
@@ -849,6 +882,24 @@ export const demoLibraryPT: Library = {
                 },
                 {
                     id: "perguntas_interrogativas",
+                    rule: [
+                        "quem: кто — Quem é você?",
+                        "o que: что — O que você faz?",
+                        "que: какой — Que livro você lê?",
+                        "qual: который/какой — Qual é o seu nome?",
+                        "quais: какие — Quais são os seus amigos?",
+                        "onde: где — Onde você mora?",
+                        "de onde: откуда — De onde você é?",
+                        "para onde: куда — Para onde você vai?",
+                        "quando: когда — Quando começa a aula?",
+                        "como: как — Como você está?",
+                        "por que: почему — Por que você estuda português?",
+                        "para que: для чего — Para que serve isto?",
+                        "quanto: сколько (м.р.) — Quanto custa?",
+                        "quanta: сколько (ж.р.) — Quanta água você bebe?",
+                        "quantos: сколько (мн. м.) — Quantos alunos há?",
+                        "quantas: сколько (мн. ж.) — Quantas pessoas vêm?",
+                    ].join("\n"),
                     title: "Тренировка вопросительных слов",
                     title_native: "Утро Иво, полное вопросов",
                     title_target: "A manhã do Ivo cheia de perguntas",
@@ -1016,25 +1067,69 @@ export const demoLibraryPT: Library = {
                     ],
 
                     words: [
-                        { id: "w1", native: "por que", target: "почему, зачем (вопрос)" },
+                        { id: "w1", native: "por que", target: "почему" },
                         { id: "w2", native: "o que", target: "что" },
                         { id: "w3", native: "quem", target: "кто" },
                         { id: "w4", native: "onde", target: "где" },
-                        { id: "w5", native: "aonde", target: "куда (с движением)" },
+                        { id: "w5", native: "aonde", target: "куда (движение)" },
                         { id: "w6", native: "de onde", target: "откуда" },
                         { id: "w7", native: "quando", target: "когда" },
                         { id: "w8", native: "como", target: "как" },
-                        { id: "w9", native: "para que", target: "для чего, с какой целью" },
-                        { id: "w10", native: "qual", target: "который, какой (из вариантов)" },
-                        { id: "w11", native: "quais", target: "какие (множественное)" },
+                        { id: "w9", native: "para que", target: "для чего" },
+                        { id: "w10", native: "qual", target: "который" },
+                        { id: "w11", native: "quais", target: "какие" },
                         { id: "w12", native: "quanto", target: "сколько (м.р.)" },
                         { id: "w13", native: "quanta", target: "сколько (ж.р.)" },
-                        { id: "w14", native: "quantos", target: "сколько (мн.ч. м.р.)" },
-                        { id: "w15", native: "quantas", target: "сколько (мн.ч. ж.р.)" },
-                        { id: "w16", native: "em que", target: "в каком, в какой" },
-                        { id: "w17", native: "de que", target: "о чём, из чего" },
-                        { id: "w18", native: "com quem", target: "с кем" }
+                        { id: "w14", native: "quantos", target: "сколько (мн. м.)" },
+                        { id: "w15", native: "quantas", target: "сколько (мн. ж.)" },
+                        { id: "w16", native: "em que", target: "в каком" },
+                        { id: "w17", native: "de que", target: "о чём" },
+                        { id: "w18", native: "com quem", target: "с кем" },
+
+                        // ——— Новые слова (ТОЛЬКО из текста) ———
+
+                        { id: "w19", native: "acordar", target: "просыпаться" },
+                        { id: "w20", native: "ouvir", target: "слышать" },
+                        { id: "w21", native: "liga", target: "он/она звонит" },
+                        { id: "w22", native: "vizinho", target: "сосед" },
+                        { id: "w23", native: "estafeta", target: "курьер" },
+                        { id: "w24", native: "telemóvel", target: "телефон" },
+                        { id: "w25", native: "mesa", target: "стол" },
+                        { id: "w26", native: "pôr", target: "класть" },
+                        { id: "w27", native: "barulho", target: "шум" },
+                        { id: "w28", native: "corredor", target: "коридор" },
+
+                        { id: "w29", native: "conseguir", target: "успевать, суметь" },
+                        { id: "w30", native: "ficar", target: "оставаться" },
+                        { id: "w31", native: "calmo", target: "спокойный" },
+
+                        { id: "w32", native: "abrir", target: "открывать" },
+                        { id: "w33", native: "janela", target: "окно" },
+
+                        { id: "w34", native: "autocarro", target: "автобус" },
+                        { id: "w35", native: "rota", target: "маршрут" },
+                        { id: "w36", native: "chegar", target: "приходить, приезжать" },
+
+                        { id: "w37", native: "tempo", target: "время" },
+                        { id: "w38", native: "chávena", target: "чашка" },
+                        { id: "w39", native: "energia", target: "энергия" },
+
+                        { id: "w40", native: "tomar", target: "принимать, пить" },
+                        { id: "w41", native: "pequeno-almoço", target: "завтрак" },
+
+                        { id: "w42", native: "paragem", target: "остановка" },
+                        { id: "w43", native: "fila", target: "очередь" },
+                        { id: "w44", native: "cheio", target: "полный, переполненный" },
+                        { id: "w45", native: "lugar", target: "место" },
+
+                        { id: "w46", native: "motorista", target: "водитель" },
+                        { id: "w47", native: "olhar", target: "смотреть" },
+
+                        { id: "w48", native: "colega", target: "коллега" },
+                        { id: "w49", native: "chefe", target: "шеф, начальник" },
+                        { id: "w50", native: "aproximar-se", target: "приближаться" }
                     ]
+
                 }
 
             ],

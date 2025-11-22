@@ -1,13 +1,24 @@
+
 "use client";
 import Link from "next/link";
 import LogoBird from "./LogoBird";
 import { useLang } from "@/context/LanguageContext";
-import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
+
+const LEARN_LANGS = [
+  { value: "pt", label: "pt" },
+  { value: "en", label: "en" },
+];
+
+const UI_LANGS = [
+  { value: "ru", label: "ru" },
+  { value: "en", label: "en" },
+];
 
 export default function Header() {
-  const { uiLang, setUiLang } = useLang();
-  const router = useRouter();
+  const {learningLang: learnLang,setLearningLang, uiLang, setUiLang, t } = useLang();    
+  const [isLearnOpen, setIsLearnOpen] = useState(false);
+  const [isUiOpen, setIsUiOpen] = useState(false);
 
   return (
     <header className="header">
@@ -20,26 +31,87 @@ export default function Header() {
         <div className="headerSpacer" />
 
         <nav className="navRight">
-          {/* <Link className="pill" href="/profile">Профиль</Link> */}
+          {/* Изучаемый язык */}
+          <div className="studyLangWrap">
+            <span className="studyLangLabel">{t("learning_lang")}</span>
 
-          <div className="langWrap">
-            <select
-              className="langSel"
-              aria-label="UI language"
-              value={uiLang}
-              onChange={(e) => setUiLang(e.target.value as "ru"|"en")}
+            <div
+              className="pillDropdown"
+              tabIndex={0}
+              onBlur={() => setIsLearnOpen(false)}
             >
-              <option value="ru">ru</option>
-              <option value="en">en</option>
-            </select>
+              <button
+                type="button"
+                className={`langSel pillDropdownBtn ${isLearnOpen ? "open" : ""
+                  }`}
+                onClick={() => setIsLearnOpen((v) => !v)}
+              >
+                {learnLang}
+              </button>
+
+              <ul
+                className={`pillDropdownMenu ${isLearnOpen ? "open" : ""
+                  }`}
+              >
+                {LEARN_LANGS.map((opt) => (
+                  <li
+                    key={opt.value}
+                    className={
+                      "pillDropdownItem" +
+                      (opt.value === learnLang ? " active" : "")
+                    }
+                    onMouseDown={(e) => {
+                      e.preventDefault();
+                      setLearningLang(opt.value as "pt" | "en");
+                      setIsLearnOpen(false);
+                    }}
+                  >
+                    {opt.label}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          {/* <button
-            className="pill"
-            onClick={() => { alert("logout"); router.push("/"); }}
-          >
-            Выйти
-          </button> */}
+          {/* Язык интерфейса – тот же стиль дропдауна */}
+          <div className="langWrap">
+            <div
+              className="pillDropdown"
+              tabIndex={0}
+              onBlur={() => setIsUiOpen(false)}
+            >
+              <button
+                type="button"
+                className={`langSel pillDropdownBtn ${isUiOpen ? "open" : ""
+                  }`}
+                onClick={() => setIsUiOpen((v) => !v)}
+              >
+                {uiLang}
+              </button>
+
+              <ul
+                className={`pillDropdownMenu ${isUiOpen ? "open" : ""
+                  }`}
+              >
+                {UI_LANGS.map((opt) => (
+                  <li
+                    key={opt.value}
+                    className={
+                      "pillDropdownItem" +
+                      (opt.value === uiLang ? " active" : "")
+                    }
+                    onMouseDown={(e) => {
+                      e.preventDefault();
+                      setUiLang(opt.value as "ru" | "en");
+                      setIsUiOpen(false);
+                    }}
+                  >
+                    {opt.label}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
     </header>

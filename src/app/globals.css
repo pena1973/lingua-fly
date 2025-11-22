@@ -20,75 +20,97 @@
   --accent-2: #345B94;
   /* hover */
   --shadow: 0 8px 24px rgba(0, 0, 0, .18), 0 2px 6px rgba(0, 0, 0, .12);
+  /* тот самый нижний цвет */
+  --sky-bottom-final: #86B2F3;
+
+}
+
+/* базовый фон страницы = твой нижний цвет */
+html {
+  background: var(--sky-bottom-final);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* убираем старые фоны у body */
+body {
+  margin: 0;
+  color: var(--text);
+  font: 16px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu;
+  background: none;
+  position: relative;
+}
+
+/* единый фиксированный слой «неба» */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    /* лёгкие облака/дымка у низа */
+    radial-gradient(900px 340px at 18% 88%, rgba(255, 255, 255, .70), rgba(255, 255, 255, 0) 72%),
+    radial-gradient(900px 320px at 82% 90%, rgba(255, 255, 255, .65), rgba(255, 255, 255, 0) 70%),
+
+    /* верхнее небо */
+    linear-gradient(180deg,
+      #24426B 0%,
+      #355C8F 26%,
+      #6EA0D8 48%,
+      #9FC3F0 62%,
+      rgba(223, 232, 255, .00) 86%),
+
+    /* нижний слой → плавно в твой цвет */
+    linear-gradient(180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(240, 245, 255, .85) 35%,
+      color-mix(in srgb, var(--sky-bottom-final) 70%, #ffffff 30%) 70%,
+      var(--sky-bottom-final) 100%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* === Контейнер приложения (если было) === */
+
+.root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 100%;
+  /* ← добавили */
+}
+
+
+.main {
+  flex: 1;
+  padding: 18px 5px;
 }
 
 /* общий контейнер по центру */
-.container{
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
 }
 
-:root{
-  --sky-bottom-final: #86B2F3; /* тот самый нижний цвет */
-}
+@media (max-width: 520px) {
 
-/* базовый фон страницы = твой нижний цвет */
-html{ background: var(--sky-bottom-final); }
-html,body{ height:100%; }
-
-/* убираем старые фоны у body */
-body{
-  margin:0;
-  color:var(--text);
-  font:16px/1.35 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
-  background:none;
-  position:relative;
-}
-
-/* единый фиксированный слой «неба» */
-body::before{
-  content:"";
-  position:fixed; inset:0; z-index:-1; pointer-events:none;
-
-  background-image:
-    /* лёгкие облака/дымка у низа */
-    radial-gradient(900px 340px at 18% 88%, rgba(255,255,255,.70), rgba(255,255,255,0) 72%),
-    radial-gradient(900px 320px at 82% 90%, rgba(255,255,255,.65), rgba(255,255,255,0) 70%),
-
-    /* верхнее небо */
-    linear-gradient(
-      180deg,
-      #24426B 0%,
-      #355C8F 26%,
-      #6EA0D8 48%,
-      #9FC3F0 62%,
-      rgba(223,232,255,.00) 86%
-    ),
-
-    /* нижний слой → плавно в твой цвет */
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0) 0%,
-      rgba(240,245,255,.85) 35%,
-      color-mix(in srgb, var(--sky-bottom-final) 70%, #ffffff 30%) 70%,
-      var(--sky-bottom-final) 100%
-    );
-
-  background-repeat:no-repeat;
-  background-size:cover;
-}
-
-/* === Контейнер приложения (если было) === */
-.root {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+  html,
+  body,
+  .root,
+  .main {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
-
-.main {
-  flex: 1;
-  padding: 18px
 }
 
 
@@ -101,7 +123,7 @@ body::before{
   background: linear-gradient(180deg, rgba(0, 0, 0, .22), rgba(0, 0, 0, .05));
   backdrop-filter: blur(6px);
   box-shadow: inset 0 -1px rgba(255, 255, 255, .15);
-  color: #eef3ff;
+  /* color: #eef3ff; */
 }
 
 .headerRow {
@@ -124,7 +146,8 @@ body::before{
   font-weight: 800;
   font-size: 20px;
   letter-spacing: .2px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .35)
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .35);
+  color: #eef3ff;
 }
 
 .headerSpacer {
@@ -188,14 +211,16 @@ body::before{
 .textBtn {
   width: 100%;
   text-align: left;
-  
+
   border-radius: 12px;
   border: 1px solid transparent;
   background: transparent;
   color: #16345d;
   transition: background .15s ease, box-shadow .15s ease, border-color .15s ease;
-  padding:8px 10px;           /* было 10px 12px */
-  font-size:15px;             /* немного крупнее, но не громоздко */
+  padding: 8px 10px;
+  /* было 10px 12px */
+  font-size: 15px;
+  /* немного крупнее, но не громоздко */
 }
 
 .textBtn:hover {
@@ -249,7 +274,6 @@ body::before{
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 16px
-  
 }
 
 /* панели слева/справа */
@@ -262,7 +286,7 @@ body::before{
 }
 
 .leftPane {
-  padding: 12px;  
+  padding: 12px;
   height: calc(100vh - 120px);
   overflow: auto
 }
@@ -275,6 +299,20 @@ body::before{
   max-width: 960px;
 }
 
+/* Обёртка страницы чтения */
+.readerLayout {
+  position: relative;
+}
+
+/* по умолчанию мобильный бар не виден — включаем в media ниже */
+.mobileTopBar {
+  display: none;
+}
+
+/* плавные переходы для мобильной версии leftPane */
+.leftPane-mobile {
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
 
 /* таблица и блоки не растягиваются на весь экран */
 
@@ -303,6 +341,19 @@ body::before{
   font-size: 18px;
   margin: 0 0 10px 0;
   color: #0f2b4f
+}
+
+.ruleBox {
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff, #eef3ff);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24426b;
+
 }
 
 .dual {
@@ -340,7 +391,7 @@ body::before{
 
 /* слова */
 .wordsTitle {
-    
+
   font-weight: 700;
   margin: 12px 0 6px;
   color: #1e3f6e;
@@ -406,16 +457,17 @@ body::before{
 .card {
   border: 1px solid rgba(0, 0, 0, .08);
   border-radius: 10px;
-  padding:8px 10px;
+  padding: 8px 10px;
   background: #fff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, .08);
-  font-size:16px;
-  line-height:1.3;
+  font-size: 16px;
+  line-height: 1.3;
 }
 
 .draggable {
   cursor: grab
 }
+
 /* 
 .pairRow {
   display: grid;
@@ -429,10 +481,11 @@ body::before{
   border: 2px dashed #9fb6df;
   border-radius: 10px;
   background: rgba(255, 255, 255, .8);
-  min-height:36px;
-  padding:6px 8px;
-  font-size:16px;
-  line-height:1.25;
+  min-height: 36px;
+  padding: 6px 8px;
+  font-size: 16px;
+  line-height: 1.25;
+
 }
 
 .slot.filled {
@@ -451,41 +504,382 @@ body::before{
 }
 
 
+.pairsGrid {
+  display: grid;
+  /* две колонки, каждая может сжиматься внутри контейнера */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 16px;
 
-/* две колонки со строками пар */
-.pairsGrid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px 24px;            /* межстрочный и между колонками */
-  align-items:start;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-/* колонка = вертикальный стек строк */
-.pairsCol{ display:flex; flex-direction:column; gap:12px }
+/* очень важно — иначе дочерние колонки могут тянуть grid */
+.pairsGrid>* {
+  min-width: 0;
+}
+
+/* колонки */
+.pairsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.centerPane {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 
 /* сама строка пары (как было) */
-.pairRow{
-  display:grid;
-  grid-template-columns: 1fr 200px;  /* цель + слот */
-  gap:12px; align-items:center;
+.pairRow {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  /* цель + слот */
+  gap: 12px;
+  align-items: center;
 }
 
 /* можно чуть уже слот, чтобы меньше переносило строки */
-@media (min-width: 1280px){
-  .pairRow{ grid-template-columns: 1fr 180px; }
+@media (min-width: 1280px) {
+  .pairRow {
+    grid-template-columns: 1fr 180px;
+  }
 }
 
 /* на узких экранах вернёмся к одной колонке */
-@media (max-width: 900px){
-  .pairsGrid{ grid-template-columns: 1fr; }
+@media (max-width: 900px) {
+  .pairsGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
-.slot { transition: background 0.2s, border-color 0.2s; }
-.slot.filled { background: var(--ok-bg, #d8f5d0); border-color: var(--ok, #58a55c); }
+.slot {
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.slot.filled {
+  background: var(--ok-bg, #d8f5d0);
+  border-color: var(--ok, #58a55c);
+}
+
 @keyframes slot-shake {
-  0% { transform: translateX(0); }
-  35% { transform: translateX(6px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+
+  35% {
+    transform: translateX(6px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
-.slot.shake { animation: slot-shake 180ms linear; }
+
+.slot.shake {
+  animation: slot-shake 180ms linear;
+}
+
+
+/* блок "изучаемый язык" слева от переключателя UI */
+.studyLangWrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 6px;
+}
+
+
+/* чуть более компактный селект для изучаемого языка */
+.studyLangSel {
+  font-size: 14px;
+  padding: 6px 10px;
+  min-width: 64px;
+}
+
+
+/* На совсем узких экранах — одна колонка, центр занимает всю ширину */
+@media (max-width: 520px) {
+  .navRight {
+    gap: 6px;
+  }
+
+  .studyLangLabel {
+    display: none;
+    /* если захочешь, можно скрывать подпись на очень узких экранах */
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* только одна колонка */
+    gap: 12px;
+  }
+
+  .centerPane {
+    width: 100%;
+  }
+
+  /* если нужно, чтобы сетка гарантированно не вылезала */
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+    overflow-x: hidden;
+  }
+}
+
+
+
+
+
+/* общий стиль для селектора языков уже есть: .langSel {...} */
+
+/* блок левее основного переключателя */
+.studyLangWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 8px;
+}
+
+.studyLangLabel {
+  font-size: 18px;
+  font-weight: 600;
+  color: #eef3ff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .35);
+  white-space: nowrap;
+}
+
+/* кастомный дропдаун-переключатель */
+.pillDropdown {
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+
+.pillDropdownBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  padding-inline: 14px;
+}
+
+.pillDropdownBtn.open {
+  box-shadow: 0 0 0 2px rgba(40, 80, 140, .25);
+}
+
+/* выпадающее меню в стиле карточки */
+.pillDropdownMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 60px;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, .08);
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity .12s ease, transform .12s ease;
+  z-index: 100;
+}
+
+.pillDropdownMenu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.pillDropdownItem {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+
+}
+
+.pillDropdownItem:hover {
+  background: #f0f4ff;
+  color: var(--accent);
+}
+
+.pillDropdownItem.active {
+  font-weight: 700;
+}
+
+/* мобильная плотность */
+@media (max-width: 520px) {
+  .studyLangLabel {
+    display: none;
+  }
+}
+
+/* Кнопка-гамбургер в стиле пилюли */
+.hamburgerBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(13, 38, 76, 0.1);
+  background: linear-gradient(180deg, #ffffff, #f7faff);
+  color: var(--accent);
+  box-shadow: 0 6px 16px rgba(13, 38, 76, 0.18);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+}
+
+.hamburgerBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 22px rgba(13, 38, 76, 0.22);
+  color: var(--accent-2);
+}
+
+.hamburgerBtn:active {
+  transform: translateY(0);
+}
+
+/* Иконка из трёх полосок */
+.hamburgerIcon,
+.hamburgerIcon::before,
+.hamburgerIcon::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  border-radius: 999px;
+  background: #1a3255;
+  transition: transform 0.18s ease, opacity 0.18s ease, background 0.18s ease;
+}
+
+.hamburgerIcon {
+  position: relative;
+}
+
+.hamburgerIcon::before {
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+
+.hamburgerIcon::after {
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+/* состояние "открыто" → крестик */
+.hamburgerBtn.open .hamburgerIcon {
+  background: transparent;
+}
+
+.hamburgerBtn.open .hamburgerIcon::before {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.hamburgerBtn.open .hamburgerIcon::after {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.hamburgerLabel {
+  white-space: nowrap;
+}
+
+/* затемнение фона под выпадающей панелью */
+.catalogOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 20, 40, 0.35);
+  z-index: 25;
+}
+
+/* Десктоп: гамбургер не нужен, leftPane ведёт себя как раньше */
+@media (min-width: 900px) {
+  .mobileTopBar {
+    display: none;
+  }
+
+  .leftPane-mobile {
+    position: static;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    max-width: none;
+    max-height: none;
+  }
+
+  /* если вдруг стейт открыт — затемнение всё равно не показываем */
+  .catalogOverlay {
+    display: none;
+  }
+}
+
+/* Мобильный режим: колонка превращается в выпадающую панель */
+@media (max-width: 899px) {
+  .page {
+    display: block;
+  }
+
+  .mobileTopBar {
+    position: sticky;
+    top: 8px;
+    z-index: 35;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+
+  /* Центральная панель на всю ширину */
+  .centerPane {
+    margin-top: 8px;
+  }
+
+  /* Левая панель — фиксированная "висящая" сверху */
+  .leftPane.leftPane-mobile {
+    position: fixed;
+    top: 64px;
+    /* чуть ниже шапки */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 360px;
+    max-height: calc(100vh - 90px);
+    transform: translateY(-130%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 40;
+  }
+
+  .leftPane.leftPane-mobile.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.ruleBlock {
+  margin-bottom: 1rem;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ruleLine+.ruleLine {
+  margin-top: 2px;
+}
