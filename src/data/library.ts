@@ -11,52 +11,457 @@ export type Library = {
 
 
 export const libraryEN: Library = {
-    learningLang: "en",
-    sections: [
+  learningLang: "en",
+  sections: [
+    {
+      id: "A1",
+      title_native: "A1",
+      title_target: "A1",
+      texts: [
+        // 1) Greetings & introductions
         {
-            id: "A2",
-            title_native: "A2",
-            title_target: "A2",
-            texts: [
-                {
-                    id: "coffee",
-                    rule: "Правило",
-                    title: "Утро и кофе",
-                    title_native: "Утро и кофе",
-                    title_target: "Morning and coffee",
-                    sentences: [
-                        { native: "Каждое утро я встаю рано.", target: "Every morning I wake up early." },
-                        { native: "Я делаю кофе и слушаю музыку.", target: "I make coffee and listen to music." },
-                        { native: "Потом я пишу пару писем и выхожу.", target: "Then I write a couple of emails and head out." },
-                    ],
-                    // 20 слов, id одинаков для пары — это нужно для точной проверки в тренажёре
-                    words: [
-                        { id: "w1", native: "утро", target: "morning" },
-                        { id: "w2", native: "кофе", target: "coffee" },
-                        { id: "w3", native: "музыка", target: "music" },
-                        { id: "w4", native: "писать", target: "to write" },
-                        { id: "w5", native: "выходить", target: "to go out" },
-                        { id: "w6", native: "рано", target: "early" },
-                        { id: "w7", native: "вставать", target: "to wake up" },
-                        { id: "w8", native: "делать", target: "to make" },
-                        { id: "w9", native: "слушать", target: "to listen" },
-                        { id: "w10", native: "письмо", target: "email" },
-                        { id: "w11", native: "голова", target: "head" },
-                        { id: "w12", native: "книга", target: "book" },
-                        { id: "w13", native: "вода", target: "water" },
-                        { id: "w14", native: "дом", target: "home" },
-                        { id: "w15", native: "работа", target: "work" },
-                        { id: "w16", native: "идти", target: "to go" },
-                        { id: "w17", native: "пить", target: "to drink" },
-                        { id: "w18", native: "слышать", target: "to hear" },
-                        { id: "w19", native: "быстрый", target: "fast" },
-                        { id: "w20", native: "на улице", target: "outside" },
-                    ],
-                },
-            ],
-
+          id: "en_a1_greetings",
+          rule: [
+            "to be: I am, you are, he is, she is, it is, we are, they are",
+            "subject pronouns: I, you, he, she, it, we, they",
+            "basic questions: What is your name? Where are you from? How are you?",
+            "short answers: I am fine. I am OK. I am not very well."
+          ].join("\n"),
+          title: "Знакомство и приветствия",
+          title_native: "Знакомство и приветствия",
+          title_target: "Greetings and introductions",
+          sentences: [
+            {
+              native: "Меня зовут Анна, и я начинаю учить английский язык.",
+              target: "My name is Anna and I am starting to learn English."
+            },
+            {
+              native: "Сегодня у меня первый урок в онлайн-школе.",
+              target: "Today I have my first lesson in an online school."
+            },
+            {
+              native: "Учитель улыбается и говорит: «Hello, my name is Mark.»",
+              target: "The teacher smiles and says, 'Hello, my name is Mark.'"
+            },
+            {
+              native: "Я немного нервничаю, но тоже говорю: «Hello, I am Anna.»",
+              target: "I feel a little nervous, but I also say, 'Hello, I am Anna.'"
+            },
+            {
+              native: "В группе есть люди из разных стран.",
+              target: "There are people from different countries in the group."
+            },
+            {
+              native: "Одна девушка из Испании, один парень из Италии и одна женщина из Бразилии.",
+              target: "One girl is from Spain, one boy is from Italy, and one woman is from Brazil."
+            },
+            {
+              native: "Учитель задаёт простой вопрос: «Where are you from?»",
+              target: "The teacher asks a simple question, 'Where are you from?'"
+            },
+            {
+              native: "Я отвечаю: «I am from Latvia, but I live in Riga.»",
+              target: "I answer, 'I am from Latvia, but I live in Riga.'"
+            },
+            {
+              native: "Все внимательно слушают друг друга и повторяют имена.",
+              target: "Everyone listens to each other carefully and repeats the names."
+            },
+            {
+              native: "Потом учитель учит нас приветствиям на английском.",
+              target: "Then the teacher teaches us greetings in English."
+            },
+            {
+              native: "Мы говорим: «Good morning», «Good afternoon» и «Good evening».",
+              target: "We say, 'Good morning', 'Good afternoon' and 'Good evening'."
+            },
+            {
+              native: "Мы также учим вежливые фразы: «Nice to meet you» и «See you later».",
+              target: "We also learn polite phrases: 'Nice to meet you' and 'See you later'."
+            },
+            {
+              native: "Иногда я ошибаюсь и путаю слова.",
+              target: "Sometimes I make mistakes and mix up the words."
+            },
+            {
+              native: "Учитель говорит, что это нормально и что ошибки — часть обучения.",
+              target: "The teacher says it is normal and that mistakes are part of learning."
+            },
+            {
+              native: "В конце урока мы повторяем диалог в парах.",
+              target: "At the end of the lesson we repeat a dialogue in pairs."
+            },
+            {
+              native: "Моя партнёрша говорит: «Hello, what is your name?»",
+              target: "My partner says, 'Hello, what is your name?'"
+            },
+            {
+              native: "Я отвечаю: «My name is Anna. How are you?»",
+              target: "I answer, 'My name is Anna. How are you?'"
+            },
+            {
+              native: "Она говорит: «I am fine, thank you. And you?»",
+              target: "She says, 'I am fine, thank you. And you?'"
+            },
+            {
+              native: "Я немного смеюсь, потому что мой акцент пока сильный.",
+              target: "I laugh a little because my accent is still strong."
+            },
+            {
+              native: "Но я чувствую, что делаю первый важный шаг в мире английского языка.",
+              target: "But I feel that I am taking the first important step into the world of English."
+            }
+          ],
+          words: [
+            { id: "w1", native: "знакомство", target: "introduction" },
+            { id: "w2", native: "приветствие", target: "greeting" },
+            { id: "w3", native: "имя", target: "name" },
+            { id: "w4", native: "страна", target: "country" },
+            { id: "w5", native: "город", target: "city" },
+            { id: "w6", native: "онлайн-школа", target: "online school" },
+            { id: "w7", native: "учитель", target: "teacher" },
+            { id: "w8", native: "студент", target: "student" },
+            { id: "w9", native: "группа", target: "group" },
+            { id: "w10", native: "урок", target: "lesson" },
+            { id: "w11", native: "привет", target: "hello" },
+            { id: "w12", native: "доброе утро", target: "good morning" },
+            { id: "w13", native: "добрый день", target: "good afternoon" },
+            { id: "w14", native: "добрый вечер", target: "good evening" },
+            { id: "w15", native: "как дела?", target: "how are you?" },
+            { id: "w16", native: "хорошо", target: "fine" },
+            { id: "w17", native: "нормально", target: "OK" },
+            { id: "w18", native: "спасибо", target: "thank you" },
+            { id: "w19", native: "рад познакомиться", target: "nice to meet you" },
+            { id: "w20", native: "увидимся позже", target: "see you later" },
+            { id: "w21", native: "откуда ты?", target: "where are you from?" },
+            { id: "w22", native: "я из", target: "I am from" },
+            { id: "w23", native: "жить", target: "to live" },
+            { id: "w24", native: "ошибка", target: "mistake" },
+            { id: "w25", native: "акцент", target: "accent" },
+            { id: "w26", native: "чувствовать", target: "to feel" },
+            { id: "w27", native: "смеяться", target: "to laugh" },
+            { id: "w28", native: "слушать", target: "to listen" },
+            { id: "w29", native: "повторять", target: "to repeat" },
+            { id: "w30", native: "вопрос", target: "question" },
+            { id: "w31", native: "ответ", target: "answer" },
+            { id: "w32", native: "нервный", target: "nervous" },
+            { id: "w33", native: "спокойный", target: "calm" },
+            { id: "w34", native: "улыбаться", target: "to smile" },
+            { id: "w35", native: "слово", target: "word" },
+            { id: "w36", native: "фраза", target: "phrase" },
+            { id: "w37", native: "язык", target: "language" },
+            { id: "w38", native: "начинающий", target: "beginner" },
+            { id: "w39", native: "важный", target: "important" },
+            { id: "w40", native: "первый шаг", target: "first step" },
+            { id: "w41", native: "другой", target: "other" },
+            { id: "w42", native: "люди", target: "people" },
+            { id: "w43", native: "разный", target: "different" },
+            { id: "w44", native: "сегодня", target: "today" },
+            { id: "w45", native: "сейчас", target: "now" },
+            { id: "w46", native: "повторять имя", target: "to repeat a name" },
+            { id: "w47", native: "слушать внимательно", target: "to listen carefully" },
+            { id: "w48", native: "это нормально", target: "it is normal" },
+            { id: "w49", native: "часть обучения", target: "part of learning" },
+            { id: "w50", native: "мир английского языка", target: "world of English" }
+          ]
         },
-    ],
+
+        // 2) Daily routine
+        {
+          id: "en_a1_daily_routine",
+          rule: [
+            "present simple (habits): I get up, you work, he works, we study",
+            "adverbs of frequency: always, usually, often, sometimes, never",
+            "time phrases: in the morning, in the afternoon, in the evening, at night, every day"
+          ].join("\n"),
+          title: "Ежедневная рутина",
+          title_native: "Ежедневная рутина",
+          title_target: "Daily routine",
+          sentences: [
+            {
+              native: "Каждое утро я просыпаюсь в семь часов.",
+              target: "Every morning I wake up at seven o'clock."
+            },
+            {
+              native: "Я выключаю будильник и несколько минут лежу в кровати.",
+              target: "I turn off my alarm and lie in bed for a few minutes."
+            },
+            {
+              native: "Потом я встаю, иду в ванную и умываюсь холодной водой.",
+              target: "Then I get up, go to the bathroom and wash my face with cold water."
+            },
+            {
+              native: "Я чищу зубы и быстро причёсываюсь.",
+              target: "I brush my teeth and comb my hair quickly."
+            },
+            {
+              native: "Обычно я пью чай или кофе и ем простой завтрак.",
+              target: "I usually drink tea or coffee and eat a simple breakfast."
+            },
+            {
+              native: "Я часто слушаю спокойную музыку во время завтрака.",
+              target: "I often listen to calm music during breakfast."
+            },
+            {
+              native: "В восемь часов я сажусь за стол и начинаю работать.",
+              target: "At eight o'clock I sit at my desk and start to work."
+            },
+            {
+              native: "Я работаю из дома, поэтому мой ноутбук — это мой офис.",
+              target: "I work from home, so my laptop is my office."
+            },
+            {
+              native: "Каждый час я делаю небольшой перерыв на пару минут.",
+              target: "Every hour I take a short break for a few minutes."
+            },
+            {
+              native: "Иногда во время перерыва я повторяю новые английские слова.",
+              target: "Sometimes during the break I review new English words."
+            },
+            {
+              native: "В полдень я готовлю простой обед и немного отдыхаю.",
+              target: "At noon I cook a simple lunch and rest a little."
+            },
+            {
+              native: "После обеда я продолжаю работать до пяти часов.",
+              target: "After lunch I continue to work until five o'clock."
+            },
+            {
+              native: "Вечером я выхожу на короткую прогулку около дома.",
+              target: "In the evening I go for a short walk near my home."
+            },
+            {
+              native: "Я иногда встречаю соседей и говорю им «hello».",
+              target: "Sometimes I meet my neighbours and say 'hello' to them."
+            },
+            {
+              native: "После прогулки я ужинаю и немного смотрю сериал.",
+              target: "After the walk I have dinner and watch a series for a while."
+            },
+            {
+              native: "Перед сном я всегда повторяю хотя бы десять слов по-английски.",
+              target: "Before bed I always review at least ten English words."
+            },
+            {
+              native: "Иногда я пишу короткий дневник о своём дне на английском.",
+              target: "Sometimes I write a short diary about my day in English."
+            },
+            {
+              native: "Когда я очень устала, я просто читаю простой текст.",
+              target: "When I am very tired, I just read a simple text."
+            },
+            {
+              native: "Я ложусь спать около одиннадцати часов.",
+              target: "I go to bed at about eleven o'clock."
+            },
+            {
+              native: "Мой обычный день простой, но он помогает мне учить язык каждый день.",
+              target: "My usual day is simple, but it helps me learn the language every day."
+            }
+          ],
+          words: [
+            { id: "w1", native: "ежедневная рутина", target: "daily routine" },
+            { id: "w2", native: "просыпаться", target: "to wake up" },
+            { id: "w3", native: "будильник", target: "alarm clock" },
+            { id: "w4", native: "кровать", target: "bed" },
+            { id: "w5", native: "ванная", target: "bathroom" },
+            { id: "w6", native: "умываться", target: "to wash (one's face)" },
+            { id: "w7", native: "чистить зубы", target: "to brush teeth" },
+            { id: "w8", native: "завтрак", target: "breakfast" },
+            { id: "w9", native: "обед", target: "lunch" },
+            { id: "w10", native: "ужин", target: "dinner" },
+            { id: "w11", native: "чай", target: "tea" },
+            { id: "w12", native: "кофе", target: "coffee" },
+            { id: "w13", native: "музыка", target: "music" },
+            { id: "w14", native: "работать", target: "to work" },
+            { id: "w15", native: "из дома", target: "from home" },
+            { id: "w16", native: "ноутбук", target: "laptop" },
+            { id: "w17", native: "офис", target: "office" },
+            { id: "w18", native: "перерыв", target: "break" },
+            { id: "w19", native: "каждый день", target: "every day" },
+            { id: "w20", native: "обычно", target: "usually" },
+            { id: "w21", native: "часто", target: "often" },
+            { id: "w22", native: "иногда", target: "sometimes" },
+            { id: "w23", native: "никогда", target: "never" },
+            { id: "w24", native: "утро", target: "morning" },
+            { id: "w25", native: "день", target: "afternoon" },
+            { id: "w26", native: "вечер", target: "evening" },
+            { id: "w27", native: "ночь", target: "night" },
+            { id: "w28", native: "прогулка", target: "walk" },
+            { id: "w29", native: "сосед", target: "neighbour" },
+            { id: "w30", native: "дом", target: "home" },
+            { id: "w31", native: "пешком", target: "on foot" },
+            { id: "w32", native: "сериал", target: "series" },
+            { id: "w33", native: "дневник", target: "diary" },
+            { id: "w34", native: "повторять (слова)", target: "to review words" },
+            { id: "w35", native: "простой", target: "simple" },
+            { id: "w36", native: "обычный день", target: "usual day" },
+            { id: "w37", native: "час", target: "o'clock" },
+            { id: "w38", native: "утомлённый", target: "tired" },
+            { id: "w39", native: "отдыхать", target: "to rest" },
+            { id: "w40", native: "готовить", target: "to cook" },
+            { id: "w41", native: "сидеть за столом", target: "to sit at the desk" },
+            { id: "w42", native: "начинать", target: "to start" },
+            { id: "w43", native: "продолжать", target: "to continue" },
+            { id: "w44", native: "выходить", target: "to go out" },
+            { id: "w45", native: "короткий", target: "short" },
+            { id: "w46", native: "уставать", target: "to get tired" },
+            { id: "w47", native: "помогать", target: "to help" },
+            { id: "w48", native: "учить язык", target: "to learn the language" },
+            { id: "w49", native: "каждый час", target: "every hour" },
+            { id: "w50", native: "перед сном", target: "before bed" }
+          ]
+        },
+
+        // 3) Family
+        {
+          id: "en_a1_family",
+          rule: [
+            "possessive adjectives: my, your, his, her, our, their",
+            "family vocabulary: mother, father, sister, brother, parents",
+            "’s for possession: Anna's mother, Mark's brother"
+          ].join("\n"),
+          title: "Моя семья",
+          title_native: "Моя семья",
+          title_target: "My family",
+          sentences: [
+            {
+              native: "У меня небольшая, но дружная семья.",
+              target: "I have a small but friendly family."
+            },
+            {
+              native: "Мы живём в уютной квартире недалеко от центра города.",
+              target: "We live in a cozy flat not far from the city centre."
+            },
+            {
+              native: "В моей семье четыре человека: мама, папа, брат и я.",
+              target: "There are four people in my family: my mother, my father, my brother and me."
+            },
+            {
+              native: "Моя мама — врач, и она много работает.",
+              target: "My mother is a doctor, and she works a lot."
+            },
+            {
+              native: "Мой папа — водитель автобуса, он часто в дороге.",
+              target: "My father is a bus driver, he is often on the road."
+            },
+            {
+              native: "Мой младший брат ходит в школу и любит играть в футбол.",
+              target: "My younger brother goes to school and likes playing football."
+            },
+            {
+              native: "По вечерам мы обычно собираемся на кухне и говорим о нашем дне.",
+              target: "In the evenings we usually sit in the kitchen and talk about our day."
+            },
+            {
+              native: "Моя мама задаёт мне вопросы на английском, чтобы помочь мне учиться.",
+              target: "My mother asks me questions in English to help me learn."
+            },
+            {
+              native: "Она говорит: «What did you do today?»",
+              target: "She says, 'What did you do today?'"
+            },
+            {
+              native: "Я отвечаю простыми предложениями и иногда ищу слова.",
+              target: "I answer with simple sentences and sometimes search for words."
+            },
+            {
+              native: "Мой папа пока не говорит по-английски, но он слушает нас с интересом.",
+              target: "My father does not speak English yet, but he listens to us with interest."
+            },
+            {
+              native: "Иногда он шутит и придумывает свои английские слова.",
+              target: "Sometimes he makes jokes and invents his own English words."
+            },
+            {
+              native: "Мы все смеёмся, и атмосфера становится ещё теплее.",
+              target: "We all laugh, and the atmosphere becomes even warmer."
+            },
+            {
+              native: "По выходным мы иногда смотрим семейный фильм на английском с субтитрами.",
+              target: "At the weekend we sometimes watch a family film in English with subtitles."
+            },
+            {
+              native: "Мой брат задаёт много вопросов о словах, которые он не понимает.",
+              target: "My brother asks many questions about the words he does not understand."
+            },
+            {
+              native: "Я объясняю ему простые фразы, и это помогает мне повторять материал.",
+              target: "I explain simple phrases to him, and it helps me review the material."
+            },
+            {
+              native: "Мои родители гордятся тем, что я учу английский язык.",
+              target: "My parents are proud that I am learning English."
+            },
+            {
+              native: "Я тоже горжусь своей семьёй, потому что они поддерживают меня.",
+              target: "I am also proud of my family because they support me."
+            },
+            {
+              native: "Иногда я мечтаю, как мы все вместе поедем в другую страну.",
+              target: "Sometimes I dream that we will all travel to another country together."
+            },
+            {
+              native: "Я представляю, как мы будем использовать английский язык в поездке.",
+              target: "I imagine how we will use the English language during the trip."
+            }
+          ],
+          words: [
+            { id: "w1", native: "семья", target: "family" },
+            { id: "w2", native: "мама", target: "mother" },
+            { id: "w3", native: "папа", target: "father" },
+            { id: "w4", native: "родители", target: "parents" },
+            { id: "w5", native: "брат", target: "brother" },
+            { id: "w6", native: "сестра", target: "sister" },
+            { id: "w7", native: "сын", target: "son" },
+            { id: "w8", native: "дочь", target: "daughter" },
+            { id: "w9", native: "младший", target: "younger" },
+            { id: "w10", native: "старший", target: "older" },
+            { id: "w11", native: "жить вместе", target: "to live together" },
+            { id: "w12", native: "квартира", target: "flat" },
+            { id: "w13", native: "центр города", target: "city centre" },
+            { id: "w14", native: "работать много", target: "to work a lot" },
+            { id: "w15", native: "врач", target: "doctor" },
+            { id: "w16", native: "водитель", target: "driver" },
+            { id: "w17", native: "автобус", target: "bus" },
+            { id: "w18", native: "дорога", target: "road" },
+            { id: "w19", native: "школа", target: "school" },
+            { id: "w20", native: "играть в футбол", target: "to play football" },
+            { id: "w21", native: "вечером", target: "in the evening" },
+            { id: "w22", native: "по выходным", target: "at the weekend" },
+            { id: "w23", native: "кухня", target: "kitchen" },
+            { id: "w24", native: "сидеть", target: "to sit" },
+            { id: "w25", native: "разговаривать", target: "to talk" },
+            { id: "w26", native: "вопрос", target: "question" },
+            { id: "w27", native: "поддерживать", target: "to support" },
+            { id: "w28", native: "гордиться", target: "to be proud" },
+            { id: "w29", native: "мечтать", target: "to dream" },
+            { id: "w30", native: "поездка", target: "trip" },
+            { id: "w31", native: "другая страна", target: "another country" },
+            { id: "w32", native: "фильм", target: "film" },
+            { id: "w33", native: "субтитры", target: "subtitles" },
+            { id: "w34", native: "объяснять", target: "to explain" },
+            { id: "w35", native: "повторять материал", target: "to review the material" },
+            { id: "w36", native: "шутить", target: "to make jokes" },
+            { id: "w37", native: "придумывать", target: "to invent" },
+            { id: "w38", native: "атмосфера", target: "atmosphere" },
+            { id: "w39", native: "тёплый", target: "warm" },
+            { id: "w40", native: "дружный", target: "friendly/close (about family)" },
+            { id: "w41", native: "уютный", target: "cozy" },
+            { id: "w42", native: "рядом", target: "near" },
+            { id: "w43", native: "интерес", target: "interest" },
+            { id: "w44", native: "слушать с интересом", target: "to listen with interest" },
+            { id: "w45", native: "смеяться вместе", target: "to laugh together" },
+            { id: "w46", native: "английский язык", target: "English language" },
+            { id: "w47", native: "использовать язык", target: "to use the language" },
+            { id: "w48", native: "иногда", target: "sometimes" },
+            { id: "w49", native: "обычно", target: "usually" },
+            { id: "w50", native: "моя семья", target: "my family" }
+          ]
+        }
+      ]
+    }
+  ]
 };
 
 export const libraryPT: Library = {

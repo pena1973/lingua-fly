@@ -94,6 +94,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const [learningLang, setLearningLangState] = useState<LearningLang>("pt");
 
     useEffect(() => {
+        
         setUiLangState(detectInitialLang());
         setLearningLangState(detectInitialLearningLang());
     }, []);

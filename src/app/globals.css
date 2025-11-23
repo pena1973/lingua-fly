@@ -883,3 +883,110 @@ body::before {
 .ruleLine+.ruleLine {
   margin-top: 2px;
 }
+
+/* Крупнее шрифты на мобильных */
+@media (max-width: 820px) {
+  body {
+    font-size: 18px; /* было 16px */
+  }
+
+  .textBtn {
+    font-size: 16px; /* было 15px */
+  }
+
+  .dualHead {
+    font-size: 16px; /* заголовки колонок */
+  }
+
+  .dualCell {
+    font-size: 18px; /* сами предложения в таблице */
+  }
+
+  .ruleBox {
+    font-size: 16px;
+  }
+
+  .wordsTitle {
+    font-size: 19px;
+  }
+
+  .wordItem {
+    font-size: 18px;
+  }
+
+  .card {
+    font-size: 18px;
+  }
+
+  .slot {
+    font-size: 18px;
+  }
+
+  .langSel,
+  .pill,
+  .pillDropdownBtn,
+  .studyLangSel {
+    font-size: 15px;   /* подписи в шапке чуть крупнее */
+  }
+}
+
+
+.cookieBanner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(16, 36, 92, 0.96); /* тёмно-синий, в тон хедеру */
+  backdrop-filter: blur(10px);
+  padding: 16px 20px;
+  border-radius: 14px;
+  max-width: 420px;
+  width: calc(100% - 24px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cookieText {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #f9fbff; /* почти белый */
+}
+
+.cookieActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cookieBtn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.15s ease;
+}
+
+.cookieBtnPrimary {
+  background: #f9fbff;          /* светлая кнопка */
+  color: #10245c;               /* в тон фону */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.cookieBtnPrimary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+.cookieBtnSecondary {
+  background: transparent;
+  color: #f9fbff;
+  border: 1px solid rgba(249, 251, 255, 0.7);
+}
+
+.cookieBtnSecondary:hover {
+  opacity: 0.85;
+}
