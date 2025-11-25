@@ -2503,7 +2503,136 @@ export const libraryPT: Library = {
                         { id: "w49", native: "lá", target: "там (далеко)" },
                         { id: "w50", native: "também", target: "тоже" }
                     ]
+                },
+                {
+                    "id": "seasons_and_months",
+                    "rule": [
+                        "As estações do ano(Времена года): primavera(весна), verão(лето), outono(осень), inverno(зима)",
+                        "Os meses: janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro, dezembro"
+                    ].join("\n"),
+                    "title": "Времена года и месяцы",
+                    "title_native": "Времена года и месяцы",
+                    "title_target": "As estações e os meses",
+                    "sentences": [
+                        {
+                            "native": "В Португалии четыре времени года: весна, лето, осень и зима.",
+                            "target": "Em Portugal há quatro estações: primavera, verão, outono e inverno."
+                        },
+                        {
+                            "native": "Весной погода становится мягкой, и люди начинают больше гулять.",
+                            "target": "Na primavera o tempo fica mais suave e as pessoas começam a passear mais."
+                        },
+                        {
+                            "native": "Летом стоит жара, и многие едут к океану.",
+                            "target": "No verão faz calor e muitos vão ao oceano."
+                        },
+                        {
+                            "native": "Осенью часто идут дожди, а листья меняют цвет.",
+                            "target": "No outono chove muitas vezes e as folhas mudam de cor."
+                        },
+                        {
+                            "native": "Зимой бывает прохладно, особенно в северных регионах.",
+                            "target": "No inverno pode estar fresco, especialmente nas regiões do norte."
+                        },
+                        {
+                            "native": "Год начинается в январе, когда многие люди делают новые планы.",
+                            "target": "O ano começa em janeiro, quando muitas pessoas fazem novos planos."
+                        },
+                        {
+                            "native": "В феврале погода ещё холодная, но дни уже становятся длиннее.",
+                            "target": "Em fevereiro o tempo ainda é frio, mas os dias já ficam mais longos."
+                        },
+                        {
+                            "native": "В марте чувствуется приближение весны.",
+                            "target": "Em março sente-se a chegada da primavera."
+                        },
+                        {
+                            "native": "Апрель приносит солнечные дни и частые ливни.",
+                            "target": "Abril traz dias de sol e chuvas frequentes."
+                        },
+                        {
+                            "native": "В мае природа полностью расцветает.",
+                            "target": "Em maio a natureza floresce completamente."
+                        },
+                        {
+                            "native": "Июнь открывает сезон тёплых вечеров.",
+                            "target": "Junho abre a época das noites quentes."
+                        },
+                        {
+                            "native": "В июле и августе самые высокие температуры.",
+                            "target": "Em julho e agosto estão as temperaturas mais altas."
+                        },
+                        {
+                            "native": "Сентябрь мягкий и спокойный, идеален для путешествий.",
+                            "target": "Setembro é suave e tranquilo, ideal para viajar."
+                        },
+                        {
+                            "native": "Октябрь приносит золотые листья.",
+                            "target": "Outubro traz folhas douradas."
+                        },
+                        {
+                            "native": "В ноябре дни становятся короткими и прохладными.",
+                            "target": "Em novembro os dias ficam curtos e frescos."
+                        },
+                        {
+                            "native": "Декабрь — месяц праздников и тёплых семейных встреч.",
+                            "target": "Dezembro é o mês das festas e dos encontros familiares."
+                        }
+                    ],
+                    "words": [
+                        { id: "w1", native: "primavera", target: "весна" },
+                        { id: "w2", native: "verão", target: "лето" },
+                        { id: "w3", native: "outono", target: "осень" },
+                        { id: "w4", native: "inverno", target: "зима" },
+                        { id: "w5", native: "janeiro", target: "январь" },
+                        { id: "w6", native: "fevereiro", target: "февраль" },
+                        { id: "w7", native: "março", target: "март" },
+                        { id: "w8", native: "abril", target: "апрель" },
+                        { id: "w9", native: "maio", target: "май" },
+                        { id: "w10", native: "junho", target: "июнь" },
+                        { id: "w11", native: "julho", target: "июль" },
+                        { id: "w12", native: "agosto", target: "август" },
+                        { id: "w13", native: "setembro", target: "сентябрь" },
+                        { id: "w14", native: "outubro", target: "октябрь" },
+                        { id: "w15", native: "novembro", target: "ноябрь" },
+                        { id: "w16", native: "dezembro", target: "декабрь" },
+                        { id: "w17", native: "tempo", target: "погода" },
+                        { id: "w18", native: "calor", target: "жара" },
+                        { id: "w19", native: "frio", target: "холод" },
+                        { id: "w20", native: "chuva", target: "дождь" },
+                        { id: "w22", native: "sol", target: "солнце" },
+                        { id: "w23", native: "viagem", target: "путешествие" },
+                        { id: "w24", native: "praia", target: "пляж" },
+                        { id: "w25", native: "oceano", target: "океан" },
+                        { id: "w26", native: "folhas", target: "листья" },
+                        { id: "w27", native: "cores", target: "цвета" },
+                        { id: "w28", native: "festas", target: "праздники" },
+                        { id: "w29", native: "família", target: "семья" },
+                        { id: "w30", native: "região", target: "регион" },
+                        { id: "w31", native: "natureza", target: "природа" },
+                        { id: "w32", native: "florescer", target: "цвести" },
+                        { id: "w33", native: "planos", target: "планы" },
+                        { id: "w34", native: "noites", target: "ночи" },
+                        { id: "w35", native: "dias", target: "дни" },
+                        { id: "w36", native: "longo", target: "длинный" },
+                        { id: "w37", native: "curto", target: "короткий" },
+                        { id: "w38", native: "quente", target: "тёплый" },
+                        { id: "w39", native: "suave", target: "мягкий" },
+                        { id: "w40", native: "viajar", target: "путешествовать" },
+                        { id: "w41", native: "andar", target: "гулять" },
+                        { id: "w42", native: "começar", target: "начинать" },
+                        { id: "w43", native: "mudar", target: "менять" },
+                        { id: "w44", native: "trazer", target: "приносить" },
+                        { id: "w45", native: "sentir", target: "чувствовать" },
+                        { id: "w46", native: "ficar", target: "становиться" },
+                        { id: "w47", native: "pessoa", target: "человек" },
+                        { id: "w48", native: "cidade", target: "город" },
+                        { id: "w49", native: "regiões", target: "регионы" },
+                        { id: "w50", native: "altura", target: "период/сезон" },
+                        { id: "w51", native: "ano", target: "год" }
+                    ]
                 }
+
 
 
             ],
