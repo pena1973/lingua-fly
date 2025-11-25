@@ -1950,7 +1950,561 @@ export const libraryPT: Library = {
                         { id: "w49", native: "café", target: "кофе" },
                         { id: "w50", native: "visão", target: "вид, взгляд" }
                     ]
+                },
+                {
+                    id: "demonstratives_with_prepositions",
+                    rule: [
+                        "de + esse = desse — Eu preciso desse livro (мне нужна эта твоя книга)",
+                        "em + esse = nesse — Eu moro nesse prédio (я живу в этом доме)",
+                        "a + esse = àquele (в Португалии: a esse = a esse; àquele = к тому)",
+                        "de + este = deste — perto deste lugar (рядом с этим местом)",
+                        "em + este = neste — neste momento (в этот момент)",
+                        "de + aquele = daquele — perto daquele parque (рядом с тем парком)",
+                        "em + aquele = naquele — naquela rua (на той улице)",
+                        "com + meu/sua — com o meu amigo (с моим другом), com a sua mãe (с его матерью)",
+                        "por + minha/suas — pela minha rua (по моей улице), pelos seus planos (по его/её планам)"
+                    ].join("\n"),
+
+                    title: "Тренировка указательных + предлоги + принадлежность",
+                    title_native: "День Марко и предметы вокруг него",
+                    title_target: "O dia do Marco e as coisas à sua volta",
+
+
+                    sentences: [
+                        {
+                            native: "Марко начинает день на своей кухне и смотрит на окно этого маленького помещения.",
+                            target: "O Marco começa o dia na sua cozinha e olha para a janela deste pequeno espaço."
+                        },
+                        {
+                            native: "Он берёт чашку с полки возле этого окна и наливает туда кофе.",
+                            target: "Ele pega a chávena da prateleira perto dessa janela e põe lá o café."
+                        },
+                        {
+                            native: "На столе лежит блокнот Марко, и он открывает его на странице из прошлой недели.",
+                            target: "Na mesa está o caderno do Marco, e ele abre-o na página daquela semana passada."
+                        },
+                        {
+                            native: "Он вспоминает, что должен вернуться к тому проекту, который он написал в том блокноте.",
+                            target: "Ele lembra-se de que deve voltar àquele projeto que escreveu naquele caderno."
+                        },
+                        {
+                            native: "Перед выходом Марко кладёт ключи в сумку, которая висит на спинке его стула.",
+                            target: "Antes de sair, o Marco põe as chaves na mala que está nas costas da sua cadeira."
+                        },
+                        {
+                            native: "Он выходит из дома и идёт по улице, рядом с которой находится парк его района.",
+                            target: "Ele sai de casa e caminha pela rua ao lado do parque do seu bairro."
+                        },
+                        {
+                            native: "Марко любит смотреть на людей, которые проходят по той дорожке возле деревьев.",
+                            target: "O Marco gosta de observar as pessoas que passam pelo caminho perto daquelas árvores."
+                        },
+                        {
+                            native: "Он останавливается возле киоска и покупает воду у продавца, который работает в этом месте много лет.",
+                            target: "Ele pára perto do quiosque e compra água ao vendedor que trabalha neste lugar há muitos anos."
+                        },
+                        {
+                            native: "Потом Марко идёт к автобусной остановке и ждёт транспорта на этой платформе.",
+                            target: "Depois, o Marco vai à paragem de autocarro e espera o transporte nessa plataforma."
+                        },
+                        {
+                            native: "Он читает сообщение от своей сестры, которая спрашивает о тех документах для семьи.",
+                            target: "Ele lê uma mensagem da sua irmã, que pergunta sobre aqueles documentos para a família."
+                        },
+                        {
+                            native: "Марко отвечает, что отдаст эти документы вечером.",
+                            target: "O Marco responde que vai entregar esses documentos à noite."
+                        },
+                        {
+                            native: "В автобусе он садится на место рядом с дверью и кладёт рюкзак возле своих ног.",
+                            target: "No autocarro ele senta-se no lugar ao lado da porta e põe a mochila perto dos seus pés."
+                        },
+                        {
+                            native: "Он замечает женщину, которая держит книгу из той новой серии.",
+                            target: "Ele repara numa mulher que segura um livro daquela nova coleção."
+                        },
+                        {
+                            native: "Ему нравится оформление этой серии, и он думает купить такую же книгу.",
+                            target: "Ele gosta do design dessa coleção e pensa em comprar um livro igual."
+                        },
+                        {
+                            native: "Когда автобус останавливается возле его офиса, Марко выходит на этой остановке.",
+                            target: "Quando o autocarro pára junto do seu escritório, o Marco sai nessa paragem."
+                        },
+                        {
+                            native: "Перед входом он здоровается с коллегой, который стоит у того высокого здания.",
+                            target: "À entrada ele cumprimenta o colega que está junto daquele prédio alto."
+                        },
+                        {
+                            native: "На рабочем месте Марко открывает компьютер и проверяет письмо от своего руководителя.",
+                            target: "No trabalho o Marco abre o computador e verifica o email do seu chefe."
+                        },
+                        {
+                            native: "Он работает над задачей, которая была в том письме.",
+                            target: "Ele trabalha na tarefa que estava naquela mensagem."
+                        },
+                        {
+                            native: "В обед Марко идёт в кафе напротив его офиса и садится за стол возле двери.",
+                            target: "Ao almoço o Marco vai ao café em frente ao seu escritório e senta-se na mesa perto da porta."
+                        },
+                        {
+                            native: "Он заказывает суп и салат, которые всегда берёт в таких местах.",
+                            target: "Ele pede a sopa e a salada que sempre escolhe nesses lugares."
+                        },
+                        {
+                            native: "После работы Марко встречается с другом возле того старого кинотеатра.",
+                            target: "Depois do trabalho o Marco encontra-se com o amigo perto daquele cinema antigo."
+                        },
+                        {
+                            native: "Они идут по дорожке около реки и говорят о своих планах на выходные.",
+                            target: "Eles caminham pelo trilho ao lado do rio e falam sobre os seus planos para o fim de semana."
+                        },
+                        {
+                            native: "Друг Марко показывает ему фотографии своего нового велосипеда.",
+                            target: "O amigo mostra-lhe as fotografias da sua nova bicicleta."
+                        },
+                        {
+                            native: "Марко говорит, что хотел бы покататься на том велосипеде в тот же день.",
+                            target: "O Marco diz que gostaria de experimentar aquela bicicleta nesse mesmo dia."
+                        },
+                        {
+                            native: "Когда наступает вечер, Марко возвращается к своему дому и открывает дверь своим ключом.",
+                            target: "Quando chega a noite, o Marco volta à sua casa e abre a porta com a sua chave."
+                        },
+                        {
+                            native: "Он включает лампу в своей гостиной и кладёт телефон на стол возле этого дивана.",
+                            target: "Ele liga a lâmpada na sua sala de estar e põe o telemóvel na mesa ao lado deste sofá."
+                        },
+                        {
+                            native: "Перед сном он делает заметки о тех идеях, которые пришли ему в голову в течение дня.",
+                            target: "Antes de dormir ele faz anotações sobre aquelas ideias que lhe surgiram ao longo do dia."
+                        }
+                    ],
+
+                    words: [
+                        { id: "w1", native: "desse", target: "об этом (de + esse)" },
+                        { id: "w2", native: "nesse", target: "в этом (em + esse)" },
+                        { id: "w3", native: "deste", target: "об этом (de + este)" },
+                        { id: "w4", native: "neste", target: "в этом (em + este)" },
+                        { id: "w5", native: "daquele", target: "о том (de + aquele)" },
+                        { id: "w6", native: "naquele", target: "в том (em + aquele)" },
+                        { id: "w7", native: "com o seu", target: "с его" },
+                        { id: "w8", native: "com a sua", target: "с её" },
+                        { id: "w9", native: "pela", target: "по (por + a)" },
+                        { id: "w10", native: "pelo", target: "по (por + o)" },
+
+                        { id: "w11", native: "prateleira", target: "полка" },
+                        { id: "w12", native: "cadeira", target: "стул" },
+                        { id: "w13", native: "janela", target: "окно" },
+                        { id: "w14", native: "semana", target: "неделя" },
+                        { id: "w15", native: "caderno", target: "блокнот" },
+                        { id: "w16", native: "mala", target: "сумка" },
+                        { id: "w17", native: "árvore", target: "дерево" },
+                        { id: "w18", native: "quiosque", target: "киоск" },
+                        { id: "w19", native: "plataforma", target: "платформа" },
+                        { id: "w20", native: "mensagem", target: "сообщение" },
+
+                        { id: "w21", native: "documento", target: "документ" },
+                        { id: "w22", native: "mochila", target: "рюкзак" },
+                        { id: "w23", native: "pés", target: "ноги" },
+                        { id: "w24", native: "coleção", target: "серия, коллекция" },
+                        { id: "w25", native: "design", target: "дизайн" },
+                        { id: "w26", native: "prédio", target: "здание" },
+                        { id: "w27", native: "email", target: "имейл" },
+                        { id: "w28", native: "tarefa", target: "задача" },
+                        { id: "w29", native: "salada", target: "салат" },
+                        { id: "w30", native: "cinema", target: "кинотеатр" },
+
+                        { id: "w31", native: "rio", target: "река" },
+                        { id: "w32", native: "bicicleta", target: "велосипед" },
+                        { id: "w33", native: "fotografia", target: "фотография" },
+                        { id: "w34", native: "noite", target: "ночь" },
+                        { id: "w35", native: "sofá", target: "диван" },
+                        { id: "w36", native: "telemóvel", target: "телефон" },
+                        { id: "w37", native: "sala de estar", target: "гостиная" },
+                        { id: "w38", native: "porta", target: "дверь" },
+                        { id: "w39", native: "chave", target: "ключ" },
+                        { id: "w40", native: "ideia", target: "идея" },
+
+                        { id: "w41", native: "perto", target: "рядом" },
+                        { id: "w42", native: "ao lado", target: "возле, сбоку" },
+                        { id: "w43", native: "caminho", target: "дорожка" },
+                        { id: "w44", native: "trilho", target: "тропа" },
+                        { id: "w45", native: "andar", target: "этаж" },
+                        { id: "w46", native: "cozinha", target: "кухня" },
+                        { id: "w47", native: "prato", target: "блюдо" },
+                        { id: "w48", native: "árvore", target: "дерево" },
+                        { id: "w49", native: "mesa", target: "стол" },
+                        { id: "w50", native: "luz", target: "свет" }
+                    ]
+                },
+                {
+                    id: "movimento_demonstrativos",
+                    rule: [
+                        "este — этот (близко ко мне): esta rua, este lugar",
+                        "esse — этот/тот (близко к тебе): esse carro, essa porta",
+                        "aquele — тот (далеко от обоих): aquele parque, aquela casa",
+                        "ir a / ir para — идти/ехать к чему-то: ir àquele café",
+                        "vir de — приходить откуда-то: vir desse prédio",
+                        "chegar a — прибывать куда-то: chegar a este hotel",
+                        "sair de — выходить откуда-то: sair daquela estação",
+                        "voltar a / voltar de — возвращаться: voltar a este bairro, voltar daquele sítio",
+                        "passar por — проходить мимо/через: passar por essa rua",
+                        "ir até — идти до: ir até aquele cruzamento"
+                    ].join("\n"),
+
+                    title: "Указательные местоимения + движение",
+                    title_native: "Путешествие Диегу по трём направлениям",
+                    title_target: "A viagem do Diego por três direções",
+
+                    sentences: [
+                        {
+                            native: "Диегу начинает своё утро на этой улице, недалеко от своего дома.",
+                            target: "O Diego começa a sua manhã nesta rua, perto da sua casa."
+                        },
+                        {
+                            native: "Он выходит из этого дома и идёт к той автобусной остановке.",
+                            target: "Ele sai desta casa e vai até àquela paragem de autocarro."
+                        },
+                        {
+                            native: "Пока он идёт, он проходит по этой узкой дорожке.",
+                            target: "Enquanto caminha, ele passa por este caminho estreito."
+                        },
+                        {
+                            native: "Он видит женщин, которые идут в тот супермаркет у перекрёстка.",
+                            target: "Ele vê mulheres que vão para aquele supermercado no cruzamento."
+                        },
+                        {
+                            native: "Но Диегу идёт в другое место: в это маленькое кафе возле площади.",
+                            target: "Mas o Diego vai a outro lugar: a este café pequeno perto da praça."
+                        },
+                        {
+                            native: "Войдя в кафе, он встречает друга, который приходит из того старого района.",
+                            target: "Ao entrar no café, ele encontra um amigo que vem daquele bairro antigo."
+                        },
+                        {
+                            native: "Друг говорит, что идёт в этот офис неподалёку.",
+                            target: "O amigo diz que vai para este escritório aqui perto."
+                        },
+                        {
+                            native: "Диегу обещает пойти с ним и помочь ему донести вещи.",
+                            target: "O Diego promete ir com ele e ajudar a levar as coisas."
+                        },
+                        {
+                            native: "По пути они проходят по этой широкой улице, полной людей.",
+                            target: "Pelo caminho eles passam por esta avenida larga cheia de pessoas."
+                        },
+                        {
+                            native: "Они видят туристов, которые приходят в этот район ради красивых фотографий.",
+                            target: "Eles veem turistas que vêm a este bairro para tirar fotografias bonitas."
+                        },
+                        {
+                            native: "Перед офисом находится та высокая башня, которую можно увидеть издалека.",
+                            target: "Em frente ao escritório está aquela torre alta que se vê de longe."
+                        },
+                        {
+                            native: "Друг поднимается в здание, а Диегу решает пойти дальше.",
+                            target: "O amigo sobe ao prédio e o Diego decide seguir em frente."
+                        },
+                        {
+                            native: "Он идёт по этой дороге и выходит на ту тихую площадь.",
+                            target: "Ele segue por esta rua e chega àquela praça tranquila."
+                        },
+                        {
+                            native: "На площади он видит художника, который идёт к тем старым домам у реки.",
+                            target: "Na praça ele vê um artista que vai para aquelas casas antigas junto ao rio."
+                        },
+                        {
+                            native: "Диегу решает пройти до того моста, чтобы посмотреть на город.",
+                            target: "O Diego decide ir até àquela ponte para ver a cidade."
+                        },
+                        {
+                            native: "С моста он замечает людей, которые приходят от этой стороны реки.",
+                            target: "Da ponte ele nota pessoas que vêm deste lado do rio."
+                        },
+                        {
+                            native: "Но другие люди идут с той стороны, где много ресторанов.",
+                            target: "Mas outras pessoas vêm daquele lado onde há muitos restaurantes."
+                        },
+                        {
+                            native: "Диегу решает вернуться в этот район, чтобы поесть.",
+                            target: "O Diego decide voltar a este bairro para comer."
+                        },
+                        {
+                            native: "Он проходит по тем узким улицам и заходит в маленькое бистро.",
+                            target: "Ele passa por aquelas ruas estreitas e entra num pequeno bistrô."
+                        },
+                        {
+                            native: "После обеда он идёт обратно к этой автобусной остановке.",
+                            target: "Depois do almoço ele vai de volta a esta paragem de autocarro."
+                        },
+                        {
+                            native: "Автобус приходит с той дороги, что ведёт из старого центра.",
+                            target: "O autocarro chega daquela estrada que vem do centro antigo."
+                        },
+                        {
+                            native: "Диегу садится и возвращается в свой район.",
+                            target: "O Diego entra e volta ao seu bairro."
+                        },
+                        {
+                            native: "Дома он говорит, что сегодня прошёл по трём направлениям: этому, тому и далёкому.",
+                            target: "Em casa ele diz que hoje caminhou por três direções: esta, essa e aquela."
+                        }
+                    ],
+
+                    words: [
+                        { id: "w1", native: "neste", target: "в этом" },
+                        { id: "w2", native: "nesse", target: "в том (у тебя)" },
+                        { id: "w3", native: "naquele", target: "в том (далеко)" },
+                        { id: "w4", native: "deste", target: "об этом" },
+                        { id: "w5", native: "desse", target: "об этом (у тебя)" },
+                        { id: "w6", native: "daquele", target: "о том (далеко)" },
+                        { id: "w7", native: "até", target: "до" },
+                        { id: "w8", native: "rua", target: "улица" },
+                        { id: "w9", native: "avenida", target: "проспект" },
+                        { id: "w10", native: "ponte", target: "мост" },
+                        { id: "w11", native: "praça", target: "площадь" },
+                        { id: "w12", native: "bairro", target: "район" },
+                        { id: "w13", native: "lado", target: "сторона" },
+                        { id: "w14", native: "estrada", target: "дорога" },
+                        { id: "w15", native: "direção", target: "направление" },
+                        { id: "w16", native: "caminho", target: "путь, дорожка" },
+                        { id: "w17", native: "chegar", target: "прибыть" },
+                        { id: "w18", native: "sair", target: "выйти" },
+                        { id: "w19", native: "voltar", target: "вернуться" },
+                        { id: "w20", native: "passar", target: "проходить" },
+                        { id: "w21", native: "ir", target: "идти" },
+                        { id: "w22", native: "vir", target: "приходить" },
+                        { id: "w23", native: "subir", target: "подниматься" },
+                        { id: "w24", native: "entrar", target: "входить" },
+                        { id: "w25", native: "seguir", target: "следовать" },
+                        { id: "w26", native: "paragem", target: "остановка" },
+                        { id: "w27", native: "bistrô", target: "бистро" },
+                        { id: "w28", native: "mercado", target: "рынок" },
+                        { id: "w29", native: "artista", target: "художник" },
+                        { id: "w30", native: "ponte", target: "мост" },
+                        { id: "w31", native: "turista", target: "турист" },
+                        { id: "w32", native: "vista", target: "вид" },
+                        { id: "w33", native: "lugar", target: "место" },
+                        { id: "w34", native: "cidade", target: "город" },
+                        { id: "w35", native: "centro", target: "центр" },
+                        { id: "w36", native: "prédio", target: "здание" },
+                        { id: "w37", native: "torre", target: "башня" },
+                        { id: "w38", native: "porta", target: "дверь" },
+                        { id: "w39", native: "janela", target: "окно" },
+                        { id: "w40", native: "café", target: "кафе" },
+                        { id: "w41", native: "supermercado", target: "супермаркет" },
+                        { id: "w42", native: "mulher", target: "женщина" },
+                        { id: "w43", native: "homem", target: "мужчина" },
+                        { id: "w44", native: "fotografia", target: "фото" },
+                        { id: "w45", native: "árvore", target: "дерево" },
+                        { id: "w46", native: "rio", target: "река" },
+                        { id: "w47", native: "restaurante", target: "ресторан" },
+                        { id: "w48", native: "direções", target: "направления" },
+                        { id: "w49", native: "longo", target: "далёкий" },
+                        { id: "w50", native: "estreito", target: "узкий" }
+                    ]
+                },
+
+                {
+                    id: "dialogos_possessivos_demonstrativos",
+                    rule: [
+                        "seu / sua — его/её/ваш: sua casa, seu carro",
+                        "dele / dela — принадлежность без двусмысленности: o livro dele",
+                        "este — этот (рядом со мной)",
+                        "esse — этот/тот (рядом с тобой)",
+                        "aquele — тот (далеко от нас)",
+                        "isto / isso / aquilo — это / то / вон то",
+                        "com o seu — с твоим/вашим/его",
+                        "de + este = deste: perto deste lugar",
+                        "em + esse = nesse: nesse momento"
+                    ].join("\n"),
+
+                    title: "Притяжательные + указательные в диалогах",
+                    title_native: "Разговоры в кафе, на улице и дома",
+                    title_target: "Conversas no café, na rua e em casa",
+
+                    sentences: [
+                        {
+                            native: "— Чей это рюкзак? — спрашивает София.",
+                            target: "— De quem é esta mochila? — pergunta a Sofia."
+                        },
+                        {
+                            native: "— Это мой, но тот чехол не мой, он принадлежит моей сестре.",
+                            target: "— É meu, mas aquele estojo não é meu, pertence à minha irmã."
+                        },
+                        {
+                            native: "— А этот телефон? Он тоже твой?",
+                            target: "— E este telemóvel? Também é teu?"
+                        },
+                        {
+                            native: "— Нет, этот принадлежит Марку.",
+                            target: "— Não, esse pertence ao Marco."
+                        },
+                        {
+                            native: "— А где его зарядка?",
+                            target: "— E onde está o carregador dele?"
+                        },
+                        {
+                            native: "— Я думаю, что он оставил её в той комнате.",
+                            target: "— Acho que ele a deixou naquele quarto."
+                        },
+                        {
+                            native: "София подходит к комнате и видит книгу.",
+                            target: "A Sofia chega ao quarto e vê um livro."
+                        },
+                        {
+                            native: "— Это твоя книга или книга твоей сестры?",
+                            target: "— Este livro é teu ou da tua irmã?"
+                        },
+                        {
+                            native: "— Это книга моей сестры, но эта закладка моя.",
+                            target: "— É da minha irmã, mas este marcador é meu."
+                        },
+                        {
+                            native: "В это время Марк выходит из кухни с чашкой.",
+                            target: "Nessa altura o Marco sai da cozinha com uma chávena."
+                        },
+                        {
+                            native: "— Этот кофе твой?",
+                            target: "— Este café é teu?"
+                        },
+                        {
+                            native: "— Нет, тот кофе для Софии.",
+                            target: "— Não, aquele café é para a Sofia."
+                        },
+                        {
+                            native: "— Где твоя сумка? Я видел её возле той двери.",
+                            target: "— Onde está a tua mala? Vi-a perto daquela porta."
+                        },
+                        {
+                            native: "— Моя здесь, а та сумка принадлежит моей подруге.",
+                            target: "— A minha está aqui, e aquela mala é da minha amiga."
+                        },
+                        {
+                            native: "На улице они встречают соседа с его собакой.",
+                            target: "Na rua eles encontram o vizinho com o seu cão."
+                        },
+                        {
+                            native: "— Это его собака?",
+                            target: "— Este é o cão dele?"
+                        },
+                        {
+                            native: "— Нет, этот маленький — его, а тот большой — собака его сына.",
+                            target: "— Não, este pequeno é dele, e aquele grande é do filho dele."
+                        },
+                        {
+                            native: "— Ты видел мою книгу? Я оставила её на этом столе.",
+                            target: "— Viste o meu livro? Deixei-o nesta mesa."
+                        },
+                        {
+                            native: "— Я видел только ту газету.",
+                            target: "— Só vi aquele jornal."
+                        },
+                        {
+                            native: "— Хорошо, я посмотрю в той комнате ещё раз.",
+                            target: "— Está bem, vou ver naquele quarto outra vez."
+                        },
+                        {
+                            native: "Когда они возвращаются домой, София говорит:",
+                            target: "Quando voltam a casa, a Sofia diz:"
+                        },
+                        {
+                            native: "— Мне нравится этот дом, но тот, где живут мои родители, больше.",
+                            target: "— Gosto desta casa, mas daquela onde vivem os meus pais gosto ainda mais."
+                        },
+                        {
+                            native: "— А мне нравится этот вид из окна.",
+                            target: "— E eu gosto desta vista pela janela."
+                        },
+                        {
+                            native: "— Эта картина тоже твоя?",
+                            target: "— Este quadro também é teu?"
+                        },
+                        {
+                            native: "— Нет, она принадлежит моей подруге Карле.",
+                            target: "— Não, é da minha amiga Carla."
+                        },
+                        {
+                            native: "— А этот стул?",
+                            target: "— E esta cadeira?"
+                        },
+                        {
+                            native: "— Этот — мой, а тот — стул моего брата.",
+                            target: "— Este é meu, e aquele é do meu irmão."
+                        },
+                        {
+                            native: "— Хочу купить стол, похожий на этот.",
+                            target: "— Quero comprar uma mesa parecida com esta."
+                        },
+                        {
+                            native: "— Тогда нам нужно зайти в тот магазин на углу.",
+                            target: "— Então precisamos de passar por aquela loja na esquina."
+                        },
+                        {
+                            native: "— Хорошо, а после мы можем вернуться в этот район?",
+                            target: "— Está bem, e depois podemos voltar a este bairro?"
+                        }
+                    ],
+
+                    words: [
+                        { id: "w1", native: "este", target: "этот (рядом)" },
+                        { id: "w2", native: "esse", target: "тот/этот у тебя" },
+                        { id: "w3", native: "aquele", target: "вон тот" },
+                        { id: "w4", native: "isto", target: "это" },
+                        { id: "w5", native: "isso", target: "то (у тебя)" },
+                        { id: "w6", native: "aquilo", target: "вон то" },
+                        { id: "w7", native: "seu", target: "его/её/ваш" },
+                        { id: "w8", native: "dele", target: "его" },
+                        { id: "w9", native: "dela", target: "её" },
+                        { id: "w10", native: "marcador", target: "закладка" },
+
+                        { id: "w11", native: "mochila", target: "рюкзак" },
+                        { id: "w12", native: "carregador", target: "зарядка" },
+                        { id: "w13", native: "cozinha", target: "кухня" },
+                        { id: "w14", native: "quarto", target: "комната" },
+                        { id: "w15", native: "porta", target: "дверь" },
+                        { id: "w16", native: "janela", target: "окно" },
+                        { id: "w17", native: "cadeira", target: "стул" },
+                        { id: "w18", native: "mesa", target: "стол" },
+                        { id: "w19", native: "vista", target: "вид" },
+                        { id: "w20", native: "cão", target: "пёс" },
+
+                        { id: "w21", native: "vizinho", target: "сосед" },
+                        { id: "w22", native: "amiga", target: "подруга" },
+                        { id: "w23", native: "amigo", target: "друг" },
+                        { id: "w24", native: "filho", target: "сын" },
+                        { id: "w25", native: "jornal", target: "газета" },
+                        { id: "w26", native: "quadro", target: "картина" },
+                        { id: "w27", native: "loja", target: "магазин" },
+                        { id: "w28", native: "esquina", target: "угол" },
+                        { id: "w29", native: "bairro", target: "район" },
+                        { id: "w30", native: "casa", target: "дом" },
+
+                        { id: "w31", native: "deixar", target: "оставлять" },
+                        { id: "w32", native: "ver", target: "видеть" },
+                        { id: "w33", native: "ir", target: "идти" },
+                        { id: "w34", native: "vir", target: "приходить" },
+                        { id: "w35", native: "voltar", target: "вернуться" },
+                        { id: "w36", native: "passar por", target: "проходить мимо" },
+                        { id: "w37", native: "perguntar", target: "спрашивать" },
+                        { id: "w38", native: "responder", target: "отвечать" },
+                        { id: "w39", native: "chegar", target: "прибыть" },
+                        { id: "w40", native: "entrar", target: "входить" },
+
+                        { id: "w41", native: "pequeno", target: "маленький" },
+                        { id: "w42", native: "grande", target: "большой" },
+                        { id: "w43", native: "novo", target: "новый" },
+                        { id: "w44", native: "velho", target: "старый" },
+                        { id: "w45", native: "perto", target: "близко" },
+                        { id: "w46", native: "longe", target: "далеко" },
+                        { id: "w47", native: "aqui", target: "здесь" },
+                        { id: "w48", native: "aí", target: "там (у тебя)" },
+                        { id: "w49", native: "lá", target: "там (далеко)" },
+                        { id: "w50", native: "também", target: "тоже" }
+                    ]
                 }
+
 
             ],
 
