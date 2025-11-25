@@ -5,8 +5,17 @@ import { CatalogTree } from "@/components/CatalogTree";
 import { DualText } from "@/components/DualText";
 import { WordList } from "@/components/WordList";
 import { LearnBoard } from "@/components/LearnBoard";
-import { libraryPT, libraryEN, TextItem } from "@/data/library";
 import { useLang } from "@/context/LanguageContext";
+
+import {
+  libraryPTRU,
+  libraryPTEN,
+  libraryENRU,
+  // libraryENEN,
+  TextItem
+} from "@/data/library";
+
+
 
 // где-нибудь рядом с centerPane
 const RuleBlock: React.FC<{ rule: string }> = ({ rule }) => {
@@ -29,22 +38,39 @@ const RuleBlock: React.FC<{ rule: string }> = ({ rule }) => {
   );
 };
 
-
-// здесь будут все библиотеки по изучаемому языку
-const LIBS_BY_LEARNING_LANG = {
-  pt: libraryPT,
-  // es: libraryES,
-  en: libraryEN,
+/**
+ * Карта библиотек по паре:
+ *  - ключ 1: изучаемый язык (learningLang)
+ *  - ключ 2: язык интерфейса / родной язык (uiLang)
+ *
+ * Пока у нас есть только libraryPT и libraryEN,
+ * привяжем их к комбинациям, а позже можно будет
+ * заменить нужные пары на свои (например, libraryENRU, libraryENEN и т.п.).
+ */
+const LIBS_BY_LANG_PAIR = {
+  pt: {
+    ru: libraryPTRU, // учим PT, интерфейс RU
+    en: libraryPTEN, // учим PT, интерфейс EN (пока та же библиотека)
+  },
+  en: {
+    ru: libraryENRU, // учим EN, интерфейс RU
+    // en: libraryENEN, // учим EN, интерфейс EN (пока та же библиотека)
+  },
 } as const;
 
 export default function HomePage() {
-  const { learningLang } = useLang();
+  const { learningLang, uiLang } = useLang();
 
-  // выбираем библиотеку по изучаемому языку
-  const lib = useMemo(
-    () => LIBS_BY_LEARNING_LANG[learningLang] ?? libraryPT,
-    [learningLang]
-  );
+  const lib = useMemo(() => {
+    const byUi = LIBS_BY_LANG_PAIR[learningLang as keyof typeof LIBS_BY_LANG_PAIR];
+    const selected =
+      byUi?.[uiLang as keyof typeof byUi] ??
+      (byUi && (Object.values(byUi)[0] as (typeof libraryPTRU))) ??
+      libraryPTRU;
+
+    return selected;
+  }, [learningLang, uiLang]);
+
 
   const [selectedText, setSelectedText] = useState<TextItem | null>(
     lib.sections[0].texts[0]
@@ -158,3 +184,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+

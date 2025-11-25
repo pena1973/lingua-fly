@@ -10,16 +10,13 @@ export const CatalogTree: React.FC<{
     onSelect: (text: TextItem) => void;
 }> = ({ lib, onSelect, selectedTextId }) => {
     const { uiLang, t } = useLang();
-    const pick = (s: Section) => (uiLang === "ru" ? s.title_native : s.title_target);
-    const pickText = (x: TextItem) => (uiLang === "ru" ? x.title : x.title_target);
-
-
+    
     return (
         <div className="catalog">
             <div className="catalogTitle">{t("catalog_title")}</div>
             {lib.sections.map((sec) => (
                 <details key={sec.id} open>
-                    <summary className="sectionTitle">{pick(sec)}</summary>
+                    <summary className="sectionTitle">{sec.title_native}</summary>
                     <ul className="textList">
                         {sec.texts.map((txt) => (
                             <li key={txt.id}>
@@ -27,7 +24,7 @@ export const CatalogTree: React.FC<{
                                     className={`textBtn ${selectedTextId === txt.id ? "active" : ""}`}
                                     onClick={() => onSelect(txt)}
                                 >
-                                    {pickText(txt)}
+                                    {txt.title}
                                 </button>
                             </li>
                         ))}

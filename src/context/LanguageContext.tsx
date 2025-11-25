@@ -1,11 +1,8 @@
 "use client";
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 
-
-type UiLang = "ru" | "en";
-// 🔹 язык библиотеки (изучаемый язык)
-// при необходимости просто добавишь сюда новые коды
-type LearningLang = "pt" | "en";
+export type UiLang = "ru" | "en";
+export type LearningLang = "pt" | "en";
 
 
 type Dict = Record<string, Record<UiLang, string>>;
@@ -46,33 +43,6 @@ function detectInitialLearningLang(): LearningLang {
     return "pt"; // по умолчанию учим португальский
 }
 
-// export const LanguageContext = createContext<{
-//     uiLang: UiLang;
-//     setUiLang: (v: UiLang) => void;
-//     t: (key: keyof typeof dict) => string;
-// }>({ uiLang: "ru", setUiLang: () => { }, t: (k) => dict[k].ru });
-
-
-// export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-//     const [uiLang, setUiLangState] = useState<UiLang>("ru");
-
-
-//     useEffect(() => { setUiLangState(detectInitialLang()); }, []);
-
-
-//     const setUiLang = (v: UiLang) => {
-//         setUiLangState(v);
-//         if (typeof window !== "undefined") localStorage.setItem("uiLang", v);
-//     };
-
-
-//     const t = (key: keyof typeof dict) => dict[key][uiLang];
-
-
-//     const value = useMemo(() => ({ uiLang, setUiLang, t }), [uiLang]);
-//     return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
-// };
-
 
 
 export const LanguageContext = createContext<{
@@ -83,30 +53,44 @@ export const LanguageContext = createContext<{
     t: (key: keyof typeof dict) => string;
 }>({
     uiLang: "ru",
-    setUiLang: () => {},
+    setUiLang: () => { },
     learningLang: "pt",
-    setLearningLang: () => {},
+    setLearningLang: () => { },
     t: (k) => dict[k].ru,
 });
+
+
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [uiLang, setUiLangState] = useState<UiLang>("ru");
     const [learningLang, setLearningLangState] = useState<LearningLang>("pt");
 
     useEffect(() => {
-        
+
         setUiLangState(detectInitialLang());
         setLearningLangState(detectInitialLearningLang());
     }, []);
 
     const setUiLang = (v: UiLang) => {
-        setUiLangState(v);
-        if (typeof window !== "undefined") localStorage.setItem("uiLang", v);
+        // не даём интерфейсу совпасть с языком, который учим
+        setUiLangState((prev) => {
+            if (v === learningLang) {
+                return prev;
+            }
+            if (typeof window !== "undefined") localStorage.setItem("uiLang", v);
+            return v;
+        });
     };
 
     const setLearningLang = (v: LearningLang) => {
-        setLearningLangState(v);
-        if (typeof window !== "undefined") localStorage.setItem("learningLang", v);
+        // не даём языку обучения совпасть с языком интерфейса
+        setLearningLangState((prev) => {
+            if (v === uiLang) {
+                return prev;
+            }
+            if (typeof window !== "undefined") localStorage.setItem("learningLang", v);
+            return v;
+        });
     };
 
     const t = (key: keyof typeof dict) => dict[key][uiLang];
