@@ -1039,62 +1039,166 @@ body::before {
 }
 
 /* Общий контейнер для страниц /legal, /privacy, /ai */
+/* Общий контейнер для страниц /legal, /privacy, /ai */
 .page_ {
-  max-width: 960px;              /* ширина как у основного контента */
-  margin: 24px auto 40px;        /* отступ сверху/снизу и авто по бокам */
-  padding: 24px 28px 28px;
+  max-width: 960px;
+  margin: 32px auto 48px;
+  padding: 28px 32px 32px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.06); /* полупрозрачная карточка */
-  backdrop-filter: blur(6px);
+
+  /* новый тёмно-голубой фон */
+  background: linear-gradient(
+    135deg,
+    rgba(36, 66, 107, 0.96),   /* var(--sky-top) */
+    rgba(58, 94, 142, 0.94)    /* var(--sky-mid) */
+  );
+
+  /* тень и отсутствие явной рамки — как было */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  color: #f5f7ff;
-  line-height: 1.6;
+  border: none;
+
+  backdrop-filter: blur(8px);
+
+  color: #ffffff;
+  line-height: 1.7;
 }
 
-/* Заголовок страницы */
-.page_ h1 {
-  font-size: 24px;
-  font-weight: 600;
+/* Заголовки */
+.page_ h1,
+.page_ h2,
+.page_ h3 {
+  color: #ffffff;
+  margin-top: 0;
   margin-bottom: 16px;
-  text-align: center;
 }
 
-/* Заголовки секций */
+/* Текст */
+.page_ p,
+.page_ li {
+  color: rgba(240, 244, 255, 0.96);
+}
+
+/* Подзаголовки разделов */
 .page_ h2 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 20px;
-  margin-bottom: 8px;
+  font-size: 1.4rem;
+  margin-top: 24px;
 }
 
-/* Параграфы */
-.page_ p {
-  margin: 0 0 8px;
-  font-size: 14px;
+/* Ссылки */
+.page_ a {
+  color: #e4efff;
+  text-decoration: underline;
+  text-decoration-color: rgba(228, 239, 255, 0.6);
 }
 
-/* Немного воздуха между секциями */
-.page_ section {
-  margin-bottom: 16px;
+.page_ a:hover {
+  text-decoration-color: #ffffff;
 }
 
-/* Адаптация для мобильных */
-@media (max-width: 600px) {
+/* Узкие экраны */
+@media (max-width: 640px) {
   .page_ {
-    margin: 16px 8px 24px;
-    padding: 16px 14px 18px;
-    border-radius: 12px;
+    margin: 16px 12px 24px;
+    padding: 20px 18px 22px;
+    border-radius: 14px;
+    font-size: 0.95rem;
   }
 
   .page_ h1 {
-    font-size: 20px;
+    font-size: 1.35rem;
+    text-align: center;
   }
 
   .page_ h2 {
-    font-size: 16px;
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+/* // реклама */
+/* Внешний контейнер — тянется на всю ширину */
+.promoBar {
+  width: 100%;
+}
+
+/* Внутренний — центрируем как основной контент */
+.promoBarInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 16px 24px;
+
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Карточки */
+.promoCard {
+  flex: 1;
+  min-width: 260px;
+  background: linear-gradient(
+    135deg,
+    #e3f1ff,
+    #f4f8ff
+  ); /* лёгкий голубой */
+  border: 1px solid rgba(30, 63, 110, 0.12);
+  border-radius: 16px;
+  padding: 20px 24px;
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.promoCard h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.promoCard p {
+  margin: 0;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* Ховер для обеих карточек */
+.promoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-2);
+}
+
+/* Можно чуть отличить визуально */
+.promoDev {
+  /* чуть более насыщенный голубой */
+  background: linear-gradient(
+    135deg,
+    #dbe9ff,
+    #f0f6ff
+  );
+}
+
+.promoAd {
+  border-style: dashed;
+}
+
+/* На узких экранах — колонкой */
+@media (max-width: 768px) {
+  .promoBarInner {
+    flex-direction: column;
   }
 
-  .page_ p {
-    font-size: 13px;
+  .promoCard {
+    width: 100%;
   }
 }

@@ -2,7 +2,8 @@ import "@/app/globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Header from "@/components/Header";
 import CookieNotice from "@/components/CookieNotice";
-import VisitCounterFooter from "@/components/VisitCounterFooter";
+
+import PromoBar from "@/components/PromoBar";
 import Footer from "@/components/Footer";
 export const metadata = { title: "LinguaFly" };
 
@@ -14,8 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <LanguageProvider>
                     <div className="root">
                         <Header />
+                        <PromoBar />
                         <main className="main">{children}</main>
-                        {/* футер с красивой цифиркой */}                        
+
                         <Footer />
                         <CookieNotice />
                     </div>
