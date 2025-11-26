@@ -166,25 +166,41 @@ body::before {
   flex-shrink: 0;
   padding: 12px 20px;
   font-size: 12px;
-  opacity: 0.8;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  /* подстрой под свою тему */
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0.85;
 }
 
 .siteFooterInner {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
   align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+ 
+  
+  
+}
+
+.siteFooterNav {
+  display: flex;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
-.siteFooterVisits {
-  white-space: nowrap;
+.siteFooterLink {
+  text-decoration: none;
+  opacity: 0.9;
 }
 
-.siteFooterCounter {
-  font-weight: 600;
+.siteFooterLink:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.siteFooterBrand {
+  opacity: 0.8;
 }
 
 /* === Кнопки в шапке (пилюли) === */
@@ -401,7 +417,8 @@ body::before {
 
 .dualRow {
   display: grid;
-  grid-template-columns: 1fr 1fr
+  grid-template-columns: 1fr 1fr;
+  color: #24426b
 }
 
 .dualCell {
@@ -449,7 +466,8 @@ body::before {
 
 
 .wNative {
-  opacity: .95
+  opacity: .95;
+  color: #5b6f92
 }
 
 .wTarget {
@@ -492,17 +510,10 @@ body::before {
 }
 
 .draggable {
-  cursor: grab
+  cursor: grab;
+  color: #0f2b4f
 }
 
-/* 
-.pairRow {
-  display: grid;
-  grid-template-columns: 1fr 240px;
-  gap: 12px;
-  align-items: center;  
-  gap:10px;
-} */
 
 .slot {
   border: 2px dashed #9fb6df;
@@ -552,7 +563,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
+  color: #0f2b4f;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -1025,4 +1036,65 @@ body::before {
 
 .cookieBtnSecondary:hover {
   opacity: 0.85;
+}
+
+/* Общий контейнер для страниц /legal, /privacy, /ai */
+.page_ {
+  max-width: 960px;              /* ширина как у основного контента */
+  margin: 24px auto 40px;        /* отступ сверху/снизу и авто по бокам */
+  padding: 24px 28px 28px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06); /* полупрозрачная карточка */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  color: #f5f7ff;
+  line-height: 1.6;
+}
+
+/* Заголовок страницы */
+.page_ h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Заголовки секций */
+.page_ h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+/* Параграфы */
+.page_ p {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+/* Немного воздуха между секциями */
+.page_ section {
+  margin-bottom: 16px;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 600px) {
+  .page_ {
+    margin: 16px 8px 24px;
+    padding: 16px 14px 18px;
+    border-radius: 12px;
+  }
+
+  .page_ h1 {
+    font-size: 20px;
+  }
+
+  .page_ h2 {
+    font-size: 16px;
+  }
+
+  .page_ p {
+    font-size: 13px;
+  }
 }
