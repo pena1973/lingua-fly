@@ -7,7 +7,6 @@ export type LearningLang = "pt" | "en";
 
 type Dict = Record<string, Record<UiLang, string>>;
 
-
 const dict: Dict = {
     app_title: { ru: "LinguaFly", en: "LinguaFly" },
     menu_profile: { ru: "Профиль", en: "Profile" },
@@ -21,11 +20,35 @@ const dict: Dict = {
     paired_texts: { ru: "Сопоставленные тексты", en: "Aligned texts" },
     native: { ru: "Родной", en: "Native" },
     target: { ru: "Изучаемый", en: "Target" },
-    match_help: { ru: "Перетащи карточку сверху к соответствующему слову снизу", en: "Drag a card from the top to a matching word below" },
+    match_help: {
+        ru: "Перетащи карточку сверху к соответствующему слову снизу",
+        en: "Drag a card from the top to a matching word below",
+    },
     reset: { ru: "Сброс", en: "Reset" },
     learning_lang: { ru: "Изучаемый язык", en: "Learning language" },
-};
 
+    // --- Promo bar ---
+    promo_dev_title: {
+        ru: "Rino Labs — разработка веб-приложений",
+        en: "Rino Labs — web application development",
+    },
+    promo_dev_text1: {
+        ru: "(частный разработчик)",
+        en: "(independent developer) ",
+    },
+    promo_dev_text2: {
+        ru: "Современные SaaS-сервисы, Next.js, Node.js, UX-дизайн, архитектура.",
+        en: "Modern SaaS products, Next.js, Node.js, UX design, architecture.",
+    },
+    promo_ad_title: {
+        ru: "Здесь может быть ваша реклама",
+        en: "Your advertisement could be here",
+    },
+    promo_ad_text: {
+        ru: "По вопросам размещения пишите:",
+        en: "For advertising inquiries, please contact:",
+    },
+};
 
 function detectInitialLang(): UiLang {
     if (typeof window === "undefined") return "ru";

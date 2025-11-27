@@ -20,110 +20,118 @@
 //   "range": { "from": "2025-10-27", "to": "2025-11-26" }
 // }
 
+// app/api/cf-visits/route.ts
 import { NextResponse } from "next/server";
 
 const CF_API_TOKEN = process.env.CF_API_TOKEN;
 const CF_ZONE_ID = process.env.CF_ZONE_ID;
 
-if (!CF_API_TOKEN || !CF_ZONE_ID) {
-  console.warn(
-    "[CF_VISITS] Missing CF_API_TOKEN or CF_ZONE_ID in environment variables"
-  );
-}
+// сколько дней считаем (можешь поставить 1, если хочешь "как в дашборде за 24ч")
+const DAYS = 30;
 
-// Запросим суммарные pageViews и uniques за последние 30 дней
 export async function GET() {
   if (!CF_API_TOKEN || !CF_ZONE_ID) {
+    console.warn("[CF_VISITS] Missing CF_API_TOKEN or CF_ZONE_ID");
     return NextResponse.json(
-      { error: "Cloudflare env vars are not configured" },
-      { status: 500 }
+      {
+        pageViews: 0,
+        uniquesApprox: 0,
+        days: 0,
+        range: { from: null, to: null },
+      },
+      { status: 200 }
     );
   }
 
-  try {
-    const today = new Date();
-    const endDate = today.toISOString().slice(0, 10); // YYYY-MM-DD
+  // берём дату (UTC) и отматываем N дней назад
+  const today = new Date();
+  today.setUTCHours(0, 0, 0, 0);
+  const start = new Date(today);
+  start.setUTCDate(start.getUTCDate() - DAYS);
 
-    const start = new Date(today);
-    start.setDate(start.getDate() - 30);
-    const startDate = start.toISOString().slice(0, 10); // YYYY-MM-DD
+  const startStr = start.toISOString().slice(0, 10); // YYYY-MM-DD
 
-    const query = `
-      query GetZoneAnalytics($zoneTag: string, $date_geq: string, $date_lt: string) {
-        viewer {
-          zones(filter: { zoneTag: $zoneTag }) {
-            httpRequests1dGroups(
-              limit: 1000,
-              filter: { date_geq: $date_geq, date_lt: $date_lt }
-            ) {
-              sum {
-                pageViews
-              }
-              uniq {
-                uniques
-              }
-            }
-          }
+  const query = `
+  {
+    viewer {
+      zones(filter: { zoneTag: "${CF_ZONE_ID}" }) {
+        httpRequests1dGroups(
+          limit: ${DAYS}
+          orderBy: [date_ASC]
+          filter: { date_geq: "${startStr}" }
+        ) {
+          dimensions { date }
+          sum { pageViews }
+          uniq { uniques }
         }
       }
-    `;
+    }
+  }`;
 
-    const payload = {
-      query,
-      variables: {
-        zoneTag: CF_ZONE_ID,
-        date_geq: startDate,
-        date_lt: endDate,
-      },
-    };
-
+  try {
     const resp = await fetch("https://api.cloudflare.com/client/v4/graphql", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
         Authorization: `Bearer ${CF_API_TOKEN}`,
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(payload),
+      body: JSON.stringify({ query }),
+      cache: "no-store",
     });
 
-    if (!resp.ok) {
-      const text = await resp.text();
-      console.error("[CF_VISITS] CF API error:", resp.status, text);
+    const json = await resp.json();
+
+    if (!resp.ok || json.errors) {
+      console.error("[CF_VISITS] GraphQL error", {
+        status: resp.status,
+        errors: json.errors,
+      });
       return NextResponse.json(
-        { error: "Cloudflare API error", status: resp.status },
-        { status: 502 }
+        {
+          pageViews: 0,
+          uniquesApprox: 0,
+          days: 0,
+          range: { from: null, to: null },
+        },
+        { status: 200 }
       );
     }
 
-    const data = await resp.json();
-
-    // Немного безопасного парсинга структуры
     const groups =
-      data?.data?.viewer?.zones?.[0]?.httpRequests1dGroups ?? [];
+      json?.data?.viewer?.zones?.[0]?.httpRequests1dGroups ?? [];
 
-    let totalPageViews = 0;
-    let totalUniquesApprox = 0;
+    const totalPageViews = groups.reduce(
+      (acc: number, g: any) => acc + (g.sum?.pageViews ?? 0),
+      0
+    );
+    const totalUniques = groups.reduce(
+      (acc: number, g: any) => acc + (g.uniq?.uniques ?? 0),
+      0
+    );
 
-    for (const g of groups) {
-      const pv = g?.sum?.pageViews ?? 0;
-      const u = g?.uniq?.uniques ?? 0;
-      totalPageViews += pv;
-      // uniques по дням не строго суммируются как "уникальные за период",
-      // но для "красивой циферки" можно использовать как приближение
-      totalUniquesApprox += u;
-    }
+    const days = groups.length;
+    const from = groups[0]?.dimensions?.date ?? null;
+    const to =
+      groups.length > 0
+        ? groups[groups.length - 1]?.dimensions?.date ?? null
+        : null;
 
     return NextResponse.json({
       pageViews: totalPageViews,
-      uniquesApprox: totalUniquesApprox,
-      days: groups.length,
-      range: { from: startDate, to: endDate },
+      uniquesApprox: totalUniques,
+      days,
+      range: { from, to },
     });
-  } catch (err) {
-    console.error("[CF_VISITS] Unexpected error:", err);
+  } catch (e) {
+    console.error("[CF_VISITS] Request failed", e);
     return NextResponse.json(
-      { error: "Internal error while fetching Cloudflare data" },
-      { status: 500 }
+      {
+        pageViews: 0,
+        uniquesApprox: 0,
+        days: 0,
+        range: { from: null, to: null },
+      },
+      { status: 200 }
     );
   }
 }
