@@ -331,8 +331,12 @@ body::before {
 .leftPane {
   padding: 12px;
   height: calc(100vh - 270px);
-  overflow: auto
+  overflow: auto;
+  scrollbar-color: #848f9c transparent;
 }
+
+
+
 
 .centerPane {
   padding: 16px
