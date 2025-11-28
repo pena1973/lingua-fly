@@ -330,7 +330,7 @@ body::before {
 
 .leftPane {
   padding: 12px;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 270px);
   overflow: auto
 }
 
