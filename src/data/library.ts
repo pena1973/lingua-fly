@@ -5,7 +5,7 @@ export type Section = { id: string; title_native: string; title_target: string; 
 
 
 export type Library = {
-    learningLang: "en" | "pt" | "es"; // что учим (пример: en)
+    learningLang: "en" | "pt" ; // что учим (пример: en)
     sections: Section[];
 };
 
