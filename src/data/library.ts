@@ -5,7 +5,7 @@ export type Section = { id: string; title_native: string; title_target: string; 
 
 
 export type Library = {
-    learningLang: "en" | "pt" ; // что учим (пример: en)
+    learningLang: "en" | "pt"; // что учим (пример: en)
     sections: Section[];
 };
 
@@ -13,7 +13,7 @@ export type Library = {
 // ====== PAREDES "ИЗУЧАЕМЫЙ ЯЗЫК — РОДНОЙ/ИНТЕРФЕЙС" ======
 
 export const libraryENRU: Library = {
-    learningLang: "en",    
+    learningLang: "en",
     sections: [
         {
             id: "A1",
@@ -1968,244 +1968,2263 @@ export const libraryENRU: Library = {
                 // 1. Прошедшее время — Past Simple (регулярные/нерегулярные)
                 {
                     id: "past_simple_basic",
+
                     rule: [
                         "Past Simple: did / didn’t + V1",
                         "Регулярные глаголы: worked, visited, watched",
                         "Нерегулярные глаголы: went, saw, ate"
                     ].join("\n"),
-                    title: "Past Simple — основы",
+
+                    title: "Прошедшее время — Past Simple (регулярные/нерегулярные)",
                     title_native: "Прошедшее время: основы",
                     title_target: "Past Simple Basics",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "Last weekend I visited my friend Anna.", native: "В прошлые выходные я навестил свою подругу Анну." },
+                        { target: "She lives in a small town.", native: "Она живёт в маленьком городке." },
+                        { target: "I went there by train.", native: "Я поехал туда на поезде." },
+                        { target: "The train ride was long but comfortable.", native: "Поездка была долгой, но комфортной." },
+
+                        { target: "I arrived in the morning.", native: "Я прибыл утром." },
+                        { target: "Anna met me at the station.", native: "Анна встретила меня на станции." },
+                        { target: "We walked to her house.", native: "Мы пошли пешком к её дому." },
+                        { target: "We talked a lot on the way.", native: "Мы много разговаривали по дороге." },
+
+                        { target: "Her family welcomed me warmly.", native: "Её семья тепло меня поприветствовала." },
+                        { target: "We drank tea together.", native: "Мы вместе выпили чай." },
+                        { target: "We ate a big breakfast.", native: "Мы съели большой завтрак." },
+                        { target: "The food was delicious.", native: "Еда была вкусной." },
+
+                        { target: "After breakfast we visited the town center.", native: "После завтрака мы посетили центр города." },
+                        { target: "We walked around the old streets.", native: "Мы гуляли по старым улицам." },
+                        { target: "We saw many interesting buildings.", native: "Мы увидели много интересных зданий." },
+                        { target: "We took photos together.", native: "Мы сделали фотографии вместе." },
+
+                        { target: "Then we went to the local museum.", native: "Затем мы пошли в местный музей." },
+                        { target: "The museum had a new exhibition.", native: "В музее была новая выставка." },
+                        { target: "We watched a short film about the town.", native: "Мы посмотрели короткий фильм о городе." },
+                        { target: "I learned many new facts.", native: "Я узнал много новых фактов." },
+
+                        { target: "In the afternoon we met Anna’s friends.", native: "Днём мы встретили друзей Анны." },
+                        { target: "We sat in a small café.", native: "Мы сидели в маленьком кафе." },
+                        { target: "We drank coffee and talked.", native: "Мы пили кофе и разговаривали." },
+                        { target: "They asked me many questions.", native: "Они задавали мне много вопросов." },
+
+                        { target: "We laughed a lot.", native: "Мы много смеялись." },
+                        { target: "The atmosphere was friendly.", native: "Атмосфера была дружелюбной." },
+                        { target: "We stayed there for two hours.", native: "Мы пробыли там два часа." },
+                        { target: "Then we went to a park.", native: "Затем мы пошли в парк." },
+
+                        { target: "The park was quiet and beautiful.", native: "Парк был тихим и красивым." },
+                        { target: "We walked near the lake.", native: "Мы гуляли возле озера." },
+                        { target: "The water looked calm.", native: "Вода выглядела спокойной." },
+                        { target: "We fed the ducks.", native: "Мы кормили уток." },
+
+                        { target: "In the evening we returned home.", native: "Вечером мы вернулись домой." },
+                        { target: "We cooked dinner together.", native: "Мы приготовили ужин вместе." },
+                        { target: "We listened to music.", native: "Мы слушали музыку." },
+                        { target: "We talked about our plans.", native: "Мы говорили о наших планах." },
+
+                        { target: "After dinner we watched a movie.", native: "После ужина мы посмотрели фильм." },
+                        { target: "The movie was funny.", native: "Фильм был забавным." },
+                        { target: "We enjoyed it very much.", native: "Он нам очень понравился." },
+                        { target: "We went to bed late.", native: "Мы легли спать поздно." },
+
+                        { target: "The next day I woke up early.", native: "На следующий день я проснулся рано." },
+                        { target: "Anna made breakfast again.", native: "Анна снова приготовила завтрак." },
+                        { target: "We ate pancakes.", native: "Мы ели блинчики." },
+                        { target: "They tasted great.", native: "Они были очень вкусными." },
+
+                        { target: "I packed my bag.", native: "Я собрал свою сумку." },
+                        { target: "Anna walked with me to the station.", native: "Анна пошла со мной на станцию." },
+                        { target: "We said goodbye.", native: "Мы попрощались." },
+                        { target: "I took the train home.", native: "Я поехал домой на поезде." },
+
+                        { target: "I thought about the weekend during the trip.", native: "Я думал о выходных во время поездки." },
+                        { target: "I felt happy.", native: "Я чувствовал себя счастливым." },
+                        { target: "It was a great weekend.", native: "Это были замечательные выходные." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "visited", native: "навестил" },
+                        { id: "w2", target: "went", native: "поехал" },
+                        { id: "w3", target: "arrived", native: "прибыл" },
+                        { id: "w4", target: "met", native: "встретил" },
+                        { id: "w5", target: "walked", native: "гулял" },
+
+                        { id: "w6", target: "talked", native: "разговаривал" },
+                        { id: "w7", target: "drank", native: "пил" },
+                        { id: "w8", target: "ate", native: "ел" },
+                        { id: "w9", target: "watched", native: "смотрел" },
+                        { id: "w10", target: "worked", native: "работал" },
+
+                        { id: "w11", target: "saw", native: "увидел" },
+                        { id: "w12", target: "took", native: "взял/сделал" },
+                        { id: "w13", target: "learned", native: "узнал" },
+                        { id: "w14", target: "asked", native: "спросил" },
+                        { id: "w15", target: "laughed", native: "смеялся" },
+
+                        { id: "w16", target: "stayed", native: "остался" },
+                        { id: "w17", target: "returned", native: "вернулся" },
+                        { id: "w18", target: "cooked", native: "готовил" },
+                        { id: "w19", target: "listened", native: "слушал" },
+                        { id: "w20", target: "enjoyed", native: "наслаждался" },
+
+                        { id: "w21", target: "woke up", native: "проснулся" },
+                        { id: "w22", target: "packed", native: "собрал" },
+                        { id: "w23", target: "said goodbye", native: "попрощался" },
+                        { id: "w24", target: "thought", native: "думал" },
+                        { id: "w25", target: "felt", native: "чувствовал" },
+
+                        { id: "w26", target: "weekend", native: "выходные" },
+                        { id: "w27", target: "trip", native: "поездка" },
+                        { id: "w28", target: "station", native: "станция" },
+                        { id: "w29", target: "museum", native: "музей" },
+                        { id: "w30", target: "breakfast", native: "завтрак" },
+
+                        { id: "w31", target: "dinner", native: "ужин" },
+                        { id: "w32", target: "evening", native: "вечер" },
+                        { id: "w33", target: "morning", native: "утро" },
+                        { id: "w34", target: "family", native: "семья" },
+                        { id: "w35", target: "friends", native: "друзья" },
+
+                        { id: "w36", target: "center", native: "центр" },
+                        { id: "w37", target: "lake", native: "озеро" },
+                        { id: "w38", target: "house", native: "дом" },
+                        { id: "w39", target: "city", native: "город" },
+                        { id: "w40", target: "food", native: "еда" },
+
+                        { id: "w41", target: "quiet", native: "тихий" },
+                        { id: "w42", target: "beautiful", native: "красивый" },
+                        { id: "w43", target: "comfortable", native: "комфортный" },
+                        { id: "w44", target: "warmly", native: "тепло" },
+                        { id: "w45", target: "delicious", native: "вкусный" },
+
+                        { id: "w46", target: "together", native: "вместе" },
+                        { id: "w47", target: "question", native: "вопрос" },
+                        { id: "w48", target: "plan", native: "план" },
+                        { id: "w49", target: "photo", native: "фото" },
+                        { id: "w50", target: "building", native: "здание" }
+                    ]
+                },
                 // 2. Пересказ событий — последовательность действий
                 {
                     id: "past_simple_story",
+
                     rule: [
                         "Past Simple для рассказа о прошедших событиях",
                         "Порядок действий: first, then, after that, finally"
                     ].join("\n"),
-                    title: "Истории в прошедшем",
+
+                    title: "Пересказ событий — последовательность действий",
                     title_native: "Рассказ о событиях",
                     title_target: "Telling a Past Story",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "Last Saturday I had a very busy day.", native: "В прошлую субботу у меня был очень занятой день." },
+                        { target: "First, I woke up earlier than usual.", native: "Сначала я проснулся раньше обычного." },
+                        { target: "The sun was already bright.", native: "Солнце уже сияло ярко." },
+                        { target: "I got out of bed and made my breakfast.", native: "Я встал с постели и приготовил себе завтрак." },
+
+                        { target: "I ate toast and drank tea.", native: "Я съел тост и выпил чай." },
+                        { target: "Then I cleaned my room.", native: "Затем я убрал свою комнату." },
+                        { target: "I washed the dishes.", native: "Я помыл посуду." },
+                        { target: "I vacuumed the floor.", native: "Я пропылесосил пол." },
+
+                        { target: "After that, I left the house.", native: "После этого я вышел из дома." },
+                        { target: "I went to the bus stop.", native: "Я пошёл на автобусную остановку." },
+                        { target: "The bus arrived on time.", native: "Автобус прибыл вовремя." },
+                        { target: "I took the bus to the city center.", native: "Я поехал на автобусе в центр города." },
+
+                        { target: "I met my friend Tom there.", native: "Там я встретил своего друга Тома." },
+                        { target: "We planned a long walk together.", native: "Мы запланировали долгую прогулку вместе." },
+                        { target: "First, we visited a small café.", native: "Сначала мы посетили маленькое кафе." },
+                        { target: "We drank coffee and talked about our week.", native: "Мы выпили кофе и поговорили о нашей неделе." },
+
+                        { target: "Then we walked to the park.", native: "Затем мы пошли в парк." },
+                        { target: "The park was full of people.", native: "Парк был полон людей." },
+                        { target: "Children played on the playground.", native: "Дети играли на игровой площадке." },
+                        { target: "We sat on a bench near the lake.", native: "Мы сели на скамейку возле озера." },
+
+                        { target: "We watched the ducks swim.", native: "Мы смотрели, как плавают утки." },
+                        { target: "After that, we went to the museum.", native: "После этого мы отправились в музей." },
+                        { target: "The museum had a new art exhibition.", native: "В музее была новая художественная выставка." },
+                        { target: "We looked at many paintings.", native: "Мы посмотрели много картин." },
+
+                        { target: "I liked a painting of a mountain.", native: "Мне понравилась картина с горой." },
+                        { target: "Tom liked a painting of a river.", native: "Тому понравилась картина с рекой." },
+                        { target: "We talked about the artists.", native: "Мы поговорили об художниках." },
+                        { target: "We took some photos.", native: "Мы сделали несколько фотографий." },
+
+                        { target: "Then we left the museum and walked to a bookstore.", native: "Потом мы вышли из музея и пошли в книжный магазин." },
+                        { target: "I bought a novel.", native: "Я купил роман." },
+                        { target: "Tom bought a travel guide.", native: "Том купил туристический путеводитель." },
+                        { target: "We spent a long time looking at books.", native: "Мы долго смотрели книги." },
+
+                        { target: "After that, we ate lunch in a small restaurant.", native: "После этого мы пообедали в маленьком ресторане." },
+                        { target: "I ordered soup.", native: "Я заказал суп." },
+                        { target: "Tom ordered pasta.", native: "Том заказал пасту." },
+                        { target: "The food tasted great.", native: "Еда была очень вкусной." },
+
+                        { target: "Finally, we said goodbye.", native: "Наконец мы попрощались." },
+                        { target: "I went back to the bus stop.", native: "Я вернулся на автобусную остановку." },
+                        { target: "I took the bus home.", native: "Я поехал домой на автобусе." },
+                        { target: "I arrived home tired but happy.", native: "Я приехал домой уставшим, но счастливым." },
+
+                        { target: "In the evening I read my new book.", native: "Вечером я почитал свою новую книгу." },
+                        { target: "I wrote about my day in my notebook.", native: "Я записал свой день в блокнот." },
+                        { target: "Then I went to bed early.", native: "Потом я лёг спать рано." },
+                        { target: "It was a good day.", native: "Это был хороший день." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "first", native: "сначала" },
+                        { id: "w2", target: "then", native: "затем" },
+                        { id: "w3", target: "after that", native: "после этого" },
+                        { id: "w4", target: "finally", native: "в конце концов" },
+                        { id: "w5", target: "visited", native: "посетил" },
+
+                        { id: "w6", target: "woke up", native: "проснулся" },
+                        { id: "w7", target: "made", native: "сделал" },
+                        { id: "w8", target: "ate", native: "ел" },
+                        { id: "w9", target: "drank", native: "пил" },
+                        { id: "w10", target: "cleaned", native: "убрал" },
+
+                        { id: "w11", target: "washed", native: "помыли" },
+                        { id: "w12", target: "vacuumed", native: "пропылесосил" },
+                        { id: "w13", target: "left", native: "покинул" },
+                        { id: "w14", target: "took", native: "взял/сел на" },
+                        { id: "w15", target: "met", native: "встретил" },
+
+                        { id: "w16", target: "walked", native: "гулял" },
+                        { id: "w17", target: "talked", native: "разговаривал" },
+                        { id: "w18", target: "sat", native: "сидел" },
+                        { id: "w19", target: "watched", native: "смотрел" },
+                        { id: "w20", target: "looked", native: "смотрели" },
+
+                        { id: "w21", target: "painting", native: "картина" },
+                        { id: "w22", target: "museum", native: "музей" },
+                        { id: "w23", target: "bookstore", native: "книжный магазин" },
+                        { id: "w24", target: "novel", native: "роман" },
+                        { id: "w25", target: "guide", native: "путеводитель" },
+
+                        { id: "w26", target: "ordered", native: "заказал" },
+                        { id: "w27", target: "restaurant", native: "ресторан" },
+                        { id: "w28", target: "bus stop", native: "автобусная остановка" },
+                        { id: "w29", target: "arrived", native: "прибыл" },
+                        { id: "w30", target: "notebook", native: "блокнот" },
+
+                        { id: "w31", target: "busy", native: "занятой" },
+                        { id: "w32", target: "bright", native: "яркий" },
+                        { id: "w33", target: "together", native: "вместе" },
+                        { id: "w34", target: "lake", native: "озеро" },
+                        { id: "w35", target: "playground", native: "детская площадка" },
+
+                        { id: "w36", target: "art", native: "искусство" },
+                        { id: "w37", target: "photo", native: "фото" },
+                        { id: "w38", target: "lunch", native: "обед" },
+                        { id: "w39", target: "morning", native: "утро" },
+                        { id: "w40", target: "evening", native: "вечер" },
+
+                        { id: "w41", target: "center", native: "центр" },
+                        { id: "w42", target: "city", native: "город" },
+                        { id: "w43", target: "bench", native: "скамейка" },
+                        { id: "w44", target: "river", native: "река" },
+                        { id: "w45", target: "mountain", native: "гора" },
+
+                        { id: "w46", target: "said goodbye", native: "попрощался" },
+                        { id: "w47", target: "tired", native: "уставший" },
+                        { id: "w48", target: "happy", native: "счастливый" },
+                        { id: "w49", target: "week", native: "неделя" },
+                        { id: "w50", target: "story", native: "история" }
+                    ]
+                },
                 // 3. Сравнения — Comparative / Superlative
                 {
                     id: "comparatives_superlatives",
+
                     rule: [
                         "Сравнительная степень: bigger, faster, more interesting",
-                        "Превосходная степень: the biggest, the most interesting"
+                        "Превосходная степень: the biggest, the fastest, the most interesting"
                     ].join("\n"),
+
                     title: "Сравнения",
                     title_native: "Сравнительная и превосходная степени",
                     title_target: "Comparatives and Superlatives",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "Last month my friend Tom and I visited three different cities.", native: "В прошлом месяце мы с другом Томом посетили три разных города." },
+                        { target: "We wanted to compare them.", native: "Мы хотели сравнить их." },
+                        { target: "The first city was small.", native: "Первый город был маленьким." },
+                        { target: "It was smaller than our hometown.", native: "Он был меньше, чем наш родной город." },
+
+                        { target: "The streets were quieter.", native: "Улицы были тише." },
+                        { target: "The restaurants were cheaper.", native: "Рестораны были дешевле." },
+                        { target: "The people were friendlier than we expected.", native: "Люди были дружелюбнее, чем мы ожидали." },
+                        { target: "It was one of the nicest towns we visited.", native: "Это был один из самых приятных городков, которые мы посетили." },
+
+                        { target: "Then we traveled to a second city.", native: "Затем мы поехали во второй город." },
+                        { target: "It was bigger and busier.", native: "Он был больше и оживлённее." },
+                        { target: "The buildings were taller.", native: "Здания были выше." },
+                        { target: "The shops were more modern.", native: "Магазины были современнее." },
+
+                        { target: "The food was better.", native: "Еда была лучше." },
+                        { target: "The museum there was more interesting than the one in the first city.", native: "Музей там был интереснее, чем в первом городе." },
+                        { target: "We spent more time there.", native: "Мы провели там больше времени." },
+                        { target: "It was the most exciting part of our trip.", native: "Это была самая захватывающая часть нашего путешествия." },
+
+                        { target: "Finally, we went to the third city.", native: "Наконец мы отправились в третий город." },
+                        { target: "It was the biggest city of all.", native: "Это был самый большой город из всех." },
+                        { target: "The streets were the busiest.", native: "Улицы были самыми оживлёнными." },
+                        { target: "The traffic was the noisiest.", native: "Движение было самым шумным." },
+
+                        { target: "But the park there was the most beautiful place.", native: "Но парк там был самым красивым местом." },
+                        { target: "It was larger than the parks in the other cities.", native: "Он был больше, чем парки в других городах." },
+                        { target: "It had the greenest trees.", native: "Там были самые зелёные деревья." },
+                        { target: "We walked for hours.", native: "Мы гуляли часами." },
+
+                        { target: "The river in the third city was wider.", native: "Река в третьем городе была шире." },
+                        { target: "It was also cleaner.", native: "Она была также чище." },
+                        { target: "The bridges were the longest we saw.", native: "Мосты были самыми длинными из тех, что мы видели." },
+                        { target: "We took many photos.", native: "Мы сделали много фотографий." },
+
+                        { target: "Tom liked the first city the most.", native: "Тому больше всего понравился первый город." },
+                        { target: "He said it was quieter and safer.", native: "Он сказал, что он тише и безопаснее." },
+                        { target: "I liked the second city more.", native: "Мне больше понравился второй город." },
+                        { target: "I found it more comfortable and more fun.", native: "Он показался мне более комфортным и более весёлым." },
+
+                        { target: "We agreed that all three cities were different.", native: "Мы согласились, что все три города были разными." },
+                        { target: "Each city had something special.", native: "Каждый город имел что-то особенное." },
+                        { target: "The first was the quietest.", native: "Первый был самым тихим." },
+                        { target: "The second was the most interesting.", native: "Второй был самым интересным." },
+
+                        { target: "The third was the largest.", native: "Третий был самым большим." },
+                        { target: "Our trip became longer than we planned.", native: "Наше путешествие стало длиннее, чем мы планировали." },
+                        { target: "But it was one of the best experiences we had.", native: "Но это был один из лучших наших опытов." },
+                        { target: "We learned a lot from the trip.", native: "Мы многому научились из этого путешествия." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "bigger", native: "больше" },
+                        { id: "w2", target: "smaller", native: "меньше" },
+                        { id: "w3", target: "quieter", native: "тише" },
+                        { id: "w4", target: "cheaper", native: "дешевле" },
+                        { id: "w5", target: "friendlier", native: "дружелюбнее" },
+
+                        { id: "w6", target: "nicest", native: "самый приятный" },
+                        { id: "w7", target: "busier", native: "оживлённее" },
+                        { id: "w8", target: "taller", native: "выше" },
+                        { id: "w9", target: "more modern", native: "современнее" },
+                        { id: "w10", target: "better", native: "лучше" },
+
+                        { id: "w11", target: "more interesting", native: "интереснее" },
+                        { id: "w12", target: "most interesting", native: "самый интересный" },
+                        { id: "w13", target: "most exciting", native: "самый захватывающий" },
+                        { id: "w14", target: "biggest", native: "самый большой" },
+                        { id: "w15", target: "busiest", native: "самый оживлённый" },
+
+                        { id: "w16", target: "noisiest", native: "самый шумный" },
+                        { id: "w17", target: "most beautiful", native: "самый красивый" },
+                        { id: "w18", target: "greenest", native: "самый зелёный" },
+                        { id: "w19", target: "wider", native: "шире" },
+                        { id: "w20", target: "cleaner", native: "чище" },
+
+                        { id: "w21", target: "longest", native: "самый длинный" },
+                        { id: "w22", target: "safer", native: "безопаснее" },
+                        { id: "w23", target: "more comfortable", native: "комфортнее" },
+                        { id: "w24", target: "more fun", native: "веселее" },
+                        { id: "w25", target: "different", native: "разный" },
+
+                        { id: "w26", target: "city", native: "город" },
+                        { id: "w27", target: "trip", native: "путешествие" },
+                        { id: "w28", target: "experience", native: "опыт" },
+                        { id: "w29", target: "street", native: "улица" },
+                        { id: "w30", target: "restaurant", native: "ресторан" },
+
+                        { id: "w31", target: "building", native: "здание" },
+                        { id: "w32", target: "shop", native: "магазин" },
+                        { id: "w33", target: "park", native: "парк" },
+                        { id: "w34", target: "lake", native: "озеро" },
+                        { id: "w35", target: "bridge", native: "мост" },
+
+                        { id: "w36", target: "painting", native: "картина" },
+                        { id: "w37", target: "photo", native: "фото" },
+                        { id: "w38", target: "river", native: "река" },
+                        { id: "w39", target: "modern", native: "современный" },
+                        { id: "w40", target: "exciting", native: "захватывающий" },
+
+                        { id: "w41", target: "quiet", native: "тихий" },
+                        { id: "w42", target: "busy", native: "оживлённый" },
+                        { id: "w43", target: "big", native: "большой" },
+                        { id: "w44", target: "small", native: "маленький" },
+                        { id: "w45", target: "beautiful", native: "красивый" },
+
+                        { id: "w46", target: "compare", native: "сравнивать" },
+                        { id: "w47", target: "visit", native: "посещать" },
+                        { id: "w48", target: "plan", native: "планировать" },
+                        { id: "w49", target: "agree", native: "соглашаться" },
+                        { id: "w50", target: "special", native: "особенный" }
+                    ]
+                },
                 // 4. Модальные глаголы — must / have to
                 {
                     id: "must_have_to",
+
                     rule: [
                         "must — личная необходимость",
                         "have to — внешняя необходимость"
                     ].join("\n"),
-                    title: "Обязанность и необходимость",
+
+                    title: "Модальные глаголы — must / have to",
                     title_native: "Must / Have to",
                     title_target: "Must vs Have to",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "Last Monday I had a very busy day at work.", native: "В прошлый понедельник у меня был очень занятый день на работе." },
+                        { target: "I had to wake up early because I had a meeting.", native: "Мне пришлось проснуться рано, потому что у меня была встреча." },
+                        { target: "I did not want to get up, but I had to.", native: "Я не хотел вставать, но мне пришлось." },
+                        { target: "I must drink coffee in the morning.", native: "Я должен выпить кофе утром." },
+
+                        { target: "I had to catch the bus at seven.", native: "Мне нужно было успеть на автобус в семь." },
+                        { target: "The bus was full, so I had to stand.", native: "Автобус был полным, поэтому мне пришлось стоять." },
+                        { target: "I must be on time for my meetings.", native: "Я должен быть вовремя на своих встречах." },
+                        { target: "I arrived at the office at eight.", native: "Я прибыл в офис в восемь." },
+
+                        { target: "First, I had to check my emails.", native: "Сначала мне нужно было проверить свои письма." },
+                        { target: "I had to answer many questions.", native: "Мне пришлось ответить на много вопросов." },
+                        { target: "I must focus when I work.", native: "Я должен концентрироваться, когда я работаю." },
+                        { target: "My boss asked me to prepare a report.", native: "Мой начальник попросил меня подготовить отчёт." },
+
+                        { target: "I had to finish the report before lunch.", native: "Мне нужно было закончить отчёт до обеда." },
+                        { target: "I must write clearly so everyone understands.", native: "Я должен писать ясно, чтобы все понимали." },
+                        { target: "I worked fast, because I had to join another meeting.", native: "Я работал быстро, потому что мне нужно было присоединиться к другой встрече." },
+                        { target: "The meeting was long.", native: "Встреча была долгой." },
+
+                        { target: "After that, I had to call our clients.", native: "После этого мне нужно было позвонить нашим клиентам." },
+                        { target: "I must be polite when I speak with clients.", native: "Я должен быть вежливым, когда разговариваю с клиентами." },
+                        { target: "One client had a problem.", native: "У одного клиента была проблема." },
+                        { target: "I had to help him solve it.", native: "Мне пришлось помочь ему решить её." },
+
+                        { target: "I must stay calm in difficult situations.", native: "Я должен сохранять спокойствие в трудных ситуациях." },
+                        { target: "At one o’clock I had to go to lunch.", native: "В час дня мне нужно было пойти на обед." },
+                        { target: "I must eat something healthy.", native: "Я должен съесть что-то полезное." },
+                        { target: "I ate soup and salad.", native: "Я ел суп и салат." },
+
+                        { target: "After lunch I had to finish a presentation.", native: "После обеда мне нужно было закончить презентацию." },
+                        { target: "I must check every slide carefully.", native: "Я должен внимательно проверить каждый слайд." },
+                        { target: "Then I had to join a video call.", native: "Затем мне нужно было присоединиться к видеозвонку." },
+                        { target: "My internet was slow, so I had to reconnect.", native: "Мой интернет был медленным, поэтому мне пришлось переподключиться." },
+
+                        { target: "In the evening I had to stay late at the office.", native: "Вечером мне пришлось задержаться в офисе." },
+                        { target: "I must finish my tasks before I go home.", native: "Я должен закончить задачи перед тем, как идти домой." },
+                        { target: "I finally finished at seven.", native: "Наконец я закончил в семь." },
+                        { target: "I had to take a taxi because the buses were full.", native: "Мне пришлось взять такси, потому что автобусы были переполнены." },
+
+                        { target: "At home I must relax.", native: "Дома я должен расслабиться." },
+                        { target: "I made dinner.", native: "Я приготовил ужин." },
+                        { target: "I watched a short film.", native: "Я посмотрел короткий фильм." },
+                        { target: "I felt tired after the long day.", native: "Я чувствовал себя уставшим после долгого дня." },
+
+                        { target: "Before bed I had to plan the next day.", native: "Перед сном мне нужно было спланировать следующий день." },
+                        { target: "I must write a list to stay organized.", native: "Я должен написать список, чтобы оставаться организованным." },
+                        { target: "Finally, I went to sleep.", native: "Наконец я лёг спать." },
+                        { target: "It was a productive day.", native: "Это был продуктивный день." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "must", native: "должен (личная необходимость)" },
+                        { id: "w2", target: "have to", native: "вынужден (внешняя необходимость)" },
+                        { id: "w3", target: "had to", native: "пришлось" },
+                        { id: "w4", target: "must be", native: "должен быть" },
+                        { id: "w5", target: "must do", native: "должен сделать" },
+
+                        { id: "w6", target: "report", native: "отчет" },
+                        { id: "w7", target: "presentation", native: "презентация" },
+                        { id: "w8", target: "meeting", native: "встреча" },
+                        { id: "w9", target: "client", native: "клиент" },
+                        { id: "w10", target: "boss", native: "начальник" },
+
+                        { id: "w11", target: "answer", native: "отвечать" },
+                        { id: "w12", target: "solve", native: "решать" },
+                        { id: "w13", target: "prepare", native: "готовить" },
+                        { id: "w14", target: "check", native: "проверять" },
+                        { id: "w15", target: "focus", native: "концентрироваться" },
+
+                        { id: "w16", target: "wake up", native: "просыпаться" },
+                        { id: "w17", target: "catch", native: "успеть (на транспорт)" },
+                        { id: "w18", target: "arrive", native: "прибывать" },
+                        { id: "w19", target: "stay", native: "оставаться" },
+                        { id: "w20", target: "relax", native: "расслабляться" },
+
+                        { id: "w21", target: "healthy", native: "полезный" },
+                        { id: "w22", target: "organized", native: "организованный" },
+                        { id: "w23", target: "busy", native: "занятой" },
+                        { id: "w24", target: "tired", native: "уставший" },
+                        { id: "w25", target: "productive", native: "продуктивный" },
+
+                        { id: "w26", target: "office", native: "офис" },
+                        { id: "w27", target: "bus", native: "автобус" },
+                        { id: "w28", target: "taxi", native: "такси" },
+                        { id: "w29", target: "internet", native: "интернет" },
+                        { id: "w30", target: "film", native: "фильм" },
+
+                        { id: "w31", target: "plan", native: "планировать" },
+                        { id: "w32", target: "write", native: "писать" },
+                        { id: "w33", target: "list", native: "список" },
+                        { id: "w34", target: "email", native: "электронное письмо" },
+                        { id: "w35", target: "question", native: "вопрос" },
+
+                        { id: "w36", target: "help", native: "помогать" },
+                        { id: "w37", target: "understand", native: "понимать" },
+                        { id: "w38", target: "speak", native: "говорить" },
+                        { id: "w39", target: "cook", native: "готовить" },
+                        { id: "w40", target: "eat", native: "есть" },
+
+                        { id: "w41", target: "drink", native: "пить" },
+                        { id: "w42", target: "early", native: "рано" },
+                        { id: "w43", target: "late", native: "поздно" },
+                        { id: "w44", target: "slide", native: "слайд" },
+                        { id: "w45", target: "task", native: "задача" },
+
+                        { id: "w46", target: "problem", native: "проблема" },
+                        { id: "w47", target: "solution", native: "решение" },
+                        { id: "w48", target: "call", native: "звонок" },
+                        { id: "w49", target: "day", native: "день" },
+                        { id: "w50", target: "home", native: "дом" }
+                    ]
+                },
                 // 5. Планы и надежды — Future: will
                 {
                     id: "future_will",
+
                     rule: [
                         "will — решение в момент речи",
                         "Структуры: I think…, I hope…, I’m sure…"
                     ].join("\n"),
-                    title: "Будущее: will",
+
+                    title: "Планы и надежды — Future: will",
                     title_native: "Планы и надежды",
                     title_target: "Future with Will",
-                    sentences: [],
-                    words: []
+
+                    sentences: [
+                        { target: "Next year I will start a new chapter in my life.", native: "В следующем году я начну новую главу в своей жизни." },
+                        { target: "I think it will be exciting.", native: "Я думаю, это будет увлекательно." },
+                        { target: "I hope I will learn many new things.", native: "Я надеюсь, что я узнаю много нового." },
+                        { target: "I’m sure I will grow as a person.", native: "Я уверена, что я вырасту как личность." },
+
+                        { target: "Tomorrow I will make a plan for the year.", native: "Завтра я составлю план на год." },
+                        { target: "I think I will write down my goals.", native: "Я думаю, я запишу свои цели." },
+                        { target: "I will try to be realistic.", native: "Я постараюсь быть реалистичной." },
+                        { target: "I will also dream big.", native: "Я также буду мечтать масштабно." },
+
+                        { target: "Next week I will start exercising again.", native: "На следующей неделе я снова начну заниматься спортом." },
+                        { target: "I think exercise will make me feel better.", native: "Я думаю, спорт поможет мне чувствовать себя лучше." },
+                        { target: "I will go for long walks.", native: "Я буду ходить на долгие прогулки." },
+                        { target: "Sometimes I will run a little.", native: "Иногда я немного побегаю." },
+
+                        { target: "I will also cook healthier food.", native: "Я также буду готовить более полезную еду." },
+                        { target: "I hope I will have more energy.", native: "Я надеюсь, у меня будет больше энергии." },
+                        { target: "I will drink more water.", native: "Я буду пить больше воды." },
+                        { target: "I will try to sleep eight hours every night.", native: "Я постараюсь спать восемь часов каждую ночь." },
+
+                        { target: "This summer I will travel somewhere new.", native: "Этим летом я поеду куда-то в новое место." },
+                        { target: "I think I will visit a warm country.", native: "Я думаю, что посещу тёплую страну." },
+                        { target: "I will swim in the sea.", native: "Я буду плавать в море." },
+                        { target: "I will take many photos.", native: "Я сделаю много фотографий." },
+
+                        { target: "I hope I will meet interesting people.", native: "Я надеюсь, что встречу интересных людей." },
+                        { target: "I will try new food.", native: "Я попробую новую еду." },
+                        { target: "I think the trip will inspire me.", native: "Я думаю, путешествие меня вдохновит." },
+                        { target: "I will write about it in my diary.", native: "Я напишу об этом в своём дневнике." },
+
+                        { target: "My family will support me.", native: "Моя семья будет поддерживать меня." },
+                        { target: "My friends will visit me sometimes.", native: "Мои друзья будут иногда навещать меня." },
+                        { target: "We will spend good time together.", native: "Мы будем хорошо проводить время вместе." },
+                        { target: "We will celebrate my success.", native: "Мы будем праздновать мои успехи." },
+
+                        { target: "One day I will start a big project.", native: "Однажды я начну большой проект." },
+                        { target: "I think it will take a lot of time.", native: "Я думаю, это займёт много времени." },
+                        { target: "But I’m sure I will finish it.", native: "Но я уверена, что закончу его." },
+                        { target: "I will not give up.", native: "Я не сдамся." },
+
+                        { target: "In the evening I will relax.", native: "Вечером я буду отдыхать." },
+                        { target: "I will watch a movie.", native: "Я посмотрю фильм." },
+                        { target: "I think the movie will be funny.", native: "Я думаю, фильм будет забавным." },
+                        { target: "After that I will read a book.", native: "После этого я почитаю книгу." },
+
+                        { target: "Before bed I will think about my goals.", native: "Перед сном я подумаю о своих целях." },
+                        { target: "I hope I will stay motivated.", native: "Я надеюсь, что останусь мотивированной." },
+                        { target: "I will try to do my best every day.", native: "Я постараюсь выкладываться каждый день." },
+                        { target: "My future will be bright.", native: "Моё будущее будет светлым." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "will", native: "будет / буду" },
+                        { id: "w2", target: "I think", native: "я думаю" },
+                        { id: "w3", target: "I hope", native: "я надеюсь" },
+                        { id: "w4", target: "I’m sure", native: "я уверена" },
+                        { id: "w5", target: "decide", native: "решать" },
+
+                        { id: "w6", target: "plan", native: "план" },
+                        { id: "w7", target: "goal", native: "цель" },
+                        { id: "w8", target: "dream", native: "мечтать" },
+                        { id: "w9", target: "exercise", native: "заниматься спортом" },
+                        { id: "w10", target: "walk", native: "гулять" },
+
+                        { id: "w11", target: "run", native: "бегать" },
+                        { id: "w12", target: "healthy", native: "полезный" },
+                        { id: "w13", target: "energy", native: "энергия" },
+                        { id: "w14", target: "sleep", native: "спать" },
+                        { id: "w15", target: "travel", native: "путешествовать" },
+
+                        { id: "w16", target: "sea", native: "море" },
+                        { id: "w17", target: "photo", native: "фото" },
+                        { id: "w18", target: "meet", native: "встречать" },
+                        { id: "w19", target: "inspire", native: "вдохновлять" },
+                        { id: "w20", target: "write", native: "писать" },
+
+                        { id: "w21", target: "diary", native: "дневник" },
+                        { id: "w22", target: "support", native: "поддерживать" },
+                        { id: "w23", target: "celebrate", native: "праздновать" },
+                        { id: "w24", target: "project", native: "проект" },
+                        { id: "w25", target: "finish", native: "заканчивать" },
+
+                        { id: "w26", target: "give up", native: "сдаваться" },
+                        { id: "w27", target: "relax", native: "расслабляться" },
+                        { id: "w28", target: "movie", native: "фильм" },
+                        { id: "w29", target: "funny", native: "забавный" },
+                        { id: "w30", target: "book", native: "книга" },
+
+                        { id: "w31", target: "future", native: "будущее" },
+                        { id: "w32", target: "bright", native: "светлый" },
+                        { id: "w33", target: "tomorrow", native: "завтра" },
+                        { id: "w34", target: "next week", native: "на следующей неделе" },
+                        { id: "w35", target: "next year", native: "в следующем году" },
+
+                        { id: "w36", target: "cook", native: "готовить" },
+                        { id: "w37", target: "water", native: "вода" },
+                        { id: "w38", target: "food", native: "еда" },
+                        { id: "w39", target: "energy", native: "энергия" },
+                        { id: "w40", target: "success", native: "успех" },
+
+                        { id: "w41", target: "write down", native: "записывать" },
+                        { id: "w42", target: "big", native: "большой" },
+                        { id: "w43", target: "learn", native: "учиться / узнавать" },
+                        { id: "w44", target: "hope", native: "надежда" },
+                        { id: "w45", target: "sure", native: "уверенный" },
+
+                        { id: "w46", target: "try", native: "пытаться" },
+                        { id: "w47", target: "stay", native: "оставаться" },
+                        { id: "w48", target: "motivation", native: "мотивация" },
+                        { id: "w49", target: "country", native: "страна" },
+                        { id: "w50", target: "people", native: "люди" }
+                    ]
                 },
                 // ⚡ 16. Present Continuous — действия, происходящие сейчас
                 {
                     id: "present_continuous_now",
+
                     rule: [
                         "Present Continuous: am/is/are + Ving",
                         "Использование: действие происходит прямо сейчас",
                         "Пример: I am reading. She is cooking."
                     ].join("\n"),
-                    title: "Present Continuous — настоящее",
+
+                    title: "Present Continuous — действия, происходящие сейчас",
                     title_native: "Настоящее продолженное время",
                     title_target: "Present Continuous (Now)",
-                    sentences: [],
-                    words: []
+
+                    sentences: [
+                        { target: "Right now I am sitting in a small café.", native: "Прямо сейчас я сижу в небольшом кафе." },
+                        { target: "I am drinking a cup of coffee.", native: "Я пью чашку кофе." },
+                        { target: "I am looking at the people around me.", native: "Я смотрю на людей вокруг себя." },
+                        { target: "Many people are working on their laptops.", native: "Многие люди работают за своими ноутбуками." },
+
+                        { target: "A woman is reading a book.", native: "Женщина читает книгу." },
+                        { target: "A man is talking on the phone.", native: "Мужчина разговаривает по телефону." },
+                        { target: "Two students are studying together.", native: "Двое студентов занимаются вместе." },
+                        { target: "They are laughing quietly.", native: "Они тихо смеются." },
+
+                        { target: "The barista is making fresh coffee.", native: "Бариста готовит свежий кофе." },
+                        { target: "He is smiling at the customers.", native: "Он улыбается посетителям." },
+                        { target: "He is cleaning the counter now.", native: "Сейчас он убирает стойку." },
+                        { target: "He is working very fast today.", native: "Сегодня он работает очень быстро." },
+
+                        { target: "Outside, cars are moving slowly.", native: "Снаружи машины движутся медленно." },
+                        { target: "People are walking along the street.", native: "Люди идут по улице." },
+                        { target: "Some tourists are taking photos.", native: "Некоторые туристы делают фотографии." },
+                        { target: "A child is eating ice cream.", native: "Ребёнок ест мороженое." },
+
+                        { target: "Right now my friend Anna is calling me.", native: "Прямо сейчас мне звонит моя подруга Анна." },
+                        { target: "She is asking where I am.", native: "Она спрашивает, где я." },
+                        { target: "I am telling her that I am in the café.", native: "Я говорю ей, что нахожусь в кафе." },
+                        { target: "She is coming to join me.", native: "Она идёт, чтобы присоединиться ко мне." },
+
+                        { target: "While I am waiting, I am checking my messages.", native: "Пока я жду, я проверяю свои сообщения." },
+                        { target: "My colleagues are writing to me now.", native: "Мои коллеги сейчас пишут мне." },
+                        { target: "They are working on a project.", native: "Они работают над проектом." },
+                        { target: "They are asking for my help.", native: "Они просят моей помощи." },
+
+                        { target: "I am writing a quick answer.", native: "Я пишу быстрый ответ." },
+                        { target: "I am explaining what to do.", native: "Я объясняю, что нужно делать." },
+                        { target: "I am sending the message.", native: "Я отправляю сообщение." },
+                        { target: "Now I am closing my phone.", native: "Сейчас я закрываю свой телефон." },
+
+                        { target: "Anna is arriving at the café.", native: "Анна прибывает в кафе." },
+                        { target: "She is smiling at me.", native: "Она улыбается мне." },
+                        { target: "She is putting her bag on the chair.", native: "Она кладёт свою сумку на стул." },
+                        { target: "She is taking off her coat.", native: "Она снимает пальто." },
+
+                        { target: "We are talking about our day.", native: "Мы говорим о нашем дне." },
+                        { target: "We are planning what to do next.", native: "Мы планируем, что делать дальше." },
+                        { target: "Anna is telling me about her work.", native: "Анна рассказывает мне о своей работе." },
+                        { target: "She is working on a new project now.", native: "Она сейчас работает над новым проектом." },
+
+                        { target: "She is learning new skills.", native: "Она изучает новые навыки." },
+                        { target: "She is taking an online course.", native: "Она проходит онлайн-курс." },
+                        { target: "I am listening to her with interest.", native: "Я слушаю её с интересом." },
+                        { target: "We are laughing about something funny.", native: "Мы смеёмся из-за чего-то смешного." },
+
+                        { target: "Right now the café is getting busier.", native: "Прямо сейчас кафе становится более оживлённым." },
+                        { target: "More people are coming in.", native: "Входит больше людей." },
+                        { target: "They are looking for free tables.", native: "Они ищут свободные столики." },
+                        { target: "The baristas are working harder.", native: "Бариста работают усерднее." },
+
+                        { target: "Anna and I are finishing our drinks.", native: "Мы с Анной заканчиваем свои напитки." },
+                        { target: "We are putting on our coats.", native: "Мы надеваем свои пальто." },
+                        { target: "We are leaving the café now.", native: "Мы выходим из кафе сейчас." },
+                        { target: "We are walking into the cool evening air.", native: "Мы выходим в прохладный вечерний воздух." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "am sitting", native: "сижу" },
+                        { id: "w2", target: "am drinking", native: "пью" },
+                        { id: "w3", target: "am looking", native: "смотрю" },
+                        { id: "w4", target: "are working", native: "работают" },
+                        { id: "w5", target: "is reading", native: "читает" },
+
+                        { id: "w6", target: "is talking", native: "разговаривает" },
+                        { id: "w7", target: "are studying", native: "занимаются" },
+                        { id: "w8", target: "are laughing", native: "смеются" },
+                        { id: "w9", target: "is making", native: "готовит" },
+                        { id: "w10", target: "is smiling", native: "улыбается" },
+
+                        { id: "w11", target: "is cleaning", native: "убирает" },
+                        { id: "w12", target: "are moving", native: "движутся" },
+                        { id: "w13", target: "are walking", native: "идут" },
+                        { id: "w14", target: "are taking photos", native: "делают фотографии" },
+                        { id: "w15", target: "is eating", native: "ест" },
+
+                        { id: "w16", target: "is calling", native: "звонит" },
+                        { id: "w17", target: "is asking", native: "спрашивает" },
+                        { id: "w18", target: "am telling", native: "говорю" },
+                        { id: "w19", target: "is coming", native: "идёт" },
+                        { id: "w20", target: "am checking", native: "проверяю" },
+
+                        { id: "w21", target: "are writing", native: "пишут" },
+                        { id: "w22", target: "are asking", native: "просят" },
+                        { id: "w23", target: "am writing", native: "пишу" },
+                        { id: "w24", target: "am explaining", native: "объясняю" },
+                        { id: "w25", target: "am sending", native: "отправляю" },
+
+                        { id: "w26", target: "is arriving", native: "прибывает" },
+                        { id: "w27", target: "is putting", native: "кладёт" },
+                        { id: "w28", target: "is taking off", native: "снимает" },
+                        { id: "w29", target: "are planning", native: "планируем" },
+                        { id: "w30", target: "is telling", native: "рассказывает" },
+
+                        { id: "w31", target: "is working", native: "работает" },
+                        { id: "w32", target: "is learning", native: "изучает" },
+                        { id: "w33", target: "is taking", native: "проходит" },
+                        { id: "w34", target: "am listening", native: "слушаю" },
+                        { id: "w35", target: "are laughing", native: "смеёмся" },
+
+                        { id: "w36", target: "is getting", native: "становится" },
+                        { id: "w37", target: "are coming", native: "приходят" },
+                        { id: "w38", target: "are looking", native: "ищут" },
+                        { id: "w39", target: "are working", native: "работают" },
+                        { id: "w40", target: "are finishing", native: "заканчиваем" },
+
+                        { id: "w41", target: "are putting on", native: "надеваем" },
+                        { id: "w42", target: "are leaving", native: "уходим" },
+                        { id: "w43", target: "are walking", native: "идём" },
+                        { id: "w44", target: "café", native: "кафе" },
+                        { id: "w45", target: "barista", native: "бариста" },
+
+                        { id: "w46", target: "customer", native: "клиент" },
+                        { id: "w47", target: "message", native: "сообщение" },
+                        { id: "w48", target: "project", native: "проект" },
+                        { id: "w49", target: "street", native: "улица" },
+                        { id: "w50", target: "evening", native: "вечер" }
+                    ]
                 },
                 // ⚡ 17. Past Continuous — действие в процессе в прошлом
                 {
                     id: "past_continuous",
+
                     rule: [
                         "Past Continuous: was/were + Ving",
                         "Использование: действие было в процессе в конкретный момент времени",
                         "Пример: I was reading at 8 pm. They were working yesterday evening."
                     ].join("\n"),
-                    title: "Past Continuous — прошлое",
+
+                    title: "Past Continuous — действие в процессе в прошлом",
                     title_native: "Прошедшее продолженное время",
                     title_target: "Past Continuous",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "Last Friday evening I was sitting at home.", native: "В прошлую пятницу вечером я сидел дома." },
+                        { target: "I was watching a movie on my laptop.", native: "Я смотрел фильм на ноутбуке." },
+                        { target: "It was raining outside.", native: "На улице шёл дождь." },
+                        { target: "The wind was blowing strongly.", native: "Ветер сильно дул." },
+
+                        { target: "At seven o’clock my friend Anna was calling me.", native: "В семь часов моя подруга Анна звонила мне." },
+                        { target: "I was not hearing the phone at first.", native: "Сначала я не слышал звонок." },
+                        { target: "I was turning up the volume of the movie.", native: "Я увеличивал громкость фильма." },
+                        { target: "Finally I heard the call.", native: "Наконец я услышал звонок." },
+
+                        { target: "Anna was asking me for help.", native: "Анна спрашивала меня о помощи." },
+                        { target: "She was cooking dinner and needed advice.", native: "Она готовила ужин и нуждалась в совете." },
+                        { target: "Her soup was boiling too fast.", native: "Её суп кипел слишком быстро." },
+                        { target: "Her dog was barking loudly.", native: "Её собака громко лаяла." },
+
+                        { target: "While she was talking, I was writing notes.", native: "Пока она говорила, я записывал заметки." },
+                        { target: "I was trying to explain what to do.", native: "Я пытался объяснить, что нужно делать." },
+                        { target: "She was listening carefully.", native: "Она слушала внимательно." },
+                        { target: "Her dinner was getting better.", native: "Её ужин становился лучше." },
+
+                        { target: "At the same time her brother was playing video games.", native: "В то же время её брат играл в видеоигры." },
+                        { target: "He was shouting at the screen.", native: "Он кричал на экран." },
+                        { target: "The dog was running around the table.", native: "Собака бегала вокруг стола." },
+                        { target: "The phone was ringing again.", native: "Телефон снова звонил." },
+
+                        { target: "While all this was happening, I was preparing my own dinner.", native: "Пока всё это происходило, я готовил свой собственный ужин." },
+                        { target: "I was cutting vegetables.", native: "Я резал овощи." },
+                        { target: "The water was heating on the stove.", native: "Вода нагревалась на плите." },
+                        { target: "The radio was playing softly.", native: "Радио тихо играло." },
+
+                        { target: "At eight o’clock I was setting the table.", native: "В восемь часов я накрывал на стол." },
+                        { target: "My neighbors were talking in the hallway.", native: "Мои соседи разговаривали в коридоре." },
+                        { target: "A baby was crying upstairs.", native: "Наверху плакал ребёнок." },
+                        { target: "Someone was opening a window.", native: "Кто-то открывал окно." },
+
+                        { target: "While I was eating, Anna was sending me photos of her dinner.", native: "Пока я ел, Анна отправляла мне фотографии своего ужина." },
+                        { target: "She was smiling proudly.", native: "Она гордо улыбалась." },
+                        { target: "Her brother was still playing games.", native: "Её брат всё ещё играл в игры." },
+                        { target: "The dog was sleeping after all the noise.", native: "Собака спала после всего шума." },
+
+                        { target: "At nine I was washing the dishes.", native: "В девять я мыл посуду." },
+                        { target: "I was thinking about my day.", native: "Я думал о своём дне." },
+                        { target: "I was feeling tired but calm.", native: "Я чувствовал себя уставшим, но спокойным." },
+                        { target: "The rain was slowing down outside.", native: "Дождь снаружи ослабевал." },
+
+                        { target: "At ten o’clock I was reading a book.", native: "В десять часов я читал книгу." },
+                        { target: "My cat was sleeping next to me.", native: "Моя кошка спала рядом со мной." },
+                        { target: "My phone was charging.", native: "Мой телефон заряжался." },
+                        { target: "The movie was still paused on the screen.", native: "Фильм всё ещё был на паузе на экране." },
+
+                        { target: "Finally, I was turning off the lights.", native: "В конце концов я выключал свет." },
+                        { target: "I was getting ready for bed.", native: "Я готовился ко сну." },
+                        { target: "While I was lying down, the rain was starting again.", native: "Когда я ложился, дождь снова начинался." },
+                        { target: "I was falling asleep slowly.", native: "Я медленно засыпал." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "was watching", native: "смотрел" },
+                        { id: "w2", target: "was raining", native: "шёл дождь" },
+                        { id: "w3", target: "was blowing", native: "дул" },
+                        { id: "w4", target: "was calling", native: "звонила" },
+                        { id: "w5", target: "was hearing", native: "слышал" },
+
+                        { id: "w6", target: "was turning up", native: "увеличивал" },
+                        { id: "w7", target: "was asking", native: "спрашивала" },
+                        { id: "w8", target: "was cooking", native: "готовила" },
+                        { id: "w9", target: "was boiling", native: "кипел" },
+                        { id: "w10", target: "was barking", native: "лаяла" },
+
+                        { id: "w11", target: "was writing", native: "писал" },
+                        { id: "w12", target: "was trying", native: "пытался" },
+                        { id: "w13", target: "was listening", native: "слушала" },
+                        { id: "w14", target: "was getting", native: "становился" },
+                        { id: "w15", target: "was playing", native: "играл" },
+
+                        { id: "w16", target: "was shouting", native: "кричал" },
+                        { id: "w17", target: "was running", native: "бегала" },
+                        { id: "w18", target: "was ringing", native: "звонил" },
+                        { id: "w19", target: "was preparing", native: "готовил" },
+                        { id: "w20", target: "was cutting", native: "резал" },
+
+                        { id: "w21", target: "was heating", native: "нагревалась" },
+                        { id: "w22", target: "was playing", native: "играло" },
+                        { id: "w23", target: "was setting", native: "накрывал" },
+                        { id: "w24", target: "were talking", native: "разговаривали" },
+                        { id: "w25", target: "was crying", native: "плакал" },
+
+                        { id: "w26", target: "was opening", native: "открывал" },
+                        { id: "w27", target: "was sending", native: "отправляла" },
+                        { id: "w28", target: "was smiling", native: "улыбалась" },
+                        { id: "w29", target: "was sleeping", native: "спала" },
+                        { id: "w30", target: "was eating", native: "ел" },
+
+                        { id: "w31", target: "was washing", native: "мыл" },
+                        { id: "w32", target: "was thinking", native: "думал" },
+                        { id: "w33", target: "was feeling", native: "чувствовал" },
+                        { id: "w34", target: "was slowing down", native: "ослабевал" },
+                        { id: "w35", target: "was reading", native: "читал" },
+
+                        { id: "w36", target: "was charging", native: "заряжался" },
+                        { id: "w37", target: "was paused", native: "был на паузе" },
+                        { id: "w38", target: "was turning off", native: "выключал" },
+                        { id: "w39", target: "was getting ready", native: "готовился" },
+                        { id: "w40", target: "was lying down", native: "ложился" },
+
+                        { id: "w41", target: "was starting", native: "начинался" },
+                        { id: "w42", target: "was falling asleep", native: "засыпал" },
+                        { id: "w43", target: "rain", native: "дождь" },
+                        { id: "w44", target: "wind", native: "ветер" },
+                        { id: "w45", target: "soup", native: "суп" },
+
+                        { id: "w46", target: "dog", native: "собака" },
+                        { id: "w47", target: "stove", native: "плита" },
+                        { id: "w48", target: "hallway", native: "коридор" },
+                        { id: "w49", target: "window", native: "окно" },
+                        { id: "w50", target: "evening", native: "вечер" }
+                    ]
+                },
                 // 6. Длительные времена — Present Continuous для будущего
                 {
                     id: "present_continuous_future",
+
                     rule: [
                         "Present Continuous для запланированного будущего",
                         "Структура: I am meeting…, We are leaving…"
                     ].join("\n"),
-                    title: "Present Continuous для запланированного будущего",
+
+                    title: "Длительные времена — Present Continuous для запланированного будущего",
                     title_native: "Ближайшие планы",
                     title_target: "Present Continuous (Future Meaning)",
-                    sentences: [],
-                    words: []
+
+                    sentences: [
+                        { target: "This week is very busy for me.", native: "Эта неделя для меня очень занятая." },
+                        { target: "I am meeting many people in the next few days.", native: "В ближайшие дни я встречаюсь со многими людьми." },
+                        { target: "Tomorrow morning I am meeting my friend Anna.", native: "Завтра утром я встречаюсь с моей подругой Анной." },
+                        { target: "We are having breakfast together.", native: "Мы завтракаем вместе." },
+
+                        { target: "After breakfast we are walking to the park.", native: "После завтрака мы идём в парк." },
+                        { target: "We are talking about our plans for the summer.", native: "Мы говорим о наших планах на лето." },
+                        { target: "In the afternoon I am visiting my parents.", native: "Днём я навещаю своих родителей." },
+                        { target: "We are having dinner at home.", native: "Мы ужинаем дома." },
+
+                        { target: "On Wednesday I am going to the dentist.", native: "В среду я иду к стоматологу." },
+                        { target: "I am not enjoying this visit.", native: "Мне не нравится этот визит." },
+                        { target: "But I am keeping the appointment.", native: "Но я соблюдаю запись." },
+                        { target: "My sister is coming with me.", native: "Моя сестра идёт со мной." },
+
+                        { target: "In the evening we are watching a movie together.", native: "Вечером мы смотрим фильм вместе." },
+                        { target: "We are choosing a comedy.", native: "Мы выбираем комедию." },
+                        { target: "On Thursday I am working from home.", native: "В четверг я работаю из дома." },
+                        { target: "I am starting early in the morning.", native: "Я начинаю рано утром." },
+
+                        { target: "At lunchtime I am meeting my colleague Mark.", native: "В обед я встречаюсь с коллегой Марком." },
+                        { target: "We are discussing a new project.", native: "Мы обсуждаем новый проект." },
+                        { target: "After lunch we are visiting a client.", native: "После обеда мы навещаем клиента." },
+                        { target: "We are presenting our ideas.", native: "Мы представляем наши идеи." },
+
+                        { target: "On Friday evening I am packing my suitcase.", native: "В пятницу вечером я собираю свой чемодан." },
+                        { target: "I am leaving the city on Saturday morning.", native: "Я уезжаю из города в субботу утром." },
+                        { target: "I am taking a train to a small town.", native: "Я еду поездом в небольшой город." },
+                        { target: "My friends are waiting for me there.", native: "Мои друзья ждут меня там." },
+
+                        { target: "We are spending the weekend together.", native: "Мы проводим выходные вместе." },
+                        { target: "We are staying in a cozy house near the lake.", native: "Мы остаёмся в уютном доме возле озера." },
+                        { target: "On Saturday afternoon we are going hiking.", native: "В субботу днём мы идём в поход." },
+                        { target: "We are cooking dinner on the fire.", native: "Мы готовим ужин на костре." },
+
+                        { target: "On Sunday morning we are having breakfast outside.", native: "В воскресенье утром мы завтракаем на улице." },
+                        { target: "Then we are taking a boat on the lake.", native: "Потом мы берём лодку на озере." },
+                        { target: "In the evening we are going back home.", native: "Вечером мы возвращаемся домой." },
+                        { target: "I am arriving late.", native: "Я приезжаю поздно." },
+
+                        { target: "Next week I am starting a new course.", native: "На следующей неделе я начинаю новый курс." },
+                        { target: "I am learning something interesting.", native: "Я изучаю что-то интересное." },
+                        { target: "My friends are joining the course too.", native: "Мои друзья тоже присоединяются к курсу." },
+                        { target: "We are studying together online.", native: "Мы учимся вместе онлайн." },
+
+                        { target: "On Monday evening we are having our first lesson.", native: "В понедельник вечером у нас первое занятие." },
+                        { target: "The teacher is explaining the plan.", native: "Учитель объясняет план." },
+                        { target: "We are asking many questions.", native: "Мы задаём много вопросов." },
+                        { target: "We are feeling excited about the course.", native: "Мы чувствуем волнение по поводу курса." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "am meeting", native: "встречаюсь" },
+                        { id: "w2", target: "are having", native: "завтракаем / ужинаем" },
+                        { id: "w3", target: "are walking", native: "идём" },
+                        { id: "w4", target: "am visiting", native: "навещаю" },
+                        { id: "w5", target: "am going", native: "иду / еду" },
+
+                        { id: "w6", target: "am keeping", native: "соблюдаю" },
+                        { id: "w7", target: "is coming", native: "приходит" },
+                        { id: "w8", target: "are watching", native: "смотрим" },
+                        { id: "w9", target: "are choosing", native: "выбираем" },
+                        { id: "w10", target: "am starting", native: "начинаю" },
+
+                        { id: "w11", target: "am working", native: "работаю" },
+                        { id: "w12", target: "are discussing", native: "обсуждаем" },
+                        { id: "w13", target: "are visiting", native: "навещаем" },
+                        { id: "w14", target: "are presenting", native: "представляем" },
+                        { id: "w15", target: "am packing", native: "собираю" },
+
+                        { id: "w16", target: "am leaving", native: "уезжаю" },
+                        { id: "w17", target: "am taking", native: "беру / еду" },
+                        { id: "w18", target: "are waiting", native: "ждут" },
+                        { id: "w19", target: "are spending", native: "проводим" },
+                        { id: "w20", target: "are staying", native: "остаёмся" },
+
+                        { id: "w21", target: "are going", native: "идём" },
+                        { id: "w22", target: "are cooking", native: "готовим" },
+                        { id: "w23", target: "are taking", native: "берём" },
+                        { id: "w24", target: "are arriving", native: "приезжаем / прибываю" },
+                        { id: "w25", target: "am arriving", native: "приезжаю" },
+
+                        { id: "w26", target: "am starting", native: "начинаю" },
+                        { id: "w27", target: "am learning", native: "изучаю" },
+                        { id: "w28", target: "are joining", native: "присоединяются" },
+                        { id: "w29", target: "are studying", native: "учимся" },
+                        { id: "w30", target: "are having", native: "имеем (занятие)" },
+
+                        { id: "w31", target: "is explaining", native: "объясняет" },
+                        { id: "w32", target: "are asking", native: "задаём" },
+                        { id: "w33", target: "are feeling", native: "чувствуем" },
+                        { id: "w34", target: "breakfast", native: "завтрак" },
+                        { id: "w35", target: "dinner", native: "ужин" },
+
+                        { id: "w36", target: "park", native: "парк" },
+                        { id: "w37", target: "dentist", native: "стоматолог" },
+                        { id: "w38", target: "project", native: "проект" },
+                        { id: "w39", target: "client", native: "клиент" },
+                        { id: "w40", target: "weekend", native: "выходные" },
+
+                        { id: "w41", target: "suitcase", native: "чемодан" },
+                        { id: "w42", target: "train", native: "поезд" },
+                        { id: "w43", target: "lake", native: "озеро" },
+                        { id: "w44", target: "course", native: "курс" },
+                        { id: "w45", target: "lesson", native: "занятие" },
+
+                        { id: "w46", target: "summer", native: "лето" },
+                        { id: "w47", target: "appointment", native: "запись" },
+                        { id: "w48", target: "plans", native: "планы" },
+                        { id: "w49", target: "evening", native: "вечер" },
+                        { id: "w50", target: "morning", native: "утро" }
+                    ]
                 },
-
-
                 // 7. Сложные предлоги времени — before / after / during
                 {
                     id: "time_prepositions",
+
                     rule: [
                         "before — перед чем-то",
                         "after — после чего-то",
                         "during — в течение"
                     ].join("\n"),
-                    title: "Предлоги времени",
+
+                    title: "Сложные предлоги времени — before / after / during",
                     title_native: "Before / After / During",
                     title_target: "Time Prepositions",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "Every day I follow a simple routine.", native: "Каждый день я следую простому распорядку." },
+                        { target: "Before work I always drink a cup of tea.", native: "Перед работой я всегда пью чашку чая." },
+                        { target: "Before leaving home I check the weather.", native: "Перед тем как выйти из дома, я проверяю погоду." },
+                        { target: "Before breakfast I stretch for a few minutes.", native: "Перед завтраком я делаю лёгкую растяжку несколько минут." },
+
+                        { target: "During breakfast I read the news on my phone.", native: "Во время завтрака я читаю новости на телефоне." },
+                        { target: "During the morning I answer emails.", native: "Утром я отвечаю на электронные письма." },
+                        { target: "During meetings I take short notes.", native: "Во время встреч я делаю короткие заметки." },
+                        { target: "During lunch I walk outside for fresh air.", native: "В обед я выхожу на улицу подышать свежим воздухом." },
+
+                        { target: "After lunch I return to my desk.", native: "После обеда я возвращаюсь к своему столу." },
+                        { target: "After a long task I usually take a short break.", native: "После долгой задачи я обычно делаю короткий перерыв." },
+                        { target: "After work I meet my friend Anna.", native: "После работы я встречаюсь с моей подругой Анной." },
+                        { target: "After dinner I relax on the sofa.", native: "После ужина я отдыхаю на диване." },
+
+                        { target: "Before my walk I put on comfortable shoes.", native: "Перед прогулкой я надеваю удобную обувь." },
+                        { target: "Before a call I check my microphone.", native: "Перед звонком я проверяю свой микрофон." },
+                        { target: "Before going to bed I read a book.", native: "Перед сном я читаю книгу." },
+                        { target: "Before midnight I try to fall asleep.", native: "До полуночи я стараюсь заснуть." },
+
+                        { target: "During the evening I listen to calm music.", native: "Вечером я слушаю спокойную музыку." },
+                        { target: "During cooking I often watch a show.", native: "Во время приготовления еды я часто смотрю шоу." },
+                        { target: "During cleaning I open the windows.", native: "Во время уборки я открываю окна." },
+                        { target: "During the weekend I spend time with friends.", native: "На выходных я провожу время с друзьями." },
+
+                        { target: "After breakfast Anna calls me.", native: "После завтрака Анна звонит мне." },
+                        { target: "After a busy day she likes to rest.", native: "После напряжённого дня она любит отдыхать." },
+                        { target: "After her walk she makes tea.", native: "После прогулки она делает чай." },
+                        { target: "After reading she writes in her journal.", native: "После чтения она пишет в своём дневнике." },
+
+                        { target: "Before her lessons she prepares her notes.", native: "Перед занятиями она готовит свои записи." },
+                        { target: "Before the weekend she finishes all tasks.", native: "Перед выходными она завершает все задания." },
+                        { target: "Before lunch she drinks water.", native: "Перед обедом она пьёт воду." },
+                        { target: "Before dinner she takes a short walk.", native: "Перед ужином она делает короткую прогулку." },
+
+                        { target: "During her online class she listens carefully.", native: "Во время онлайн-занятия она внимательно слушает." },
+                        { target: "During reading she highlights important words.", native: "Во время чтения она выделяет важные слова." },
+                        { target: "During her break she checks messages.", native: "Во время перерыва она проверяет сообщения." },
+                        { target: "During the afternoon she studies English.", native: "Днём она изучает английский." },
+
+                        { target: "After the class she practices speaking.", native: "После занятия она практикует разговорную речь." },
+                        { target: "After making dinner she relaxes.", native: "После приготовления ужина она отдыхает." },
+                        { target: "After calling her mother she watches a movie.", native: "После звонка маме она смотрит фильм." },
+                        { target: "After finishing the movie she goes to bed.", native: "После окончания фильма она ложится спать." },
+
+                        { target: "Before sleep she turns off the lights.", native: "Перед сном она выключает свет." },
+                        { target: "Before closing her eyes she thinks about the day.", native: "Перед тем как закрыть глаза, она думает о дне." },
+                        { target: "During the night she sleeps very well.", native: "Ночью она спит очень хорошо." },
+                        { target: "During early morning birds are singing.", native: "Рано утром птицы поют." },
+
+                        { target: "After waking up she feels rested.", native: "После пробуждения она чувствует себя отдохнувшей." },
+                        { target: "After stretching she smiles.", native: "После растяжки она улыбается." },
+                        { target: "After getting dressed she starts the new day.", native: "После того как она одевается, она начинает новый день." },
+                        { target: "And before everything she makes coffee.", native: "И перед всем этим она делает кофе." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "before", native: "перед" },
+                        { id: "w2", target: "after", native: "после" },
+                        { id: "w3", target: "during", native: "в течение" },
+                        { id: "w4", target: "routine", native: "распорядок" },
+                        { id: "w5", target: "breakfast", native: "завтрак" },
+
+                        { id: "w6", target: "lunch", native: "обед" },
+                        { id: "w7", target: "dinner", native: "ужин" },
+                        { id: "w8", target: "meeting", native: "встреча" },
+                        { id: "w9", target: "notes", native: "заметки" },
+                        { id: "w10", target: "call", native: "звонок" },
+
+                        { id: "w11", target: "walk", native: "прогулка" },
+                        { id: "w12", target: "cleaning", native: "уборка" },
+                        { id: "w13", target: "cooking", native: "готовка" },
+                        { id: "w14", target: "weekend", native: "выходные" },
+                        { id: "w15", target: "journal", native: "дневник" },
+
+                        { id: "w16", target: "class", native: "занятие" },
+                        { id: "w17", target: "water", native: "вода" },
+                        { id: "w18", target: "weather", native: "погода" },
+                        { id: "w19", target: "movie", native: "фильм" },
+                        { id: "w20", target: "lights", native: "свет" },
+
+                        { id: "w21", target: "sleep", native: "сон" },
+                        { id: "w22", target: "morning", native: "утро" },
+                        { id: "w23", target: "night", native: "ночь" },
+                        { id: "w24", target: "early", native: "рано" },
+                        { id: "w25", target: "rested", native: "отдохнувший" },
+
+                        { id: "w26", target: "stretching", native: "растяжка" },
+                        { id: "w27", target: "smile", native: "улыбка" },
+                        { id: "w28", target: "desk", native: "стол" },
+                        { id: "w29", target: "window", native: "окно" },
+                        { id: "w30", target: "bird", native: "птица" },
+
+                        { id: "w31", target: "coffee", native: "кофе" },
+                        { id: "w32", target: "prepare", native: "готовить" },
+                        { id: "w33", target: "finish", native: "заканчивать" },
+                        { id: "w34", target: "study", native: "учиться" },
+                        { id: "w35", target: "day", native: "день" },
+
+                        { id: "w36", target: "week", native: "неделя" },
+                        { id: "w37", target: "task", native: "задание" },
+                        { id: "w38", target: "screen", native: "экран" },
+                        { id: "w39", target: "tea", native: "чай" },
+                        { id: "w40", target: "music", native: "музыка" },
+
+                        { id: "w41", target: "air", native: "воздух" },
+                        { id: "w42", target: "fresh", native: "свежий" },
+                        { id: "w43", target: "outside", native: "снаружи" },
+                        { id: "w44", target: "inside", native: "внутри" },
+                        { id: "w45", target: "prepare", native: "готовить" },
+
+                        { id: "w46", target: "appointment", native: "запись" },
+                        { id: "w47", target: "news", native: "новости" },
+                        { id: "w48", target: "task", native: "задача" },
+                        { id: "w49", target: "lesson", native: "урок" },
+                        { id: "w50", target: "evening", native: "вечер" }
+                    ]
+                },
                 // 8. Выражение эмоций и чувств
                 {
                     id: "feelings_emotions",
+
                     rule: [
                         "Эмоции: excited, worried, bored, surprised",
                         "Глаголы-состояния: feel, look, seem"
                     ].join("\n"),
-                    title: "Эмоции и чувства",
+
+                    title: "Выражение эмоций и чувств",
                     title_native: "Эмоции",
                     title_target: "Feelings and Emotions",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "This morning I feel happy.", native: "Этим утром я чувствую себя счастливым." },
+                        { target: "The sun is shining, and everything seems bright.", native: "Солнце светит, и всё кажется ярким." },
+                        { target: "I look rested after a long sleep.", native: "Я выгляжу отдохнувшим после долгого сна." },
+                        { target: "My cat seems hungry and is looking at me.", native: "Моя кошка кажется голодной и смотрит на меня." },
+
+                        { target: "I feel excited because today is important.", native: "Я чувствую воодушевление, потому что сегодня важный день." },
+                        { target: "I am meeting my friend Anna later.", native: "Позже я встречаюсь с моей подругой Анной." },
+                        { target: "She always looks cheerful in the morning.", native: "Она всегда выглядит бодрой по утрам." },
+                        { target: "Her messages seem positive today.", native: "Её сообщения сегодня кажутся позитивными." },
+
+                        { target: "At work my colleague Mark looks tired.", native: "На работе мой коллега Марк выглядит уставшим." },
+                        { target: "He feels stressed about a new project.", native: "Он чувствует стресс из-за нового проекта." },
+                        { target: "He says everything seems difficult today.", native: "Он говорит, что сегодня всё кажется трудным." },
+                        { target: "I tell him that he looks stronger than he thinks.", native: "Я говорю ему, что он выглядит сильнее, чем думает." },
+
+                        { target: "During lunch I feel relaxed.", native: "Во время обеда я чувствую себя расслабленным." },
+                        { target: "The café looks warm and cozy.", native: "Кафе выглядит тёплым и уютным." },
+                        { target: "The waiter seems friendly.", native: "Официант кажется дружелюбным." },
+                        { target: "The food tastes wonderful.", native: "Еда на вкус чудесная." },
+
+                        { target: "In the afternoon I start a long task.", native: "Днём я начинаю долгую задачу." },
+                        { target: "After twenty minutes I feel bored.", native: "Через двадцать минут я чувствую скуку." },
+                        { target: "The document looks endless.", native: "Документ выглядит бесконечным." },
+                        { target: "The numbers seem confusing.", native: "Цифры кажутся запутанными." },
+
+                        { target: "I take a break because I feel tired.", native: "Я делаю перерыв, потому что чувствую усталость." },
+                        { target: "I walk outside, and everything looks calm.", native: "Я выхожу на улицу, и всё выглядит спокойным." },
+                        { target: "The trees seem peaceful in the wind.", native: "Деревья кажутся спокойными на ветру." },
+                        { target: "I breathe deeply and feel better.", native: "Я глубоко дышу и чувствую себя лучше." },
+
+                        { target: "In the evening I meet Anna.", native: "Вечером я встречаю Анну." },
+                        { target: "She looks excited about her day.", native: "Она выглядит воодушевлённой своим днём." },
+                        { target: "She feels proud of her work.", native: "Она чувствует гордость за свою работу." },
+                        { target: "Her story seems interesting.", native: "Её история кажется интересной." },
+
+                        { target: "Suddenly Anna looks worried.", native: "Внезапно Анна выглядит взволнованной." },
+                        { target: "She feels nervous about tomorrow.", native: "Она чувствует нервозность из-за завтрашнего дня." },
+                        { target: "I ask what seems wrong.", native: "Я спрашиваю, что кажется не так." },
+                        { target: "She says she is visiting the doctor.", native: "Она говорит, что идёт к врачу." },
+
+                        { target: "I tell her she looks strong.", native: "Я говорю ей, что она выглядит сильной." },
+                        { target: "I tell her she seems brave.", native: "Я говорю ей, что она кажется смелой." },
+                        { target: "She smiles and feels calmer.", native: "Она улыбается и чувствует себя спокойнее." },
+                        { target: "We continue talking for an hour.", native: "Мы продолжаем разговаривать час." },
+
+                        { target: "Later at home I feel peaceful.", native: "Позже дома я чувствую себя умиротворённым." },
+                        { target: "The apartment looks quiet and safe.", native: "Квартира выглядит тихой и безопасной." },
+                        { target: "My cat seems sleepy on the chair.", native: "Моя кошка кажется сонной на стуле." },
+                        { target: "I look tired but happy.", native: "Я выгляжу уставшим, но счастливым." },
+
+                        { target: "Before bed I think about my day.", native: "Перед сном я думаю о своём дне." },
+                        { target: "Some moments felt difficult.", native: "Некоторые моменты казались трудными." },
+                        { target: "Other moments felt beautiful.", native: "Другие моменты казались прекрасными." },
+                        { target: "Life seems full of emotions.", native: "Жизнь кажется полной эмоций." },
+
+                        { target: "I close my eyes and feel calm.", native: "Я закрываю глаза и чувствую спокойствие." },
+                        { target: "I fall asleep with a light heart.", native: "Я засыпаю с лёгким сердцем." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "feel", native: "чувствовать" },
+                        { id: "w2", target: "look", native: "выглядеть" },
+                        { id: "w3", target: "seem", native: "казаться" },
+                        { id: "w4", target: "excited", native: "вдохновлённый / воодушевлённый" },
+                        { id: "w5", target: "worried", native: "взволнованный" },
+
+                        { id: "w6", target: "bored", native: "скучающий" },
+                        { id: "w7", target: "surprised", native: "удивлённый" },
+                        { id: "w8", target: "tired", native: "уставший" },
+                        { id: "w9", target: "happy", native: "счастливый" },
+                        { id: "w10", target: "calm", native: "спокойный" },
+
+                        { id: "w11", target: "proud", native: "гордый" },
+                        { id: "w12", target: "nervous", native: "нервный" },
+                        { id: "w13", target: "peaceful", native: "умиротворённый" },
+                        { id: "w14", target: "cheerful", native: "жизнерадостный" },
+                        { id: "w15", target: "rested", native: "отдохнувший" },
+
+                        { id: "w16", target: "hungry", native: "голодный" },
+                        { id: "w17", target: "bright", native: "яркий" },
+                        { id: "w18", target: "confusing", native: "запутывающий" },
+                        { id: "w19", target: "endless", native: "бесконечный" },
+                        { id: "w20", target: "friendly", native: "дружелюбный" },
+
+                        { id: "w21", target: "cozy", native: "уютный" },
+                        { id: "w22", target: "safe", native: "безопасный" },
+                        { id: "w23", target: "wind", native: "ветер" },
+                        { id: "w24", target: "break", native: "перерыв" },
+                        { id: "w25", target: "project", native: "проект" },
+
+                        { id: "w26", target: "visit", native: "посещение" },
+                        { id: "w27", target: "doctor", native: "врач" },
+                        { id: "w28", target: "day", native: "день" },
+                        { id: "w29", target: "moment", native: "момент" },
+                        { id: "w30", target: "life", native: "жизнь" },
+
+                        { id: "w31", target: "chair", native: "стул" },
+                        { id: "w32", target: "apartment", native: "квартира" },
+                        { id: "w33", target: "story", native: "история" },
+                        { id: "w34", target: "music", native: "музыка" },
+                        { id: "w35", target: "team", native: "команда" },
+
+                        { id: "w36", target: "meeting", native: "встреча" },
+                        { id: "w37", target: "coffee", native: "кофе" },
+                        { id: "w38", target: "morning", native: "утро" },
+                        { id: "w39", target: "evening", native: "вечер" },
+                        { id: "w40", target: "call", native: "звонок" },
+
+                        { id: "w41", target: "smile", native: "улыбка" },
+                        { id: "w42", target: "rest", native: "отдых" },
+                        { id: "w43", target: "sleep", native: "сон" },
+                        { id: "w44", target: "hungry", native: "голодный" },
+                        { id: "w45", target: "bright", native: "яркий" },
+
+                        { id: "w46", target: "safe", native: "безопасный" },
+                        { id: "w47", target: "seem wrong", native: "казаться неправильным" },
+                        { id: "w48", target: "look strong", native: "выглядеть сильным" },
+                        { id: "w49", target: "look tired", native: "выглядеть уставшим" },
+                        { id: "w50", target: "feel calm", native: "чувствовать спокойствие" }
+                    ]
+                },
                 // 9. Описание опыта — Present Perfect (начальный уровень)
                 {
                     id: "present_perfect_intro",
+
                     rule: [
                         "Структура: have/has + V3",
                         "Использование: опыт (I have tried…), новости (She has just arrived)"
                     ].join("\n"),
+
                     title: "Present Perfect — введение",
                     title_native: "Опыт и недавние события",
                     title_target: "Present Perfect (Intro)",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "This year has been very interesting for me.", native: "Этот год был очень интересным для меня." },
+                        { target: "I have learned many new things.", native: "Я узнал много новых вещей." },
+                        { target: "I have started a new job.", native: "Я начал новую работу." },
+                        { target: "I have met many new colleagues.", native: "Я познакомился со многими новыми коллегами." },
+
+                        { target: "My friend Anna has helped me a lot.", native: "Моя подруга Анна много мне помогала." },
+                        { target: "She has given me good advice.", native: "Она давала мне хорошие советы." },
+                        { target: "She has visited my office several times.", native: "Она несколько раз приходила в мой офис." },
+                        { target: "We have worked on small projects together.", native: "Мы работали над небольшими проектами вместе." },
+
+                        { target: "I have also traveled this year.", native: "В этом году я также путешествовал." },
+                        { target: "I have visited two new cities.", native: "Я посетил два новых города." },
+                        { target: "I have tried local food.", native: "Я пробовал местную еду." },
+                        { target: "I have taken many photos.", native: "Я сделал много фотографий." },
+
+                        { target: "My sister has just arrived from Germany.", native: "Моя сестра только что приехала из Германии." },
+                        { target: "She has brought gifts for everyone.", native: "Она привезла подарки для всех." },
+                        { target: "She has already visited our parents.", native: "Она уже навестила наших родителей." },
+                        { target: "She has planned a short trip with me.", native: "Она запланировала короткую поездку со мной." },
+
+                        { target: "My parents have changed the house this year.", native: "Мои родители изменили дом в этом году." },
+                        { target: "They have painted the walls.", native: "Они покрасили стены." },
+                        { target: "They have bought new furniture.", native: "Они купили новую мебель." },
+                        { target: "They have made the garden more beautiful.", native: "Они сделали сад красивее." },
+
+                        { target: "Recently I have started learning English seriously.", native: "Недавно я начал серьёзно изучать английский." },
+                        { target: "I have taken online lessons.", native: "Я проходил онлайн-занятия." },
+                        { target: "I have watched many videos in English.", native: "Я смотрел много видео на английском." },
+                        { target: "I have read simple books.", native: "Я читал простые книги." },
+
+                        { target: "I have noticed progress.", native: "Я заметил прогресс." },
+                        { target: "My listening has improved.", native: "Мой навык слушания улучшился." },
+                        { target: "My speaking has become easier.", native: "Моя разговорная речь стала легче." },
+                        { target: "My confidence has grown.", native: "Моя уверенность выросла." },
+
+                        { target: "Today something new has happened at work.", native: "Сегодня на работе произошло что-то новое." },
+                        { target: "My team has received a new project.", native: "Моя команда получила новый проект." },
+                        { target: "We have already started planning.", native: "Мы уже начали планирование." },
+                        { target: "My manager has just sent the details.", native: "Мой менеджер только что отправил детали." },
+
+                        { target: "I have prepared my notes.", native: "Я подготовил свои заметки." },
+                        { target: "I have written a short plan.", native: "Я написал короткий план." },
+                        { target: "I have organized the files.", native: "Я организовал файлы." },
+                        { target: "I have shared the documents with my team.", native: "Я поделился документами с командой." },
+
+                        { target: "This evening I have invited Anna for dinner.", native: "Сегодня вечером я пригласил Анну на ужин." },
+                        { target: "I have cooked a simple meal.", native: "Я приготовил простой ужин." },
+                        { target: "I have cleaned the kitchen.", native: "Я убрал на кухне." },
+                        { target: "I have set the table beautifully.", native: "Я красиво накрыл на стол." },
+
+                        { target: "Anna has brought dessert.", native: "Анна принесла десерт." },
+                        { target: "She has told me new stories.", native: "Она рассказала мне новые истории." },
+                        { target: "We have laughed a lot.", native: "Мы много смеялись." },
+                        { target: "We have enjoyed the evening.", native: "Мы насладились вечером." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "have learned", native: "выучил" },
+                        { id: "w2", target: "have started", native: "начал" },
+                        { id: "w3", target: "have met", native: "встретил" },
+                        { id: "w4", target: "have helped", native: "помог" },
+                        { id: "w5", target: "have given", native: "дал" },
+
+                        { id: "w6", target: "have visited", native: "посетил" },
+                        { id: "w7", target: "have tried", native: "попробовал" },
+                        { id: "w8", target: "have taken", native: "сделал" },
+                        { id: "w9", target: "has arrived", native: "прибывает / прибыла" },
+                        { id: "w10", target: "has brought", native: "привезла" },
+
+                        { id: "w11", target: "has visited", native: "навестила" },
+                        { id: "w12", target: "has painted", native: "покрасили" },
+                        { id: "w13", target: "has bought", native: "купили" },
+                        { id: "w14", target: "has made", native: "сделали" },
+                        { id: "w15", target: "have taken lessons", native: "проходил занятия" },
+
+                        { id: "w16", target: "have watched", native: "смотрел" },
+                        { id: "w17", target: "have read", native: "читал" },
+                        { id: "w18", target: "has improved", native: "улучшился" },
+                        { id: "w19", target: "has become", native: "стал" },
+                        { id: "w20", target: "has grown", native: "вырос" },
+
+                        { id: "w21", target: "has happened", native: "произошло" },
+                        { id: "w22", target: "has received", native: "получила" },
+                        { id: "w23", target: "have started", native: "начали" },
+                        { id: "w24", target: "has sent", native: "отправил" },
+                        { id: "w25", target: "have prepared", native: "подготовил" },
+
+                        { id: "w26", target: "have written", native: "написал" },
+                        { id: "w27", target: "have organized", native: "организовал" },
+                        { id: "w28", target: "have shared", native: "поделился" },
+                        { id: "w29", target: "has brought", native: "принесла" },
+                        { id: "w30", target: "have cooked", native: "приготовил" },
+
+                        { id: "w31", target: "have cleaned", native: "убрал" },
+                        { id: "w32", target: "have set", native: "накрыл" },
+                        { id: "w33", target: "have laughed", native: "смеялись" },
+                        { id: "w34", target: "have enjoyed", native: "насладились" },
+                        { id: "w35", target: "experience", native: "опыт" },
+
+                        { id: "w36", target: "news", native: "новости" },
+                        { id: "w37", target: "this year", native: "в этом году" },
+                        { id: "w38", target: "recently", native: "недавно" },
+                        { id: "w39", target: "already", native: "уже" },
+                        { id: "w40", target: "just", native: "только что" },
+
+                        { id: "w41", target: "gift", native: "подарок" },
+                        { id: "w42", target: "garden", native: "сад" },
+                        { id: "w43", target: "lesson", native: "занятие" },
+                        { id: "w44", target: "office", native: "офис" },
+                        { id: "w45", target: "trip", native: "поездка" },
+
+                        { id: "w46", target: "colleague", native: "коллега" },
+                        { id: "w47", target: "story", native: "история" },
+                        { id: "w48", target: "details", native: "детали" },
+                        { id: "w49", target: "plan", native: "план" },
+                        { id: "w50", target: "dinner", native: "ужин" }
+                    ]
+                },
                 // 10. Путешествия — аэропорт, отель, маршрут
                 {
                     id: "travel_a2",
+
                     rule: [
                         "Фразы для путешествий: check in, check out, book a room",
                         "Лексика транспорта и аэропорта"
                     ].join("\n"),
-                    title: "Путешествия",
+
+                    title: "Путешествия — аэропорт, отель, маршрут",
                     title_native: "Путешествия",
                     title_target: "Travel",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "Last month I traveled to another country.", native: "В прошлом месяце я путешествовал в другую страну." },
+                        { target: "I booked a room in a small hotel.", native: "Я забронировал комнату в небольшом отеле." },
+                        { target: "I checked the reservation online.", native: "Я проверил бронирование онлайн." },
+                        { target: "Early in the morning I went to the airport.", native: "Рано утром я поехал в аэропорт." },
+
+                        { target: "At the airport I checked in at the desk.", native: "В аэропорту я зарегистрировался на стойке." },
+                        { target: "The staff asked for my passport.", native: "Персонал попросил мой паспорт." },
+                        { target: "I got my boarding pass.", native: "Я получил посадочный талон." },
+                        { target: "Then I went to security.", native: "Затем я пошёл на досмотр." },
+
+                        { target: "During security I put my bag on the belt.", native: "На досмотре я положил свою сумку на ленту." },
+                        { target: "I took off my jacket.", native: "Я снял свою куртку." },
+                        { target: "The officer checked my things.", native: "Офицер проверил мои вещи." },
+                        { target: "Everything was fine.", native: "Всё было в порядке." },
+
+                        { target: "After that I walked to the gate.", native: "После этого я прошёл к выходу на посадку." },
+                        { target: "People were waiting for the flight.", native: "Люди ждали рейс." },
+                        { target: "I sat near the window.", native: "Я сел возле окна." },
+                        { target: "I watched airplanes outside.", native: "Я смотрел на самолёты снаружи." },
+
+                        { target: "Soon we boarded the plane.", native: "Вскоре мы зашли в самолёт." },
+                        { target: "A flight attendant greeted us.", native: "Стюардесса поприветствовала нас." },
+                        { target: "I found my seat easily.", native: "Я легко нашёл своё место." },
+                        { target: "I put my bag in the overhead bin.", native: "Я положил свою сумку на верхнюю полку." },
+
+                        { target: "During the flight I read a book.", native: "Во время полёта я читал книгу." },
+                        { target: "I drank water.", native: "Я пил воду." },
+                        { target: "I listened to music.", native: "Я слушал музыку." },
+                        { target: "The flight was comfortable.", native: "Полёт был комфортным." },
+
+                        { target: "When we arrived, I went to passport control.", native: "Когда мы прибыли, я пошёл на паспортный контроль." },
+                        { target: "The officer stamped my passport.", native: "Офицер поставил штамп в мой паспорт." },
+                        { target: "I picked up my suitcase.", native: "Я забрал свой чемодан." },
+                        { target: "Then I left the airport.", native: "Затем я вышел из аэропорта." },
+
+                        { target: "I took a taxi to the hotel.", native: "Я взял такси до отеля." },
+                        { target: "The driver was friendly.", native: "Водитель был дружелюбным." },
+                        { target: "The city looked beautiful from the car.", native: "Город выглядел красиво из машины." },
+                        { target: "I was excited to explore it.", native: "Я был воодушевлён изучать его." },
+
+                        { target: "At the hotel I checked in at the reception.", native: "В отеле я зарегистрировался на ресепшене." },
+                        { target: "The receptionist gave me the key.", native: "Администратор дал мне ключ." },
+                        { target: "I went up to my room.", native: "Я поднялся в свою комнату." },
+                        { target: "The room was clean and bright.", native: "Комната была чистой и светлой." },
+
+                        { target: "I unpacked my suitcase.", native: "Я распаковал свой чемодан." },
+                        { target: "I took a quick shower.", native: "Я принял быстрый душ." },
+                        { target: "Then I went out to explore the city.", native: "Затем я вышел изучать город." },
+                        { target: "I walked through the old streets.", native: "Я гулял по старинным улицам." },
+
+                        { target: "I visited a small museum.", native: "Я посетил небольшой музей." },
+                        { target: "I bought a postcard.", native: "Я купил открытку." },
+                        { target: "I tried local food in a café.", native: "Я попробовал местную еду в кафе." },
+                        { target: "Everything tasted wonderful.", native: "Всё было на вкус чудесным." },
+
+                        { target: "At the end of the trip I checked out of the hotel.", native: "В конце поездки я выписался из отеля." },
+                        { target: "I thanked the staff.", native: "Я поблагодарил персонал." },
+                        { target: "I took a bus to the airport.", native: "Я поехал на автобусе в аэропорт." },
+                        { target: "I returned home safely.", native: "Я вернулся домой благополучно." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "check in", native: "зарегистрироваться" },
+                        { id: "w2", target: "check out", native: "выписаться" },
+                        { id: "w3", target: "book a room", native: "забронировать комнату" },
+                        { id: "w4", target: "reservation", native: "бронирование" },
+                        { id: "w5", target: "boarding pass", native: "посадочный талон" },
+
+                        { id: "w6", target: "security", native: "досмотр" },
+                        { id: "w7", target: "gate", native: "выход на посадку" },
+                        { id: "w8", target: "flight", native: "рейс" },
+                        { id: "w9", target: "flight attendant", native: "стюардесса" },
+                        { id: "w10", target: "overhead bin", native: "верхняя полка" },
+
+                        { id: "w11", target: "passport control", native: "паспортный контроль" },
+                        { id: "w12", target: "stamp", native: "штамп" },
+                        { id: "w13", target: "suitcase", native: "чемодан" },
+                        { id: "w14", target: "taxi", native: "такси" },
+                        { id: "w15", target: "reception", native: "ресепшен" },
+
+                        { id: "w16", target: "receptionist", native: "администратор" },
+                        { id: "w17", target: "driver", native: "водитель" },
+                        { id: "w18", target: "museum", native: "музей" },
+                        { id: "w19", target: "postcard", native: "открытка" },
+                        { id: "w20", target: "local food", native: "местная еда" },
+
+                        { id: "w21", target: "airport", native: "аэропорт" },
+                        { id: "w22", target: "hotel", native: "отель" },
+                        { id: "w23", target: "desk", native: "стойка" },
+                        { id: "w24", target: "belt", native: "лента" },
+                        { id: "w25", target: "window seat", native: "место у окна" },
+
+                        { id: "w26", target: "explore", native: "исследовать" },
+                        { id: "w27", target: "streets", native: "улицы" },
+                        { id: "w28", target: "shower", native: "душ" },
+                        { id: "w29", target: "key", native: "ключ" },
+                        { id: "w30", target: "friendly", native: "дружелюбный" },
+
+                        { id: "w31", target: "bright", native: "светлый" },
+                        { id: "w32", target: "clean", native: "чистый" },
+                        { id: "w33", target: "arrive", native: "прибывать" },
+                        { id: "w34", target: "bus", native: "автобус" },
+                        { id: "w35", target: "car", native: "машина" },
+
+                        { id: "w36", target: "train", native: "поезд" },
+                        { id: "w37", target: "ticket", native: "билет" },
+                        { id: "w38", target: "bag", native: "сумка" },
+                        { id: "w39", target: "airport staff", native: "сотрудники аэропорта" },
+                        { id: "w40", target: "travel", native: "путешествовать" },
+
+                        { id: "w41", target: "arrived", native: "прибыл" },
+                        { id: "w42", target: "explored", native: "изучил" },
+                        { id: "w43", target: "visited", native: "посетил" },
+                        { id: "w44", target: "took", native: "взял / поехал" },
+                        { id: "w45", target: "watched", native: "смотрел" },
+
+                        { id: "w46", target: "tasted", native: "попробовал" },
+                        { id: "w47", target: "booked", native: "забронировал" },
+                        { id: "w48", target: "checked in", native: "зарегистрировался" },
+                        { id: "w49", target: "checked out", native: "выписался" },
+                        { id: "w50", target: "returned", native: "вернулся" }
+                    ]
+                },
                 // 11. Покупки и возвраты — более сложные диалоги
                 {
                     id: "shopping_a2",
+
                     rule: [
                         "Фразы покупателя: I would like…, Can I try it on?",
                         "Фразы продавца: It fits you well, We don’t have this size"
                     ].join("\n"),
-                    title: "Покупки A2",
-                    title_native: "Диалоги в магазине",
-                    title_target: "Shopping A2",
-                    sentences: [],
-                    words: []
-                },
 
+                    title: "Покупки и возвраты — диалоги в магазине",
+                    title_native: "Покупки и возвраты",
+                    title_target: "Shopping A2",
+
+                    sentences: [
+                        { target: "Last Saturday I went to a shopping mall.", native: "В прошлую субботу я пошёл в торговый центр." },
+                        { target: "I wanted to buy new clothes.", native: "Я хотел купить новую одежду." },
+                        { target: "The mall was busy and bright.", native: "Торговый центр был оживлённым и ярким." },
+                        { target: "I walked into a clothing store.", native: "Я зашёл в магазин одежды." },
+
+                        { target: "A shop assistant smiled at me.", native: "Продавец улыбнулся мне." },
+                        { target: "I said: I would like a new jacket.", native: "Я сказал: Я бы хотел новую куртку." },
+                        { target: "She asked what size I needed.", native: "Она спросила, какой размер мне нужен." },
+                        { target: "I said I was not sure.", native: "Я сказал, что не уверен." },
+
+                        { target: "She showed me a black jacket.", native: "Она показала мне чёрную куртку." },
+                        { target: "I asked: Can I try it on?", native: "Я спросил: Могу я её примерить?" },
+                        { target: "She opened the fitting room for me.", native: "Она открыла для меня примерочную." },
+                        { target: "The jacket looked nice.", native: "Куртка выглядела хорошо." },
+
+                        { target: "But it was too small.", native: "Но она была слишком маленькой." },
+                        { target: "I asked for a bigger size.", native: "Я попросил размер побольше." },
+                        { target: "She said: We don’t have this size.", native: "Она сказала: У нас нет этого размера." },
+                        { target: "She brought me another jacket.", native: "Она принесла мне другую куртку." },
+
+                        { target: "The second jacket fit me well.", native: "Вторая куртка сидела на мне хорошо." },
+                        { target: "The assistant said: It fits you well!", native: "Продавец сказал: Она вам хорошо подходит!" },
+                        { target: "I looked in the mirror.", native: "Я посмотрел в зеркало." },
+                        { target: "I liked the color and style.", native: "Мне понравился цвет и стиль." },
+
+                        { target: "I decided to buy it.", native: "Я решил купить её." },
+                        { target: "At the counter I asked about returns.", native: "На кассе я спросил о возвратах." },
+                        { target: "The assistant said: You can return it within fourteen days.", native: "Продавец сказал: Вы можете вернуть её в течение четырнадцати дней." },
+                        { target: "I paid with my card.", native: "Я оплатил своей картой." },
+
+                        { target: "After that I went to a shoe store.", native: "После этого я пошёл в магазин обуви." },
+                        { target: "I said: I would like comfortable shoes.", native: "Я сказал: Я бы хотел удобную обувь." },
+                        { target: "The seller showed me several pairs.", native: "Продавец показал мне несколько пар." },
+                        { target: "I tried on white sneakers.", native: "Я примерил белые кроссовки." },
+
+                        { target: "They were too big.", native: "Они были слишком большими." },
+                        { target: "Then I tried a smaller pair.", native: "Потом я примерил пару поменьше." },
+                        { target: "They fit perfectly.", native: "Они идеально подошли." },
+                        { target: "The seller said: They look great on you.", native: "Продавец сказал: Они отлично смотрятся на вас." },
+
+                        { target: "I bought the sneakers too.", native: "Я купил и кроссовки тоже." },
+                        { target: "I put the bags in my hand.", native: "Я взял пакеты в руки." },
+                        { target: "I felt happy with my purchases.", native: "Я был доволен своими покупками." },
+                        { target: "I walked to the food court.", native: "Я пошёл в фудкорт." },
+
+                        { target: "I ordered a coffee.", native: "Я заказал кофе." },
+                        { target: "During the break I looked at my receipts.", native: "Во время перерыва я посмотрел свои чеки." },
+                        { target: "I checked the prices again.", native: "Я снова проверил цены." },
+                        { target: "Everything was correct.", native: "Всё было правильно." },
+
+                        { target: "Later I went back to the first store.", native: "Позже я вернулся в первый магазин." },
+                        { target: "I wanted to buy a scarf too.", native: "Я хотел купить ещё шарф." },
+                        { target: "I said: I would like a blue scarf.", native: "Я сказал: Я бы хотел голубой шарф." },
+                        { target: "The assistant found one for me.", native: "Продавец нашёл его для меня." },
+
+                        { target: "It was soft and warm.", native: "Он был мягким и тёплым." },
+                        { target: "I took it to the counter.", native: "Я отнёс его к кассе." },
+                        { target: "I paid and put it in my bag.", native: "Я оплатил и положил его в пакет." },
+                        { target: "I finished my shopping day with a smile.", native: "Я завершил свой день покупок с улыбкой." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "I would like", native: "я бы хотел" },
+                        { id: "w2", target: "Can I try it on?", native: "могу я это примерить?" },
+                        { id: "w3", target: "It fits you well", native: "вам хорошо подходит" },
+                        { id: "w4", target: "size", native: "размер" },
+                        { id: "w5", target: "fitting room", native: "примерочная" },
+
+                        { id: "w6", target: "shoe store", native: "магазин обуви" },
+                        { id: "w7", target: "clothing store", native: "магазин одежды" },
+                        { id: "w8", target: "assistant", native: "продавец" },
+                        { id: "w9", target: "jacket", native: "куртка" },
+                        { id: "w10", target: "sneakers", native: "кроссовки" },
+
+                        { id: "w11", target: "too big", native: "слишком большой" },
+                        { id: "w12", target: "too small", native: "слишком маленький" },
+                        { id: "w13", target: "perfectly", native: "идеально" },
+                        { id: "w14", target: "scarf", native: "шарф" },
+                        { id: "w15", target: "receipt", native: "чек" },
+
+                        { id: "w16", target: "price", native: "цена" },
+                        { id: "w17", target: "return", native: "возврат" },
+                        { id: "w18", target: "buy", native: "покупать" },
+                        { id: "w19", target: "sell", native: "продавать" },
+                        { id: "w20", target: "bag", native: "пакет" },
+
+                        { id: "w21", target: "mall", native: "торговый центр" },
+                        { id: "w22", target: "counter", native: "касса" },
+                        { id: "w23", target: "queue", native: "очередь" },
+                        { id: "w24", target: "comfortable", native: "удобный" },
+                        { id: "w25", target: "customer", native: "покупатель" },
+
+                        { id: "w26", target: "shop", native: "магазин" },
+                        { id: "w27", target: "try on", native: "примерять" },
+                        { id: "w28", target: "fits", native: "сидит (об одежде)" },
+                        { id: "w29", target: "pay", native: "платить" },
+                        { id: "w30", target: "card", native: "карта" },
+
+                        { id: "w31", target: "color", native: "цвет" },
+                        { id: "w32", target: "style", native: "стиль" },
+                        { id: "w33", target: "soft", native: "мягкий" },
+                        { id: "w34", target: "warm", native: "тёплый" },
+                        { id: "w35", target: "bright", native: "яркий" },
+
+                        { id: "w36", target: "buying", native: "покупка" },
+                        { id: "w37", target: "shopping", native: "шопинг" },
+                        { id: "w38", target: "show", native: "показывать" },
+                        { id: "w39", target: "help", native: "помогать" },
+                        { id: "w40", target: "pay for", native: "платить за" },
+
+                        { id: "w41", target: "comfortable shoes", native: "удобная обувь" },
+                        { id: "w42", target: "white sneakers", native: "белые кроссовки" },
+                        { id: "w43", target: "bigger size", native: "больший размер" },
+                        { id: "w44", target: "smaller size", native: "меньший размер" },
+                        { id: "w45", target: "shopping mall", native: "торговый центр" },
+
+                        { id: "w46", target: "look great", native: "выглядеть отлично" },
+                        { id: "w47", target: "perfect fit", native: "идеальная посадка" },
+                        { id: "w48", target: "soft scarf", native: "мягкий шарф" },
+                        { id: "w49", target: "food court", native: "фудкорт" },
+                        { id: "w50", target: "purchase", native: "покупка (как факт)" }
+                    ]
+                },
                 // 12. Работа и обязанности — более сложные описания
                 {
                     id: "jobs_a2",
+
                     rule: [
                         "Описание задач: I am responsible for…, I take care of…",
                         "Время Present Simple/Continuous в рабочих контекстах"
                     ].join("\n"),
-                    title: "Работа A2",
-                    title_native: "Работа и обязанности",
-                    title_target: "Work A2",
-                    sentences: [],
-                    words: []
-                },
 
+                    title: "Работа и обязанности",
+                    title_native: "Работа и обязанности",
+                    title_target: "Work",
+
+                    sentences: [
+                        { target: "I work in a small office in the city center.", native: "Я работаю в небольшом офисе в центре города." },
+                        { target: "Our office is on the third floor.", native: "Наш офис на третьем этаже." },
+                        { target: "I am responsible for customer emails.", native: "Я отвечаю за письма клиентов." },
+                        { target: "I also take care of phone calls.", native: "Я также занимаюсь телефонными звонками." },
+
+                        { target: "Every morning I arrive at nine o'clock.", native: "Каждое утро я прихожу в девять часов." },
+                        { target: "I make a cup of coffee.", native: "Я делаю чашку кофе." },
+                        { target: "Then I turn on my computer.", native: "Затем я включаю свой компьютер." },
+                        { target: "I check my inbox.", native: "Я проверяю свой почтовый ящик." },
+
+                        { target: "I usually have many new messages.", native: "Обычно у меня много новых сообщений." },
+                        { target: "I read them carefully.", native: "Я читаю их внимательно." },
+                        { target: "I answer easy questions first.", native: "Сначала я отвечаю на простые вопросы." },
+                        { target: "Then I write longer replies.", native: "Потом я пишу более длинные ответы." },
+
+                        { target: "My colleague Anna helps me with reports.", native: "Моя коллега Анна помогает мне с отчётами." },
+                        { target: "She is very organized.", native: "Она очень организована." },
+                        { target: "We often work together.", native: "Мы часто работаем вместе." },
+                        { target: "Right now she is preparing a new document.", native: "Прямо сейчас она готовит новый документ." },
+
+                        { target: "My boss usually arrives later.", native: "Мой начальник обычно приходит позже." },
+                        { target: "He checks the schedule.", native: "Он проверяет расписание." },
+                        { target: "He asks me about important tasks.", native: "Он спрашивает меня о важных задачах." },
+                        { target: "I tell him what I am working on.", native: "Я говорю ему, над чем я работаю." },
+
+                        { target: "At eleven we have a short meeting.", native: "В одиннадцать у нас короткая встреча." },
+                        { target: "We talk about our projects.", native: "Мы говорим о наших проектах." },
+                        { target: "We plan our day.", native: "Мы планируем наш день." },
+                        { target: "Sometimes we discuss problems.", native: "Иногда мы обсуждаем проблемы." },
+
+                        { target: "Before lunch I work on a report.", native: "Перед обедом я работаю над отчётом." },
+                        { target: "I collect information in a spreadsheet.", native: "Я собираю информацию в таблицу." },
+                        { target: "I check numbers twice.", native: "Я проверяю цифры дважды." },
+                        { target: "I send the report to my boss.", native: "Я отправляю отчёт своему начальнику." },
+
+                        { target: "At one o'clock I have lunch with my colleagues.", native: "В час я обедаю с коллегами." },
+                        { target: "We talk about work and family.", native: "Мы говорим о работе и семье." },
+                        { target: "We sometimes go to a small café.", native: "Мы иногда ходим в маленькое кафе." },
+                        { target: "After lunch we return to the office.", native: "После обеда мы возвращаемся в офис." },
+
+                        { target: "In the afternoon I call clients.", native: "После обеда я звоню клиентам." },
+                        { target: "I explain details about our services.", native: "Я объясняю детали о наших услугах." },
+                        { target: "Some clients ask many questions.", native: "Некоторые клиенты задают много вопросов." },
+                        { target: "I answer them patiently.", native: "Я отвечаю им терпеливо." },
+
+                        { target: "Right now I am writing an email to a new client.", native: "Прямо сейчас я пишу письмо новому клиенту." },
+                        { target: "The client wants information about prices.", native: "Клиент хочет информацию о ценах." },
+                        { target: "I am preparing an offer.", native: "Я готовлю предложение." },
+                        { target: "I hope the client will accept it.", native: "Я надеюсь, что клиент его примет." },
+
+                        { target: "At five o'clock I finish my work.", native: "В пять часов я заканчиваю работу." },
+                        { target: "I clean my desk.", native: "Я убираю свой стол." },
+                        { target: "I turn off my computer.", native: "Я выключаю свой компьютер." },
+                        { target: "I say goodbye to my colleagues.", native: "Я прощаюсь с коллегами." },
+
+                        { target: "After work I feel tired but satisfied.", native: "После работы я чувствую себя уставшим, но довольным." },
+                        { target: "My job is busy but interesting.", native: "Моя работа занятая, но интересная." },
+                        { target: "I learn something new every week.", native: "Я узнаю что-то новое каждую неделю." },
+                        { target: "I like my job.", native: "Мне нравится моя работа." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "responsible for", native: "отвечающий за" },
+                        { id: "w2", target: "take care of", native: "заниматься" },
+                        { id: "w3", target: "task", native: "задача" },
+                        { id: "w4", target: "meeting", native: "встреча" },
+                        { id: "w5", target: "schedule", native: "расписание" },
+
+                        { id: "w6", target: "report", native: "отчёт" },
+                        { id: "w7", target: "spreadsheet", native: "таблица" },
+                        { id: "w8", target: "document", native: "документ" },
+                        { id: "w9", target: "client", native: "клиент" },
+                        { id: "w10", target: "service", native: "услуга" },
+
+                        { id: "w11", target: "boss", native: "начальник" },
+                        { id: "w12", target: "colleague", native: "коллега" },
+                        { id: "w13", target: "office", native: "офис" },
+                        { id: "w14", target: "desk", native: "стол" },
+                        { id: "w15", target: "computer", native: "компьютер" },
+
+                        { id: "w16", target: "email", native: "письмо" },
+                        { id: "w17", target: "inbox", native: "почтовый ящик" },
+                        { id: "w18", target: "phone call", native: "телефонный звонок" },
+                        { id: "w19", target: "offer", native: "предложение" },
+                        { id: "w20", target: "responsibility", native: "обязанность" },
+
+                        { id: "w21", target: "carefully", native: "внимательно" },
+                        { id: "w22", target: "patiently", native: "терпеливо" },
+                        { id: "w23", target: "busy", native: "занятой" },
+                        { id: "w24", target: "organized", native: "организованный" },
+                        { id: "w25", target: "tired", native: "уставший" },
+
+                        { id: "w26", target: "satisfied", native: "довольный" },
+                        { id: "w27", target: "floor", native: "этаж" },
+                        { id: "w28", target: "arrive", native: "прибывать" },
+                        { id: "w29", target: "prepare", native: "готовить" },
+                        { id: "w30", target: "check", native: "проверять" },
+
+                        { id: "w31", target: "explain", native: "объяснять" },
+                        { id: "w32", target: "question", native: "вопрос" },
+                        { id: "w33", target: "answer", native: "ответ" },
+                        { id: "w34", target: "learn", native: "учить" },
+                        { id: "w35", target: "finish", native: "заканчивать" },
+
+                        { id: "w36", target: "turn on", native: "включать" },
+                        { id: "w37", target: "turn off", native: "выключать" },
+                        { id: "w38", target: "help", native: "помогать" },
+                        { id: "w39", target: "plan", native: "планировать" },
+                        { id: "w40", target: "collect", native: "собирать" },
+
+                        { id: "w41", target: "number", native: "число" },
+                        { id: "w42", target: "twice", native: "дважды" },
+                        { id: "w43", target: "return", native: "возвращаться" },
+                        { id: "w44", target: "offer", native: "предложение" },
+                        { id: "w45", target: "city center", native: "центр города" },
+
+                        { id: "w46", target: "right now", native: "прямо сейчас" },
+                        { id: "w47", target: "project", native: "проект" },
+                        { id: "w48", target: "important", native: "важный" },
+                        { id: "w49", target: "week", native: "неделя" },
+                        { id: "w50", target: "job", native: "работа" }
+                    ]
+                },
                 // 13. Природа и окружающая среда
                 {
                     id: "nature_environment",
+
                     rule: [
                         "Лексика природы: forest, river, mountain, lake",
                         "Глаголы действий: climb, hike, explore"
                     ].join("\n"),
+
                     title: "Природа",
                     title_native: "Природа и окружающая среда",
                     title_target: "Nature",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "Last weekend I visited a beautiful national park.", native: "На прошлых выходных я посетил красивый национальный парк." },
+                        { target: "The weather was warm and sunny.", native: "Погода была тёплой и солнечной." },
+                        { target: "I wanted to spend the whole day in nature.", native: "Я хотел провести весь день на природе." },
+                        { target: "I started my trip early in the morning.", native: "Я начал свою прогулку рано утром." },
+
+                        { target: "First I walked into a large forest.", native: "Сначала я вошёл в большой лес." },
+                        { target: "The trees were tall and green.", native: "Деревья были высокими и зелёными." },
+                        { target: "I listened to the birds singing.", native: "Я слушал, как поют птицы." },
+                        { target: "The forest felt calm and peaceful.", native: "Лес казался спокойным и мирным." },
+
+                        { target: "A small river ran through the forest.", native: "Через лес протекала небольшая река." },
+                        { target: "The water was clear and cold.", native: "Вода была прозрачной и холодной." },
+                        { target: "I sat near the river for a moment.", native: "Я сел возле реки на минутку." },
+                        { target: "I watched the water move slowly.", native: "Я наблюдал, как вода медленно движется." },
+
+                        { target: "After that I continued my hike.", native: "После этого я продолжил свой поход." },
+                        { target: "The trail led to a lake.", native: "Тропа вела к озеру." },
+                        { target: "The lake was wide and quiet.", native: "Озеро было широким и тихим." },
+                        { target: "Mountains stood around the lake.", native: "Вокруг озера стояли горы." },
+
+                        { target: "I took many photos of the mountains.", native: "Я сделал много фотографий гор." },
+                        { target: "The air was fresh and clean.", native: "Воздух был свежим и чистым." },
+                        { target: "I enjoyed the view a lot.", native: "Мне очень понравился вид." },
+                        { target: "I felt relaxed and happy.", native: "Я чувствовал себя расслабленным и счастливым." },
+
+                        { target: "Later I saw a small wooden bridge.", native: "Позже я увидел маленький деревянный мост." },
+                        { target: "I crossed the bridge slowly.", native: "Я медленно перешёл мост." },
+                        { target: "A group of ducks swam in the water below.", native: "Группа уток плыла в воде внизу." },
+                        { target: "I watched them for a while.", native: "Я некоторое время наблюдал за ними." },
+
+                        { target: "Then I climbed a low hill.", native: "Потом я поднялся на невысокий холм." },
+                        { target: "From the top I could see the whole valley.", native: "С вершины я мог видеть всю долину." },
+                        { target: "The view was amazing.", native: "Вид был потрясающим." },
+                        { target: "I took more pictures.", native: "Я сделал ещё больше фотографий." },
+
+                        { target: "On my way down I met two hikers.", native: "На пути вниз я встретил двух туристов." },
+                        { target: "We talked about the park.", native: "Мы поговорили о парке." },
+                        { target: "They were exploring the same trail.", native: "Они исследовали ту же тропу." },
+                        { target: "We wished each other a good day.", native: "Мы пожелали друг другу хорошего дня." },
+
+                        { target: "In the afternoon the sky became cloudy.", native: "После обеда небо стало облачным." },
+                        { target: "The wind grew stronger.", native: "Ветер стал сильнее." },
+                        { target: "I decided to walk back to the forest.", native: "Я решил вернуться в лес." },
+                        { target: "The forest protected me from the wind.", native: "Лес защищал меня от ветра." },
+
+                        { target: "Before leaving the park I sat on a bench.", native: "Перед уходом из парка я сел на скамейку." },
+                        { target: "I drank some water.", native: "Я выпил немного воды." },
+                        { target: "I rested for a few minutes.", native: "Я отдохнул несколько минут." },
+                        { target: "I thought about coming back soon.", native: "Я подумал о том, чтобы скоро вернуться." },
+
+                        { target: "Finally I left the park.", native: "Наконец я покинул парк." },
+                        { target: "I felt tired but peaceful.", native: "Я чувствовал себя уставшим, но спокойным." },
+                        { target: "It was a wonderful day in nature.", native: "Это был чудесный день на природе." },
+                        { target: "I want to explore more places like this.", native: "Я хочу исследовать больше таких мест." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "forest", native: "лес" },
+                        { id: "w2", target: "river", native: "река" },
+                        { id: "w3", target: "mountain", native: "гора" },
+                        { id: "w4", target: "lake", native: "озеро" },
+                        { id: "w5", target: "valley", native: "долина" },
+
+                        { id: "w6", target: "trail", native: "тропа" },
+                        { id: "w7", target: "bridge", native: "мост" },
+                        { id: "w8", target: "hill", native: "холм" },
+                        { id: "w9", target: "path", native: "путь" },
+                        { id: "w10", target: "view", native: "вид" },
+
+                        { id: "w11", target: "fresh", native: "свежий" },
+                        { id: "w12", target: "clean", native: "чистый" },
+                        { id: "w13", target: "quiet", native: "тихий" },
+                        { id: "w14", target: "peaceful", native: "мирный" },
+                        { id: "w15", target: "sunny", native: "солнечный" },
+
+                        { id: "w16", target: "cloudy", native: "облачный" },
+                        { id: "w17", target: "wind", native: "ветер" },
+                        { id: "w18", target: "strong", native: "сильный" },
+                        { id: "w19", target: "warm", native: "тёплый" },
+                        { id: "w20", target: "cold", native: "холодный" },
+
+                        { id: "w21", target: "explore", native: "исследовать" },
+                        { id: "w22", target: "hike", native: "ходить в поход" },
+                        { id: "w23", target: "climb", native: "взбираться" },
+                        { id: "w24", target: "walk", native: "гулять" },
+                        { id: "w25", target: "rest", native: "отдыхать" },
+
+                        { id: "w26", target: "bird", native: "птица" },
+                        { id: "w27", target: "duck", native: "утка" },
+                        { id: "w28", target: "tree", native: "дерево" },
+                        { id: "w29", target: "water", native: "вода" },
+                        { id: "w30", target: "air", native: "воздух" },
+
+                        { id: "w31", target: "photo", native: "фото" },
+                        { id: "w32", target: "picture", native: "картинка" },
+                        { id: "w33", target: "national park", native: "национальный парк" },
+                        { id: "w34", target: "bench", native: "скамейка" },
+                        { id: "w35", target: "moment", native: "момент" },
+
+                        { id: "w36", target: "whole day", native: "весь день" },
+                        { id: "w37", target: "afternoon", native: "день (после обеда)" },
+                        { id: "w38", target: "morning", native: "утро" },
+                        { id: "w39", target: "weekend", native: "выходные" },
+                        { id: "w40", target: "weather", native: "погода" },
+
+                        { id: "w41", target: "calm", native: "спокойный" },
+                        { id: "w42", target: "amazing", native: "потрясающий" },
+                        { id: "w43", target: "beautiful", native: "красивый" },
+                        { id: "w44", target: "clear", native: "чистый / прозрачный" },
+                        { id: "w45", target: "wide", native: "широкий" },
+
+                        { id: "w46", target: "group", native: "группа" },
+                        { id: "w47", target: "hikers", native: "туристы" },
+                        { id: "w48", target: "top", native: "вершина" },
+                        { id: "w49", target: "below", native: "внизу" },
+                        { id: "w50", target: "return", native: "возвращаться" }
+                    ]
+                },
                 // 14. Жизненные привычки и здоровье A2
                 {
                     id: "healthy_lifestyle",
+
                     rule: [
                         "Структуры: I try to…, I want to…, I need to…",
                         "Темы: спорт, еда, режим дня"
                     ].join("\n"),
+
                     title: "Здоровый образ жизни",
                     title_native: "Привычки и здоровье",
                     title_target: "Healthy Lifestyle",
-                    sentences: [],
-                    words: []
-                },
 
+                    sentences: [
+                        { target: "This year I want to live a healthier life.", native: "В этом году я хочу жить более здоровой жизнью." },
+                        { target: "I try to make small changes every day.", native: "Я стараюсь делать небольшие изменения каждый день." },
+                        { target: "I need to take better care of my body.", native: "Мне нужно лучше заботиться о своём теле." },
+                        { target: "My goal is to feel strong and energetic.", native: "Моя цель — чувствовать себя сильным и энергичным." },
+
+                        { target: "Every morning I wake up earlier now.", native: "Каждое утро я теперь просыпаюсь раньше." },
+                        { target: "I drink a glass of water after I wake up.", native: "Я пью стакан воды после пробуждения." },
+                        { target: "Then I do a short stretching routine.", native: "Затем я делаю короткую растяжку." },
+                        { target: "It helps my body wake up.", native: "Это помогает моему телу проснуться." },
+
+                        { target: "I also try to eat a healthy breakfast.", native: "Я также стараюсь есть полезный завтрак." },
+                        { target: "I eat yogurt with fruit.", native: "Я ем йогурт с фруктами." },
+                        { target: "Sometimes I add nuts or seeds.", native: "Иногда я добавляю орехи или семечки." },
+                        { target: "A good breakfast gives me energy.", native: "Хороший завтрак даёт мне энергию." },
+
+                        { target: "Three times a week I go jogging.", native: "Три раза в неделю я бегаю трусцой." },
+                        { target: "I run in the park near my home.", native: "Я бегаю в парке рядом с домом." },
+                        { target: "I try to run at least twenty minutes.", native: "Я стараюсь бегать как минимум двадцать минут." },
+                        { target: "Sometimes I listen to music while running.", native: "Иногда я слушаю музыку во время бега." },
+
+                        { target: "On weekends I like to ride my bicycle.", native: "По выходным я люблю кататься на велосипеде." },
+                        { target: "Cycling makes me feel free.", native: "Катание на велосипеде даёт мне чувство свободы." },
+                        { target: "I explore different routes.", native: "Я изучаю разные маршруты." },
+                        { target: "Fresh air always makes me feel better.", native: "Свежий воздух всегда улучшает моё самочувствие." },
+
+                        { target: "I am also changing my eating habits.", native: "Я также меняю свои пищевые привычки." },
+                        { target: "I try to cook more at home.", native: "Я стараюсь больше готовить дома." },
+                        { target: "I want to eat more vegetables.", native: "Я хочу есть больше овощей." },
+                        { target: "I need to reduce sugar in my diet.", native: "Мне нужно уменьшить количество сахара в рационе." },
+
+                        { target: "I drink less soda now.", native: "Теперь я пью меньше газировки." },
+                        { target: "I drink more water during the day.", native: "Я пью больше воды в течение дня." },
+                        { target: "Sometimes I make herbal tea.", native: "Иногда я делаю травяной чай." },
+                        { target: "Healthy drinks help me stay hydrated.", native: "Полезные напитки помогают мне оставаться гидратированным." },
+
+                        { target: "Sleep is also very important.", native: "Сон тоже очень важен." },
+                        { target: "I try to go to bed earlier.", native: "Я стараюсь ложиться спать раньше." },
+                        { target: "I turn off my phone before bed.", native: "Я выключаю телефон перед сном." },
+                        { target: "This helps me sleep better.", native: "Это помогает мне спать лучше." },
+
+                        { target: "Stress is bad for my health.", native: "Стресс вреден для моего здоровья." },
+                        { target: "I need to relax more often.", native: "Мне нужно чаще расслабляться." },
+                        { target: "Sometimes I meditate for ten minutes.", native: "Иногда я медитирую десять минут." },
+                        { target: "Deep breathing makes me calmer.", native: "Глубокое дыхание делает меня спокойнее." },
+
+                        { target: "In the evening I take a short walk.", native: "Вечером я делаю короткую прогулку." },
+                        { target: "Walking helps me clear my mind.", native: "Прогулка помогает мне очистить мысли." },
+                        { target: "I think about the day and my progress.", native: "Я думаю о дне и своём прогрессе." },
+                        { target: "Small steps help me build good habits.", native: "Маленькие шаги помогают мне формировать хорошие привычки." },
+
+                        { target: "I know healthy living takes time.", native: "Я знаю, что здоровая жизнь требует времени." },
+                        { target: "But I want to continue improving.", native: "Но я хочу продолжать улучшаться." },
+                        { target: "Every week I feel a little stronger.", native: "Каждую неделю я чувствую себя немного сильнее." },
+                        { target: "I am proud of my healthy choices.", native: "Я горжусь своими полезными выборами." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "healthy", native: "здоровый" },
+                        { id: "w2", target: "lifestyle", native: "образ жизни" },
+                        { id: "w3", target: "try to", native: "стараться" },
+                        { id: "w4", target: "need to", native: "нужно" },
+                        { id: "w5", target: "want to", native: "хотеть" },
+
+                        { id: "w6", target: "body", native: "тело" },
+                        { id: "w7", target: "energy", native: "энергия" },
+                        { id: "w8", target: "stretching", native: "растяжка" },
+                        { id: "w9", target: "jogging", native: "бег трусцой" },
+                        { id: "w10", target: "cycling", native: "велоспорт" },
+
+                        { id: "w11", target: "breakfast", native: "завтрак" },
+                        { id: "w12", target: "vegetables", native: "овощи" },
+                        { id: "w13", target: "fruit", native: "фрукты" },
+                        { id: "w14", target: "water", native: "вода" },
+                        { id: "w15", target: "tea", native: "чай" },
+
+                        { id: "w16", target: "sugar", native: "сахар" },
+                        { id: "w17", target: "diet", native: "диета" },
+                        { id: "w18", target: "cook", native: "готовить" },
+                        { id: "w19", target: "eat", native: "есть" },
+                        { id: "w20", target: "drink", native: "пить" },
+
+                        { id: "w21", target: "sleep", native: "сон" },
+                        { id: "w22", target: "go to bed", native: "ложиться спать" },
+                        { id: "w23", target: "wake up", native: "просыпаться" },
+                        { id: "w24", target: "habits", native: "привычки" },
+                        { id: "w25", target: "relax", native: "расслабляться" },
+
+                        { id: "w26", target: "meditate", native: "медитировать" },
+                        { id: "w27", target: "breathe", native: "дышать" },
+                        { id: "w28", target: "progress", native: "прогресс" },
+                        { id: "w29", target: "strong", native: "сильный" },
+                        { id: "w30", target: "calm", native: "спокойный" },
+
+                        { id: "w31", target: "routine", native: "рутина" },
+                        { id: "w32", target: "nuts", native: "орехи" },
+                        { id: "w33", target: "seeds", native: "семечки" },
+                        { id: "w34", target: "fresh air", native: "свежий воздух" },
+                        { id: "w35", target: "routes", native: "маршруты" },
+
+                        { id: "w36", target: "glass of water", native: "стакан воды" },
+                        { id: "w37", target: "herbal tea", native: "травяной чай" },
+                        { id: "w38", target: "reduce", native: "уменьшать" },
+                        { id: "w39", target: "hydrate", native: "увлажнять / поддерживать водный баланс" },
+                        { id: "w40", target: "clear my mind", native: "очистить мысли" },
+
+                        { id: "w41", target: "stronger", native: "сильнее" },
+                        { id: "w42", target: "improving", native: "улучшаться" },
+                        { id: "w43", target: "choices", native: "выборы" },
+                        { id: "w44", target: "week", native: "неделя" },
+                        { id: "w45", target: "evening walk", native: "вечерняя прогулка" },
+
+                        { id: "w46", target: "healthy breakfast", native: "полезный завтрак" },
+                        { id: "w47", target: "cook at home", native: "готовить дома" },
+                        { id: "w48", target: "eating habits", native: "пищевые привычки" },
+                        { id: "w49", target: "go jogging", native: "бегать трусцой" },
+                        { id: "w50", target: "healthy choices", native: "здоровые выборы" }
+                    ]
+                },
                 // 15. Дом и обязанности
                 {
                     id: "household_chores",
+
                     rule: [
                         "Фразы: do the dishes, clean the room, take out the trash",
                         "Сравнение частоты: I usually…, I rarely…, I sometimes…"
                     ].join("\n"),
+
                     title: "Домашние обязанности",
                     title_native: "Работа по дому",
                     title_target: "Household Chores",
-                    sentences: [],
-                    words: []
-                }
 
+                    sentences: [
+                        { target: "I live in a small apartment with my family.", native: "Я живу в небольшой квартире со своей семьёй." },
+                        { target: "We all share the household chores.", native: "Мы все делим обязанности по дому." },
+                        { target: "Everyone has different tasks.", native: "У каждого есть разные задачи." },
+                        { target: "We try to keep our home clean and comfortable.", native: "Мы стараемся держать наш дом чистым и уютным." },
+
+                        { target: "I usually make my bed in the morning.", native: "Я обычно заправляю постель утром." },
+                        { target: "It takes only a few minutes.", native: "Это занимает всего несколько минут." },
+                        { target: "I sometimes forget to do it.", native: "Иногда я забываю это сделать." },
+                        { target: "But I try to remember every day.", native: "Но я стараюсь вспоминать каждый день." },
+
+                        { target: "I often clean my room on Saturdays.", native: "Я часто убираю свою комнату по субботам." },
+                        { target: "I vacuum the floor and dust the shelves.", native: "Я пылесошу пол и вытираю пыль с полок." },
+                        { target: "I open the window to let fresh air in.", native: "Я открываю окно, чтобы впустить свежий воздух." },
+                        { target: "It makes the room feel better.", native: "Это делает комнату более приятной." },
+
+                        { target: "My sister usually does the dishes.", native: "Моя сестра обычно моет посуду." },
+                        { target: "She likes to listen to music while washing.", native: "Ей нравится слушать музыку во время мытья." },
+                        { target: "Sometimes I help her.", native: "Иногда я помогаю ей." },
+                        { target: "We talk and laugh together.", native: "Мы разговариваем и смеёмся вместе." },
+
+                        { target: "My father takes out the trash.", native: "Мой отец выносит мусор." },
+                        { target: "He rarely forgets this chore.", native: "Он редко забывает эту обязанность." },
+                        { target: "He usually does it in the evening.", native: "Обычно он делает это вечером." },
+                        { target: "He also repairs things around the house.", native: "Он также чинит вещи по дому." },
+
+                        { target: "My mother cooks dinner most days.", native: "Моя мама готовит ужин почти каждый день." },
+                        { target: "She tries to make healthy meals.", native: "Она старается готовить полезные блюда." },
+                        { target: "Sometimes I cut vegetables for her.", native: "Иногда я режу овощи для неё." },
+                        { target: "I enjoy helping in the kitchen.", native: "Мне нравится помогать на кухне." },
+
+                        { target: "After dinner we clean the table together.", native: "После ужина мы вместе убираем стол." },
+                        { target: "We wipe the surface and put things away.", native: "Мы протираем поверхность и убираем вещи." },
+                        { target: "It takes only a few minutes.", native: "Это занимает всего несколько минут." },
+                        { target: "Working together makes chores easier.", native: "Совместная работа делает обязанности легче." },
+
+                        { target: "On Sunday we clean the whole apartment.", native: "В воскресенье мы убираем всю квартиру." },
+                        { target: "We sweep the floors.", native: "Мы подметаем полы." },
+                        { target: "We clean the bathroom.", native: "Мы убираем ванную комнату." },
+                        { target: "We wash the mirrors.", native: "Мы моем зеркала." },
+
+                        { target: "My sister washes her clothes.", native: "Моя сестра стирает свою одежду." },
+                        { target: "I hang the clothes to dry.", native: "Я вешаю одежду сушиться." },
+                        { target: "My father folds the dry clothes.", native: "Мой отец складывает сухую одежду." },
+                        { target: "Everyone does something.", native: "Каждый делает что-то." },
+
+                        { target: "Sometimes we are tired after cleaning.", native: "Иногда мы устаём после уборки." },
+                        { target: "But the apartment looks nice.", native: "Но квартира выглядит хорошо." },
+                        { target: "We feel proud of our clean home.", native: "Мы гордимся своим чистым домом." },
+                        { target: "A tidy home makes us feel happy.", native: "Аккуратный дом делает нас счастливыми." },
+
+                        { target: "In the evening we relax on the sofa.", native: "Вечером мы отдыхаем на диване." },
+                        { target: "We drink tea and talk.", native: "Мы пьём чай и разговариваем." },
+                        { target: "Sometimes we watch a movie together.", native: "Иногда мы вместе смотрим фильм." },
+                        { target: "It is a nice end to a busy day.", native: "Это приятное завершение насыщенного дня." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "do the dishes", native: "мыть посуду" },
+                        { id: "w2", target: "clean the room", native: "убирать комнату" },
+                        { id: "w3", target: "take out the trash", native: "выносить мусор" },
+                        { id: "w4", target: "make the bed", native: "застилать кровать" },
+                        { id: "w5", target: "vacuum", native: "пылесосить" },
+
+                        { id: "w6", target: "dust", native: "вытирать пыль" },
+                        { id: "w7", target: "sweep", native: "подметать" },
+                        { id: "w8", target: "wipe", native: "вытирать" },
+                        { id: "w9", target: "repair", native: "чинить" },
+                        { id: "w10", target: "wash", native: "мыть" },
+
+                        { id: "w11", target: "healthy meals", native: "полезные блюда" },
+                        { id: "w12", target: "vegetables", native: "овощи" },
+                        { id: "w13", target: "kitchen", native: "кухня" },
+                        { id: "w14", target: "clothes", native: "одежда" },
+                        { id: "w15", target: "fold", native: "складывать" },
+
+                        { id: "w16", target: "hang to dry", native: "вешать сушиться" },
+                        { id: "w17", target: "surface", native: "поверхность" },
+                        { id: "w18", target: "chore", native: "домашняя обязанность" },
+                        { id: "w19", target: "shared chores", native: "разделённые обязанности" },
+                        { id: "w20", target: "comfortable home", native: "уютный дом" },
+
+                        { id: "w21", target: "usually", native: "обычно" },
+                        { id: "w22", target: "rarely", native: "редко" },
+                        { id: "w23", target: "sometimes", native: "иногда" },
+                        { id: "w24", target: "often", native: "часто" },
+                        { id: "w25", target: "most days", native: "большинство дней" },
+
+                        { id: "w26", target: "family", native: "семья" },
+                        { id: "w27", target: "apartment", native: "квартира" },
+                        { id: "w28", target: "home", native: "дом" },
+                        { id: "w29", target: "sofa", native: "диван" },
+                        { id: "w30", target: "mirror", native: "зеркало" },
+
+                        { id: "w31", target: "window", native: "окно" },
+                        { id: "w32", target: "fresh air", native: "свежий воздух" },
+                        { id: "w33", target: "help", native: "помогать" },
+                        { id: "w34", target: "tired", native: "уставший" },
+                        { id: "w35", target: "proud", native: "гордый" },
+
+                        { id: "w36", target: "busy day", native: "насыщенный день" },
+                        { id: "w37", target: "clean home", native: "чистый дом" },
+                        { id: "w38", target: "wipe the table", native: "вытирать стол" },
+                        { id: "w39", target: "wash the mirrors", native: "мыть зеркала" },
+                        { id: "w40", target: "whole apartment", native: "вся квартира" },
+
+                        { id: "w41", target: "listen to music", native: "слушать музыку" },
+                        { id: "w42", target: "busy", native: "занятый" },
+                        { id: "w43", target: "together", native: "вместе" },
+                        { id: "w44", target: "talk", native: "разговаривать" },
+                        { id: "w45", target: "laugh", native: "смеяться" },
+
+                        { id: "w46", target: "share", native: "делить" },
+                        { id: "w47", target: "kitchen chores", native: "кухонные обязанности" },
+                        { id: "w48", target: "wash clothes", native: "стирать одежду" },
+                        { id: "w49", target: "dry clothes", native: "сушить одежду" },
+                        { id: "w50", target: "clean the bathroom", native: "убирать ванную" }
+                    ]
+                }
             ]
         }
 
