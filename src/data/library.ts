@@ -12,9 +12,8 @@ export type Library = {
 
 // ====== PAREDES "ИЗУЧАЕМЫЙ ЯЗЫК — РОДНОЙ/ИНТЕРФЕЙС" ======
 
-export const libraryENRU = {
-    learningLang: "en",
-    nativeLang: "ru",
+export const libraryENRU: Library = {
+    learningLang: "en",    
     sections: [
         {
             id: "A1",
