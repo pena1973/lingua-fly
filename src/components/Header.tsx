@@ -3,7 +3,7 @@
 import Link from "next/link";
 import LogoBird from "./LogoBird";
 import { useLang } from "@/context/LanguageContext";
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 const LEARN_LANGS = [
   { value: "pt", label: "pt" },
@@ -25,9 +25,18 @@ export default function Header() {
   return (
     <header className="header">
       <div className="headerRow">
-        <Link href="/" className="brand">
+        {/* <Link href="/" className="brand">
           <LogoBird size={34} />
           <span className="brandTitle">LinguaFly</span>
+        </Link> */}
+
+        <Link href="/" className="brand">
+          <LogoBird size={34} />
+
+          <div className="brandText">
+            <span className="brandTitle">LinguaFly</span>
+            <span className="brandTagline">{t("tagline")}</span>
+          </div>
         </Link>
 
         <div className="headerSpacer" />
@@ -103,7 +112,7 @@ export default function Header() {
                       (opt.value === uiLang ? " active" : "")
                     }
                     onMouseDown={(e) => {
-                      e.preventDefault();                      
+                      e.preventDefault();
                       setUiLang(opt.value as "ru" | "en");
                       setIsUiOpen(false);
                     }}

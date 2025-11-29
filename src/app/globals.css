@@ -134,6 +134,8 @@ body::before {
   gap: 14px;
 }
 
+/* brand */
+
 .brand {
   display: flex;
   align-items: center;
@@ -149,6 +151,22 @@ body::before {
   text-shadow: 0 1px 0 rgba(0, 0, 0, .35);
   color: #eef3ff;
 }
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brandTagline {
+  margin-top: 12px;
+  font-size: 0.68rem;
+  opacity: 0.75;  
+  color: #eef3ff;
+  margin-top: 5px;
+  letter-spacing: 0.3px;
+}
+/* //----------------- */
 
 .headerSpacer {
   flex: 1
@@ -334,9 +352,6 @@ body::before {
   overflow: auto;
   scrollbar-color: #848f9c transparent;
 }
-
-
-
 
 .centerPane {
   padding: 16px

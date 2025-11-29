@@ -48,6 +48,10 @@ const dict: Dict = {
         ru: "По вопросам размещения пишите:",
         en: "For advertising inquiries, please contact:",
     },
+    tagline: {
+        en: "Vocabulary Trainer",
+        ru: "Тренажёр словарного запаса"
+    }
 };
 
 function detectInitialLang(): UiLang {
