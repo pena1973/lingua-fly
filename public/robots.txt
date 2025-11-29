@@ -2,3 +2,9 @@ User-agent: *
 Allow: /
 
 Sitemap: https://lingua-fly.com/sitemap.xml
+
+User-agent: *
+Disallow: /privacy
+Disallow: /legal
+Disallow: /ai
+
