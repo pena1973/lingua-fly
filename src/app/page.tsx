@@ -59,7 +59,7 @@ const LIBS_BY_LANG_PAIR = {
 } as const;
 
 export default function HomePage() {
-  const { learningLang, uiLang } = useLang();
+  const { learningLang, uiLang, t } = useLang();
 
   const lib = useMemo(() => {
     const byUi = LIBS_BY_LANG_PAIR[learningLang as keyof typeof LIBS_BY_LANG_PAIR];
@@ -101,7 +101,7 @@ export default function HomePage() {
             onClick={() => setIsCatalogOpen((v) => !v)}
           >
             <span className="hamburgerIcon" />
-            <span className="hamburgerLabel">Каталог</span>
+            <span className="hamburgerLabel">{t("catalog_title")}</span>
           </button>
         </div>
 
