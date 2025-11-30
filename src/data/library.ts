@@ -6403,6 +6403,547 @@ export const libraryPTRU: Library = {
                         { id: "w51", native: "ano", target: "год" }
                     ]
                 },
+                // вопросы с como и quanto
+                {
+                    id: "questions_como_quanto",
+                    rule: [
+                        "Como é que te chamas? — Как тебя зовут?",
+                        "Como é a mulher do José? — Какая жена у Жозе? (описание)",
+                        "Como está a mulher do José? — Как себя чувствует жена Жозе? (состояние)",
+                        "Como fala a professora? — Как говорит преподавательница?",
+                        "Quanto vinho? — Сколько вина?",
+                        "Quanta água? — Сколько воды?",
+                        "Quantos anos? — Сколько лет?",
+                        "Quantas canetas? — Сколько ручек?",
+                        "Quanto custa? — Сколько стоит?",
+                        "Por quanto vendes? — За сколько продаёшь?"
+                    ].join("\n"),
+
+                    title: "Вопросы с COMO e QUANTO",
+                    title_native: "Вопросы с COMO и QUANTO",
+                    title_target: "Questions with COMO and QUANTO",
+
+                    sentences: [
+                        { target: "Hoje quero aprender mais perguntas em português.", native: "Сегодня я хочу выучить больше вопросов на португальском." },
+                        { target: "As perguntas ajudam a falar com as pessoas.", native: "Вопросы помогают разговаривать с людьми." },
+                        { target: "Eu começo com a pergunta: Como é que te chamas?", native: "Я начинаю с вопроса: Как тебя зовут?" },
+                        { target: "Eu respondo: Chamo-me Ana.", native: "Я отвечаю: Меня зовут Ана." },
+
+                        { target: "Depois encontro o José.", native: "Потом я встречаю Жозе." },
+                        { target: "Eu pergunto: Como é a mulher do José?", native: "Я спрашиваю: Какая жена у Жозе?" },
+                        { target: "Ele diz que ela é simpática e trabalhadora.", native: "Он говорит, что она симпатичная и трудолюбивая." },
+                        { target: "Eu também pergunto: Como está a mulher do José?", native: "Я также спрашиваю: Как чувствует себя жена Жозе?" },
+
+                        { target: "O José diz que ela está bem hoje.", native: "Жозе говорит, что сегодня она чувствует себя хорошо." },
+                        { target: "Ela está um pouco cansada, mas feliz.", native: "Она немного устала, но счастлива." },
+                        { target: "Depois eu vejo a professora de português.", native: "Потом я вижу учительницу португальского." },
+                        { target: "Eu pergunto: Como fala a professora?", native: "Я спрашиваю: Как говорит преподавательница?" },
+
+                        { target: "A professora fala devagar e claramente.", native: "Преподавательница говорит медленно и чётко." },
+                        { target: "Isso ajuda muito os alunos.", native: "Это очень помогает ученикам." },
+                        { target: "Mais tarde eu vou ao supermercado.", native: "Позже я иду в супермаркет." },
+                        { target: "Eu quero comprar algumas coisas.", native: "Я хочу купить некоторые вещи." },
+
+                        { target: "Na secção das bebidas pergunto: Quanto vinho preciso?", native: "В отделе напитков я спрашиваю: Сколько вина мне нужно?" },
+                        { target: "Eu não preciso de muito vinho.", native: "Мне не нужно много вина." },
+                        { target: "Quero também saber: Quanta água devo levar?", native: "Я также хочу узнать: Сколько воды мне взять?" },
+                        { target: "A água é sempre importante.", native: "Вода всегда важна." },
+
+                        { target: "Depois penso nos meus estudos.", native: "Потом я думаю о своих занятиях." },
+                        { target: "Eu pergunto a mim mesma: Quantos anos estudo português?", native: "Я спрашиваю себя: Сколько лет я учу португальский?" },
+                        { target: "Eu estudo português há dois anos.", native: "Я учу португальский два года." },
+                        { target: "Ainda tenho muito para aprender.", native: "Мне ещё многое предстоит выучить." },
+
+                        { target: "No supermercado também vejo canetas.", native: "В супермаркете я также вижу ручки." },
+                        { target: "Eu pergunto: Quantas canetas compro hoje?", native: "Я спрашиваю: Сколько ручек мне купить сегодня?" },
+                        { target: "Eu preciso de três canetas novas.", native: "Мне нужны три новые ручки." },
+                        { target: "As minhas antigas já não funcionam.", native: "Мои старые больше не работают." },
+
+                        { target: "Depois vou à caixa para pagar.", native: "Потом я иду на кассу, чтобы заплатить." },
+                        { target: "Eu pergunto: Quanto custa a garrafa de água?", native: "Я спрашиваю: Сколько стоит бутылка воды?" },
+                        { target: "A garrafa custa um euro.", native: "Бутылка стоит один евро." },
+                        { target: "Eu pago e saio da loja.", native: "Я плачу и выхожу из магазина." },
+
+                        { target: "Na rua encontro um vendedor de fruta.", native: "На улице я встречаю продавца фруктов." },
+                        { target: "Eu pergunto: Por quanto vendes as maçãs?", native: "Я спрашиваю: За сколько ты продаёшь яблоки?" },
+                        { target: "Ele vende por dois euros o quilo.", native: "Он продаёт по два евро за килограмм." },
+                        { target: "As maçãs parecem frescas.", native: "Яблоки выглядят свежими." },
+
+                        { target: "Eu compro meio quilo de maçãs.", native: "Я покупаю полкило яблок." },
+                        { target: "Depois continuo o meu passeio.", native: "Потом я продолжаю свою прогулку." },
+                        { target: "Eu penso em todas as perguntas que aprendi hoje.", native: "Я думаю обо всех вопросах, которые сегодня выучила." },
+                        { target: "Fazer perguntas ajuda-me a comunicar melhor.", native: "Задавать вопросы помогает мне лучше общаться." },
+
+                        { target: "Eu quero usar estas perguntas todos os dias.", native: "Я хочу использовать эти вопросы каждый день." },
+                        { target: "Eu preciso de praticar muito.", native: "Мне нужно много практиковаться." },
+                        { target: "Eu gosto de aprender línguas.", native: "Мне нравится учить языки." },
+                        { target: "O português é uma língua bonita.", native: "Португальский — красивый язык." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "como", native: "как" },
+                        { id: "w2", target: "quanto", native: "сколько (м.р.)" },
+                        { id: "w3", target: "quanta", native: "сколько (ж.р.)" },
+                        { id: "w4", target: "quantos", native: "сколько (мн.ч. м.р.)" },
+                        { id: "w5", target: "quantas", native: "сколько (мн.ч. ж.р.)" },
+
+                        { id: "w6", target: "custa", native: "стоит" },
+                        { id: "w7", target: "vendes", native: "продаёшь" },
+                        { id: "w8", target: "mulher", native: "жена / женщина" },
+                        { id: "w9", target: "professora", native: "преподавательница" },
+                        { id: "w10", target: "fala", native: "говорит" },
+
+                        { id: "w11", target: "ano", native: "год" },
+                        { id: "w12", target: "caneta", native: "ручка" },
+                        { id: "w13", target: "vinho", native: "вино" },
+                        { id: "w14", target: "água", native: "вода" },
+                        { id: "w15", target: "maçã", native: "яблоко" },
+
+                        { id: "w16", target: "supermercado", native: "супермаркет" },
+                        { id: "w17", target: "garrafa", native: "бутылка" },
+                        { id: "w18", target: "quilo", native: "килограмм" },
+                        { id: "w19", target: "pagar", native: "платить" },
+                        { id: "w20", target: "comprar", native: "покупать" },
+
+                        { id: "w21", target: "precisar", native: "нуждаться" },
+                        { id: "w22", target: "perguntar", native: "спрашивать" },
+                        { id: "w23", target: "responder", native: "отвечать" },
+                        { id: "w24", target: "conversar", native: "разговаривать" },
+                        { id: "w25", target: "comunicar", native: "общаться" },
+
+                        { id: "w26", target: "devagar", native: "медленно" },
+                        { id: "w27", target: "claramente", native: "чётко" },
+                        { id: "w28", target: "simpático", native: "симпатичный" },
+                        { id: "w29", target: "cansado", native: "уставший" },
+                        { id: "w30", target: "feliz", native: "счастливый" },
+
+                        { id: "w31", target: "linda", native: "красивая" },
+                        { id: "w32", target: "fruta", native: "фрукты" },
+                        { id: "w33", target: "loja", native: "магазин" },
+                        { id: "w34", target: "estudar", native: "учиться" },
+                        { id: "w35", target: "aprender", native: "учить" },
+
+                        { id: "w36", target: "hoje", native: "сегодня" },
+                        { id: "w37", target: "passeio", native: "прогулка" },
+                        { id: "w38", target: "preciso", native: "мне нужно" },
+                        { id: "w39", target: "devo", native: "должен" },
+                        { id: "w40", target: "usar", native: "использовать" },
+
+                        { id: "w41", target: "todos os dias", native: "каждый день" },
+                        { id: "w42", target: "encontrar", native: "встречать" },
+                        { id: "w43", target: "ver", native: "видеть" },
+                        { id: "w44", target: "continuar", native: "продолжать" },
+                        { id: "w45", target: "bom", native: "хороший" },
+
+                        { id: "w46", target: "língua", native: "язык" },
+                        { id: "w47", target: "bonita", native: "красивый (ж.р.)" },
+                        { id: "w48", target: "ajudar", native: "помогать" },
+                        { id: "w49", target: "coisas", native: "вещи" },
+                        { id: "w50", target: "pergunta", native: "вопрос" }
+                    ]
+                },
+                {
+                    id: "questions_qual_quem",
+
+                    rule: [
+                        "Qual é a profissão do Pedro? — Какая профессия у Педру?",
+                        "Quais são as profissões do Pedro? — Какие профессии у Педру?",
+                        "Qual vinho bebes? — Какое вино ты пьёшь?",
+
+                        "Quem é ela? — Кто она?",
+                        "Com quem falas? — С кем ты говоришь?",
+                        "A quem escreves? — Кому ты пишешь?",
+                        "Para quem é o vinho? — Для кого это вино?",
+                        "De quem é a caneta? — Чья это ручка?",
+                        "De quem falas? / Sobre quem falas? — О ком ты говоришь?"
+                    ].join("\n"),
+
+                    title: "Вопросы с QUAL e QUEM",
+                    title_native: "Вопросы с QUAL и QUEM",
+                    title_target: "Questions with QUAL and QUEM",
+
+                    sentences: [
+                        { target: "Hoje quero praticar novas perguntas em português.", native: "Сегодня я хочу попрактиковать новые вопросы на португальском." },
+                        { target: "As perguntas ajudam-me a falar melhor.", native: "Вопросы помогают мне говорить лучше." },
+                        { target: "Eu começo com a palavra qual.", native: "Я начинаю со слова qual." },
+                        { target: "Eu pergunto: Qual é a profissão do Pedro?", native: "Я спрашиваю: Какая профессия у Педру?" },
+
+                        { target: "O Pedro tem duas profissões.", native: "У Педру две профессии." },
+                        { target: "Por isso pergunto: Quais são as profissões do Pedro?", native: "Поэтому я спрашиваю: Какие профессии у Педру?" },
+                        { target: "Ele é professor e também fotógrafo.", native: "Он преподаватель и также фотограф." },
+                        { target: "Ele trabalha muito, mas gosta da sua vida.", native: "Он много работает, но любит свою жизнь." },
+
+                        { target: "Eu continuo a praticar com comida e bebidas.", native: "Я продолжаю практиковаться с едой и напитками." },
+                        { target: "Eu pergunto: Qual vinho bebes?", native: "Я спрашиваю: Какое вино ты пьёшь?" },
+                        { target: "Eu bebo vinho tinto algumas vezes.", native: "Я иногда пью красное вино." },
+                        { target: "Mas prefiro água no dia a dia.", native: "Но предпочитаю воду каждый день." },
+
+                        { target: "Depois penso na palavra quem.", native: "Потом я думаю о слове quem." },
+                        { target: "Eu pergunto: Quem é ela?", native: "Я спрашиваю: Кто она?" },
+                        { target: "Ela é uma amiga nova.", native: "Она новая подруга." },
+                        { target: "Ela estuda português comigo.", native: "Она учит португальский вместе со мной." },
+
+                        { target: "Às vezes falo ao telefone.", native: "Иногда я говорю по телефону." },
+                        { target: "Eu pergunto: Com quem falas?", native: "Я спрашиваю: С кем ты говоришь?" },
+                        { target: "Eu falo com a minha mãe muitas vezes.", native: "Я часто говорю со своей мамой." },
+                        { target: "Ela pergunta como foi o meu dia.", native: "Она спрашивает, как прошёл мой день." },
+
+                        { target: "Também escrevo muitas mensagens.", native: "Я также пишу много сообщений." },
+                        { target: "Por isso pergunto: A quem escreves?", native: "Поэтому я спрашиваю: Кому ты пишешь?" },
+                        { target: "Eu escrevo ao meu amigo do Brasil.", native: "Я пишу своему другу из Бразилии." },
+                        { target: "Ele gosta de praticar português comigo.", native: "Ему нравится практиковать португальский со мной." },
+
+                        { target: "Às vezes compro alguma coisa para alguém.", native: "Иногда я покупаю что-то для кого-то." },
+                        { target: "Eu pergunto: Para quem é o vinho?", native: "Я спрашиваю: Для кого это вино?" },
+                        { target: "O vinho é para a minha amiga Ana.", native: "Вино для моей подруги Аны." },
+                        { target: "Ela faz anos hoje.", native: "У неё сегодня день рождения." },
+
+                        { target: "No café encontro uma caneta na mesa.", native: "В кафе я нахожу ручку на столе." },
+                        { target: "Eu pergunto: De quem é a caneta?", native: "Я спрашиваю: Чья это ручка?" },
+                        { target: "A caneta é do João.", native: "Ручка принадлежит Жуану." },
+                        { target: "Eu devolvo a caneta para ele.", native: "Я возвращаю ручку ему." },
+
+                        { target: "Mais tarde ouço alguém falar de uma pessoa.", native: "Позже я слышу, что кто-то говорит о человеке." },
+                        { target: "Eu pergunto: De quem falas?", native: "Я спрашиваю: О ком ты говоришь?" },
+                        { target: "A pessoa responde: Falo da minha colega nova.", native: "Человек отвечает: Я говорю о своей новой коллеге." },
+                        { target: "Ela começou a trabalhar esta semana.", native: "Она начала работать на этой неделе." },
+
+                        { target: "Eu tento usar todas estas perguntas no meu dia.", native: "Я стараюсь использовать все эти вопросы в течение дня." },
+                        { target: "Perguntar ajuda-me a aprender.", native: "Задавать вопросы помогает мне учиться." },
+                        { target: "Eu sinto que melhoro a cada semana.", native: "Я чувствую, что улучшаюсь каждую неделю." },
+                        { target: "Eu quero falar português com mais confiança.", native: "Я хочу говорить по-португальски более уверенно." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "qual", native: "какой" },
+                        { id: "w2", target: "quais", native: "какие" },
+                        { id: "w3", target: "quem", native: "кто" },
+                        { id: "w4", target: "com quem", native: "с кем" },
+                        { id: "w5", target: "a quem", native: "кому" },
+
+                        { id: "w6", target: "para quem", native: "для кого" },
+                        { id: "w7", target: "de quem", native: "чей / о ком" },
+                        { id: "w8", target: "profissão", native: "профессия" },
+                        { id: "w9", target: "vinho", native: "вино" },
+                        { id: "w10", target: "caneta", native: "ручка" },
+
+                        { id: "w11", target: "perguntar", native: "спрашивать" },
+                        { id: "w12", target: "responder", native: "отвечать" },
+                        { id: "w13", target: "falar", native: "говорить" },
+                        { id: "w14", target: "escrever", native: "писать" },
+                        { id: "w15", target: "devolver", native: "возвращать" },
+
+                        { id: "w16", target: "colega", native: "коллега" },
+                        { id: "w17", target: "amiga", native: "подруга" },
+                        { id: "w18", target: "mãe", native: "мама" },
+                        { id: "w19", target: "mesa", native: "стол" },
+                        { id: "w20", target: "café", native: "кафе" },
+
+                        { id: "w21", target: "ano", native: "год" },
+                        { id: "w22", target: "dia a dia", native: "повседневность" },
+                        { id: "w23", target: "pessoa", native: "человек" },
+                        { id: "w24", target: "vida", native: "жизнь" },
+                        { id: "w25", target: "trabalhar", native: "работать" },
+
+                        { id: "w26", target: "fotógrafo", native: "фотограф" },
+                        { id: "w27", target: "professor", native: "учитель" },
+                        { id: "w28", target: "claro", native: "ясно" },
+                        { id: "w29", target: "devagar", native: "медленно" },
+                        { id: "w30", target: "às vezes", native: "иногда" },
+
+                        { id: "w31", target: "telefone", native: "телефон" },
+                        { id: "w32", target: "mensagem", native: "сообщение" },
+                        { id: "w33", target: "loja", native: "магазин" },
+                        { id: "w34", target: "fruta", native: "фрукты" },
+                        { id: "w35", target: "maçã", native: "яблоко" },
+
+                        { id: "w36", target: "quilograma", native: "килограмм" },
+                        { id: "w37", target: "comprar", native: "покупать" },
+                        { id: "w38", target: "pagar", native: "платить" },
+                        { id: "w39", target: "dia", native: "день" },
+                        { id: "w40", target: "semana", native: "неделя" },
+
+                        { id: "w41", target: "usar", native: "использовать" },
+                        { id: "w42", target: "melhorar", native: "улучшать" },
+                        { id: "w43", target: "confiança", native: "уверенность" },
+                        { id: "w44", target: "de quem falas", native: "о ком ты говоришь" },
+                        { id: "w45", target: "sobre", native: "о / про" },
+
+                        { id: "w46", target: "amiga nova", native: "новая подруга" },
+                        { id: "w47", target: "garrafa", native: "бутылка" },
+                        { id: "w48", target: "vida diária", native: "повседневная жизнь" },
+                        { id: "w49", target: "estudar", native: "учиться" },
+                        { id: "w50", target: "pergunta", native: "вопрос" }
+                    ]
+                },
+                {
+                    id: "questions_onde_quando",
+
+                    rule: [
+                        "Onde moras? — Где ты живёшь?",
+                        "Aonde vais? / Para onde vais? — Куда ты идёшь?",
+                        "Por onde passa o autocarro? — Где проходит автобус? / По какому маршруту он едет?",
+                        "De onde é? — Откуда он/она?",
+                        "Quando bebemos vinho? — Когда мы пьём вино?",
+                        "Para quando precisa? — К какому времени вам нужно? / На когда нужно?"
+                    ].join("\n"),
+
+                    title: "Вопросы с ONDE и QUANDO",
+                    title_native: "Вопросы с ONDE и QUANDO",
+                    title_target: "Questions with ONDE and QUANDO",
+
+                    sentences: [
+                        { target: "Hoje quero aprender perguntas sobre lugares e tempo.", native: "Сегодня я хочу выучить вопросы о местах и времени." },
+                        { target: "Eu começo com a palavra onde.", native: "Я начинаю со слова onde." },
+                        { target: "Eu pergunto: Onde moras?", native: "Я спрашиваю: Где ты живёшь?" },
+                        { target: "Eu moro no centro da cidade.", native: "Я живу в центре города." },
+
+                        { target: "A minha amiga Ana mora perto do parque.", native: "Моя подруга Ана живёт рядом с парком." },
+                        { target: "Ela gosta do bairro dela.", native: "Ей нравится её район." },
+                        { target: "Depois penso na pergunta aonde.", native: "Потом я думаю о вопросе aonde." },
+                        { target: "Eu pergunto: Aonde vais agora?", native: "Я спрашиваю: Куда ты сейчас идёшь?" },
+
+                        { target: "Eu vou ao supermercado comprar fruta.", native: "Я иду в супермаркет купить фрукты." },
+                        { target: "Às vezes também vou ao café.", native: "Иногда я тоже хожу в кафе." },
+                        { target: "A palavra aonde é igual a para onde.", native: "Слово aonde означает то же, что и para onde." },
+                        { target: "Eu pergunto: Para onde vais depois do trabalho?", native: "Я спрашиваю: Куда ты идёшь после работы?" },
+
+                        { target: "Depois penso na pergunta por onde.", native: "Потом я думаю о вопросе por onde." },
+                        { target: "Eu pergunto: Por onde passa o autocarro?", native: "Я спрашиваю: Где проходит автобус? / По какому маршруту идёт автобус?" },
+                        { target: "O autocarro passa pela avenida principal.", native: "Автобус проходит по главному проспекту." },
+                        { target: "Ele também passa perto da minha casa.", native: "Он также проходит рядом с моим домом." },
+
+                        { target: "Agora quero saber de onde.", native: "Теперь я хочу узнать про de onde." },
+                        { target: "Eu pergunto: De onde é o novo colega?", native: "Я спрашиваю: Откуда новый коллега?" },
+                        { target: "Ele é da Itália.", native: "Он из Италии." },
+                        { target: "Ele fala italiano e inglês.", native: "Он говорит по-итальянски и по-английски." },
+
+                        { target: "Depois penso na palavra quando.", native: "Потом я думаю о слове quando." },
+                        { target: "Eu pergunto: Quando bebemos vinho?", native: "Я спрашиваю: Когда мы пьём вино?" },
+                        { target: "Nós bebemos vinho ao jantar às vezes.", native: "Мы иногда пьём вино за ужином." },
+                        { target: "Também bebemos vinho em festas.", native: "Мы также пьём вино на праздниках." },
+
+                        { target: "Quero saber também para quando.", native: "Я хочу также узнать о para quando." },
+                        { target: "Eu pergunto: Para quando precisa do documento?", native: "Я спрашиваю: На когда вам нужен документ?" },
+                        { target: "A pessoa responde que precisa para amanhã.", native: "Человек отвечает, что ему нужно к завтрашнему дню." },
+                        { target: "Eu tento preparar tudo a tempo.", native: "Я стараюсь подготовить всё вовремя." },
+
+                        { target: "No meu dia uso muitas perguntas.", native: "В течение дня я использую много вопросов." },
+                        { target: "Pergunto onde está o autocarro.", native: "Я спрашиваю, где находится автобус." },
+                        { target: "Pergunto quando começa a aula.", native: "Я спрашиваю, когда начинается урок." },
+                        { target: "Pergunto para onde vão os meus amigos.", native: "Я спрашиваю, куда идут мои друзья." },
+
+                        { target: "As perguntas ajudam-me a entender melhor as pessoas.", native: "Вопросы помогают мне лучше понимать людей." },
+                        { target: "Eu falo com diferentes pessoas todos os dias.", native: "Я разговариваю с разными людьми каждый день." },
+                        { target: "Cada pessoa tem uma resposta diferente.", native: "У каждого человека свой ответ." },
+                        { target: "Eu gosto de aprender essas respostas.", native: "Мне нравится узнавать эти ответы." },
+
+                        { target: "Perguntar é uma parte importante da comunicação.", native: "Спрашивать — важная часть общения." },
+                        { target: "Eu quero usar estas perguntas no meu dia a dia.", native: "Я хочу использовать эти вопросы каждый день." },
+                        { target: "Eu sinto que o meu português melhora.", native: "Я чувствую, что мой португальский улучшается." },
+                        { target: "Eu continuo a estudar com motivação.", native: "Я продолжаю учиться с мотивацией." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "onde", native: "где" },
+                        { id: "w2", target: "aonde", native: "куда" },
+                        { id: "w3", target: "para onde", native: "куда" },
+                        { id: "w4", target: "por onde", native: "где проходит / по какому маршруту" },
+                        { id: "w5", target: "de onde", native: "откуда" },
+
+                        { id: "w6", target: "quando", native: "когда" },
+                        { id: "w7", target: "para quando", native: "на когда / к какому времени" },
+                        { id: "w8", target: "morar", native: "жить" },
+                        { id: "w9", target: "ir", native: "идти" },
+                        { id: "w10", target: "passar", native: "проходить" },
+
+                        { id: "w11", target: "autocarro", native: "автобус" },
+                        { id: "w12", target: "avenida", native: "проспект" },
+                        { id: "w13", target: "bairro", native: "район" },
+                        { id: "w14", target: "centro", native: "центр" },
+                        { id: "w15", target: "cidade", native: "город" },
+
+                        { id: "w16", target: "supermercado", native: "супермаркет" },
+                        { id: "w17", target: "fruta", native: "фрукты" },
+                        { id: "w18", target: "café", native: "кафе" },
+                        { id: "w19", target: "documento", native: "документ" },
+                        { id: "w20", target: "precisar", native: "нуждаться" },
+
+                        { id: "w21", target: "responder", native: "отвечать" },
+                        { id: "w22", target: "perguntar", native: "спрашивать" },
+                        { id: "w23", target: "hora", native: "время" },
+                        { id: "w24", target: "amanhã", native: "завтра" },
+                        { id: "w25", target: "sempre", native: "всегда" },
+
+                        { id: "w26", target: "às vezes", native: "иногда" },
+                        { id: "w27", target: "jantar", native: "ужин" },
+                        { id: "w28", target: "festa", native: "вечеринка" },
+                        { id: "w29", target: "colega", native: "коллега" },
+                        { id: "w30", target: "trabalho", native: "работа" },
+
+                        { id: "w31", target: "começar", native: "начинать" },
+                        { id: "w32", target: "usar", native: "использовать" },
+                        { id: "w33", target: "dia a dia", native: "повседневность" },
+                        { id: "w34", target: "motivar", native: "мотивировать" },
+                        { id: "w35", target: "melhorar", native: "улучшать" },
+
+                        { id: "w36", target: "continua", native: "продолжает" },
+                        { id: "w37", target: "pessoa", native: "человек" },
+                        { id: "w38", target: "resposta", native: "ответ" },
+                        { id: "w39", target: "diferente", native: "разный" },
+                        { id: "w40", target: "cidade", native: "город" },
+
+                        { id: "w41", target: "tempo", native: "время" },
+                        { id: "w42", target: "hoje", native: "сегодня" },
+                        { id: "w43", target: "agora", native: "сейчас" },
+                        { id: "w44", target: "antes", native: "до" },
+                        { id: "w45", target: "depois", native: "после" },
+
+                        { id: "w46", target: "linha", native: "линия (трансп.)" },
+                        { id: "w47", target: "rota", native: "маршрут" },
+                        { id: "w48", target: "preciso", native: "мне нужно" },
+                        { id: "w49", target: "percurso", native: "путь, трасса" },
+                        { id: "w50", target: "chegar", native: "прибывать" }
+                    ]
+                },
+                {
+                    id: "questions_oque_que_deque",
+
+                    rule: [
+                        "O que é que vendes? — Что ты продаёшь?",
+                        "Que vinho bebes? — Какое вино ты пьёшь?",
+                        "O que é isto? — Что это?",
+                        "De que cor é a caneta? — Какого цвета ручка?",
+                        "De que ano é o teu carro? — Какого года твоя машина?",
+                        "De que é o bolo? — Из чего сделан торт? / Какой это торт?",
+                        "De que falas? / Sobre que falas? — О чём ты говоришь?"
+                    ].join("\n"),
+
+                    title: "Вопросы с O QUE, QUE и DE QUE",
+                    title_native: "Вопросы с O QUE, QUE и DE QUE",
+                    title_target: "Questions with O QUE, QUE and DE QUE",
+
+                    sentences: [
+                        { target: "Hoje quero aprender perguntas sobre coisas e características.", native: "Сегодня я хочу выучить вопросы о предметах и их свойствах." },
+                        { target: "Eu começo com a pergunta: O que é isto?", native: "Я начинаю с вопроса: Что это?" },
+                        { target: "Eu vejo um objeto na mesa.", native: "Я вижу предмет на столе." },
+                        { target: "Eu pergunto: O que é isto?", native: "Я спрашиваю: Что это?" },
+
+                        { target: "A pessoa responde que é uma carteira.", native: "Человек отвечает, что это кошелёк." },
+                        { target: "Eu pego a carteira na mão.", native: "Я беру кошелёк в руку." },
+                        { target: "A carteira é pequena e leve.", native: "Кошелёк маленький и лёгкий." },
+                        { target: "Depois vejo uma caneta azul ao lado.", native: "Потом я вижу рядом синюю ручку." },
+
+                        { target: "Eu pergunto: De que cor é a caneta?", native: "Я спрашиваю: Какого цвета ручка?" },
+                        { target: "A caneta é azul.", native: "Ручка синяя." },
+                        { target: "Eu escrevo algumas palavras com a caneta.", native: "Я пишу несколько слов ручкой." },
+                        { target: "A tinta escreve muito bem.", native: "Чернила пишут очень хорошо." },
+
+                        { target: "Depois penso na pergunta: O que é que vendes?", native: "Потом я думаю о вопросе: Что ты продаёшь?" },
+                        { target: "Eu estou num mercado pequeno.", native: "Я нахожусь на маленьком рынке." },
+                        { target: "Vejo um vendedor com muitas caixas.", native: "Я вижу продавца с множеством коробок." },
+                        { target: "Eu pergunto ao vendedor: O que é que vendes?", native: "Я спрашиваю продавца: Что ты продаёшь?" },
+
+                        { target: "Ele diz que vende fruta e legumes.", native: "Он говорит, что продаёт фрукты и овощи." },
+                        { target: "Eu vejo maçãs e bananas frescas.", native: "Я вижу свежие яблоки и бананы." },
+                        { target: "Também vejo tomates e cenouras.", native: "Также я вижу помидоры и морковь." },
+                        { target: "Eu gosto de comprar comida saudável.", native: "Мне нравится покупать полезную еду." },
+
+                        { target: "Depois eu penso na pergunta: Que vinho bebes?", native: "Потом я думаю о вопросе: Какое вино ты пьёшь?" },
+                        { target: "Eu encontro um amigo no supermercado.", native: "В супермаркете я встречаю друга." },
+                        { target: "Ele tem uma garrafa na mão.", native: "У него в руке бутылка." },
+                        { target: "Eu pergunto: Que vinho bebes?", native: "Я спрашиваю: Какое вино ты пьёшь?" },
+
+                        { target: "Ele diz que bebe vinho branco.", native: "Он говорит, что пьёт белое вино." },
+                        { target: "Ele gosta de vinho leve e fresco.", native: "Он любит лёгкое и свежее вино." },
+                        { target: "Eu prefiro vinho tinto.", native: "Я предпочитаю красное вино." },
+                        { target: "Cada pessoa tem o seu gosto.", native: "У каждого человека свой вкус." },
+
+                        { target: "Depois vejo um carro no estacionamento.", native: "Потом я вижу машину на парковке." },
+                        { target: "Eu pergunto: De que ano é o teu carro?", native: "Я спрашиваю: Какого года твоя машина?" },
+                        { target: "O dono diz que o carro é de 2018.", native: "Владелец говорит, что машина 2018 года." },
+                        { target: "O carro parece muito bem cuidado.", native: "Машина выглядит очень ухоженной." },
+
+                        { target: "Mais tarde vejo um bolo em cima da mesa.", native: "Позже я вижу торт на столе." },
+                        { target: "Eu pergunto: De que é o bolo?", native: "Я спрашиваю: Какой это торт? / Из чего торт?" },
+                        { target: "A pessoa diz que o bolo é de chocolate.", native: "Человек говорит, что торт шоколадный." },
+                        { target: "O cheiro é muito doce e agradável.", native: "Запах очень сладкий и приятный." },
+
+                        { target: "Depois ouço duas pessoas conversar.", native: "Потом я слышу, как разговаривают двое." },
+                        { target: "Eu pergunto: De que falas?", native: "Я спрашиваю: О чём ты говоришь?" },
+                        { target: "A pessoa responde que fala sobre trabalho.", native: "Человек отвечает, что говорит о работе." },
+                        { target: "O dia deles foi muito ocupado.", native: "Их день был очень занятым." },
+
+                        { target: "Eu gosto de usar estas perguntas no meu dia.", native: "Мне нравится использовать эти вопросы в течение дня." },
+                        { target: "Elas ajudam-me a aprender mais.", native: "Они помогают мне учиться больше." },
+                        { target: "Eu sinto que entendo melhor o português.", native: "Я чувствую, что лучше понимаю португальский." },
+                        { target: "Eu quero continuar a praticar todos os dias.", native: "Я хочу продолжать практиковаться каждый день." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "o que", native: "что" },
+                        { id: "w2", target: "que", native: "какой / который" },
+                        { id: "w3", target: "de que", native: "из чего / какого / о чём" },
+                        { id: "w4", target: "cor", native: "цвет" },
+                        { id: "w5", target: "ano", native: "год" },
+
+                        { id: "w6", target: "vender", native: "продавать" },
+                        { id: "w7", target: "beber", native: "пить" },
+                        { id: "w8", target: "isto", native: "это" },
+                        { id: "w9", target: "carro", native: "машина" },
+                        { id: "w10", target: "bolo", native: "торт" },
+
+                        { id: "w11", target: "carteira", native: "кошелёк" },
+                        { id: "w12", target: "caneta", native: "ручка" },
+                        { id: "w13", target: "azul", native: "синий" },
+                        { id: "w14", target: "tinta", native: "чернила" },
+                        { id: "w15", target: "mesa", native: "стол" },
+
+                        { id: "w16", target: "vendedor", native: "продавец" },
+                        { id: "w17", target: "fruta", native: "фрукты" },
+                        { id: "w18", target: "legumes", native: "овощи" },
+                        { id: "w19", target: "bananas", native: "бананы" },
+                        { id: "w20", target: "maçãs", native: "яблоки" },
+
+                        { id: "w21", target: "tomates", native: "помидоры" },
+                        { id: "w22", target: "cenouras", native: "морковь" },
+                        { id: "w23", target: "supermercado", native: "супермаркет" },
+                        { id: "w24", target: "garrafa", native: "бутылка" },
+                        { id: "w25", target: "gosto", native: "вкус / предпочтение" },
+
+                        { id: "w26", target: "leve", native: "лёгкий" },
+                        { id: "w27", target: "fresco", native: "свежий" },
+                        { id: "w28", target: "tinto", native: "красный (о вине)" },
+                        { id: "w29", target: "branco", native: "белый (о вине)" },
+                        { id: "w30", target: "estacionamento", native: "парковка" },
+
+                        { id: "w31", target: "cheiro", native: "запах" },
+                        { id: "w32", target: "doce", native: "сладкий" },
+                        { id: "w33", target: "agradável", native: "приятный" },
+                        { id: "w34", target: "conversar", native: "разговаривать" },
+                        { id: "w35", target: "ocupado", native: "занятой" },
+
+                        { id: "w36", target: "resposta", native: "ответ" },
+                        { id: "w37", target: "entender", native: "понимать" },
+                        { id: "w38", target: "usar", native: "использовать" },
+                        { id: "w39", target: "continuar", native: "продолжать" },
+                        { id: "w40", target: "praticar", native: "практиковаться" },
+
+                        { id: "w41", target: "leve", native: "лёгкий" },
+                        { id: "w42", target: "objeto", native: "предмет" },
+                        { id: "w43", target: "pequeno", native: "маленький" },
+                        { id: "w44", target: "falar", native: "говорить" },
+                        { id: "w45", target: "sobre", native: "о, про" },
+
+                        { id: "w46", target: "mercado", native: "рынок" },
+                        { id: "w47", target: "saudável", native: "здоровый / полезный" },
+                        { id: "w48", target: "mão", native: "рука" },
+                        { id: "w49", target: "lado", native: "сторона / рядом" },
+                        { id: "w50", target: "coisa", native: "вещь" }
+                    ]
+                }
+
+
 
             ],
 
