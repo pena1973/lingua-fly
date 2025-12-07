@@ -3,7 +3,7 @@
 import { useLang } from "@/context/LanguageContext";
 
 export default function PromoBar() {
-  const { t } = useLang();
+  const { t,uiLang } = useLang();
 
   return (
     <div className="promoBar">
@@ -22,7 +22,7 @@ export default function PromoBar() {
 
         <a
           className="promoCard promoAd"
-          href="mailto:ip.portu.me@gmail.com"
+          href={uiLang==="ru"?"mailto:sutulinalarisa@gmail.com":"mailto:ip.portu.me@gmail.com"}
         >
           <h3>{t("promo_ad_title")}</h3>
           <p>
