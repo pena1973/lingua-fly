@@ -6941,8 +6941,144 @@ export const libraryPTRU: Library = {
                         { id: "w49", target: "lado", native: "сторона / рядом" },
                         { id: "w50", target: "coisa", native: "вещь" }
                     ]
-                }
+                },
 
+                {
+                    id: "possessive_pronouns_full",
+
+                    rule: [
+                        "meu / minha / meus / minhas:  мой, моя, мои",
+                        "teu / tua / teus / tuas: твой / твоя / твои (неформ.)",
+                        "seu / sua / seus / suas: ваш / ваша / ваши или его/её (по контексту)",
+                        "dele — его; dela — её (всегда однозначно)",
+                        "nosso / nossa / nossos / nossas: наш / наша / наши",
+                        "vosso / vossa / vossos / vossas: ваш / ваша / ваши",
+                        "deles / delas — их (м.р. / ж.р.)"
+                    ].join("\n"),
+
+                    title: "Притяжательные местоимения",
+                    title_native: "Притяжательные местоимения",
+                    title_target: "Possessive Pronouns",
+
+                    sentences: [
+                        { target: "Hoje quero praticar os pronomes possessivos.", native: "Сегодня я хочу попрактиковать притяжательные местоимения." },
+                        { target: "Eu começo com o meu gato.", native: "Я начинаю со своего кота." },
+                        { target: "O meu gato chama-se Leo.", native: "Моего кота зовут Лео." },
+                        { target: "A minha gata chama-se Mila.", native: "Мою кошку зовут Мила." },
+
+                        { target: "Os meus gatos são muito diferentes.", native: "Мои коты очень разные." },
+                        { target: "As minhas gatas são muito calmas.", native: "Мои кошки очень спокойные." },
+                        { target: "Agora penso nos animais do meu amigo Pedro.", native: "Теперь я думаю о животных моего друга Педру." },
+                        { target: "O gato dele é grande e pesado.", native: "Его кот большой и тяжёлый." },
+
+                        { target: "A gata dele é pequena e rápida.", native: "Его кошка маленькая и быстрая." },
+                        { target: "Os gatos dele dormem muito.", native: "Его коты много спят." },
+                        { target: "As gatas dele gostam de brincar.", native: "Его кошки любят играть." },
+                        { target: "A amiga Ana fala da família dela.", native: "Подруга Ана говорит о своей семье." },
+
+                        { target: "O cão dela é muito simpático.", native: "Её пёс очень дружелюбный." },
+                        { target: "A casa dela é grande.", native: "Её дом большой." },
+                        { target: "Os livros dela estão na mesa.", native: "Её книги находятся на столе." },
+                        { target: "As plantas dela estão na varanda.", native: "Её растения находятся на балконе." },
+
+                        { target: "Depois penso nos nossos amigos.", native: "Потом я думаю о наших друзьях." },
+                        { target: "O nosso amigo João tem uma bicicleta nova.", native: "Наш друг Жоан имеет новый велосипед." },
+                        { target: "A nossa amiga Sara tem um carro azul.", native: "Наша подруга Сара имеет голубую машину." },
+                        { target: "Os nossos colegas trabalham muito.", native: "Наши коллеги много работают." },
+
+                        { target: "As nossas professoras ajudam-nos muito.", native: "Наши преподавательницы очень нам помогают." },
+                        { target: "Depois vejo o grupo dos turistas.", native: "Потом я вижу группу туристов." },
+                        { target: "O guia diz: Estes são os vossos bilhetes.", native: "Гид говорит: Это ваши билеты." },
+                        { target: "A senhora procura a sua mala.", native: "Госпожа ищет свою сумку." },
+
+                        { target: "Os vossos mapas estão na mochila.", native: "Ваши карты в рюкзаке." },
+                        { target: "As vossas garrafas estão na mesa.", native: "Ваши бутылки на столе." },
+                        { target: "Encontramos também um grupo de estudantes.", native: "Мы также встречаем группу студентов." },
+                        { target: "Os computadores deles são novos.", native: "Их компьютеры новые." },
+
+                        { target: "Os professores falam das tarefas deles.", native: "Преподаватели говорят об их заданиях." },
+                        { target: "As mochilas delas são muito coloridas.", native: "Их рюкзаки очень цветные." },
+                        { target: "As amigas falam dos projetos delas.", native: "Подруги говорят о своих проектах." },
+                        { target: "Eu gosto de observar as famílias.", native: "Мне нравится наблюдать за семьями." },
+
+                        { target: "Cada pessoa fala da sua vida.", native: "Каждый человек рассказывает о своей жизни." },
+                        { target: "O pai fala do seu trabalho.", native: "Отец рассказывает о своей работе." },
+                        { target: "A mãe fala da sua rotina.", native: "Мать рассказывает о своей рутине." },
+                        { target: "Os filhos falam das suas escolas.", native: "Дети рассказывают о своих школах." },
+
+                        { target: "Eu percebo que os pronomes possessivos aparecem em todo o lado.", native: "Я понимаю, что притяжательные местоимения встречаются повсюду." },
+                        { target: "Eu quero usar o meu português todos os dias.", native: "Я хочу использовать свой португальский каждый день." },
+                        { target: "Eu escrevo sobre a minha vida em português.", native: "Я пишу о своей жизни на португальском." },
+                        { target: "Eu falo com os meus amigos da prática diária.", native: "Я говорю со своими друзьями о ежедневной практике." },
+
+                        { target: "Eles partilham as ideias deles comigo.", native: "Они делятся своими идеями со мной." },
+                        { target: "Eu partilho os meus planos com eles.", native: "Я делюсь своими планами с ними." },
+                        { target: "Aprender línguas é o meu objetivo importante.", native: "Изучение языков — моя важная цель." },
+                        { target: "Eu quero continuar com a minha motivação.", native: "Я хочу продолжать со своей мотивацией." }
+                    ],
+
+                    words: [
+                        { id: "w1", target: "meu", native: "мой" },
+                        { id: "w2", target: "minha", native: "моя" },
+                        { id: "w3", target: "meus", native: "мои (м.р.)" },
+                        { id: "w4", target: "minhas", native: "мои (ж.р.)" },
+                        { id: "w5", target: "teu", native: "твой" },
+
+                        { id: "w6", target: "tua", native: "твоя" },
+                        { id: "w7", target: "seu", native: "его / её / ваш" },
+                        { id: "w8", target: "sua", native: "её / его / ваша" },
+                        { id: "w9", target: "dele", native: "его" },
+                        { id: "w10", target: "dela", native: "её" },
+
+                        { id: "w11", target: "nosso", native: "наш" },
+                        { id: "w12", target: "nossa", native: "наша" },
+                        { id: "w13", target: "nossos", native: "наши (м.р.)" },
+                        { id: "w14", target: "nossas", native: "наши (ж.р.)" },
+                        { id: "w15", target: "vosso", native: "ваш" },
+
+                        { id: "w16", target: "vossa", native: "ваша" },
+                        { id: "w17", target: "vossos", native: "ваши (м.р.)" },
+                        { id: "w18", target: "vossas", native: "ваши (ж.р.)" },
+                        { id: "w19", target: "deles", native: "их (м.р.)" },
+                        { id: "w20", target: "delas", native: "их (ж.р.)" },
+
+                        { id: "w21", target: "gato", native: "кот" },
+                        { id: "w22", target: "gata", native: "кошка" },
+                        { id: "w23", target: "família", native: "семья" },
+                        { id: "w24", target: "amigo", native: "друг" },
+                        { id: "w25", target: "amiga", native: "подруга" },
+
+                        { id: "w26", target: "livro", native: "книга" },
+                        { id: "w27", target: "casa", native: "дом" },
+                        { id: "w28", target: "planta", native: "растение" },
+                        { id: "w29", target: "trabalho", native: "работа" },
+                        { id: "w30", target: "mala", native: "сумка" },
+
+                        { id: "w31", target: "bilhete", native: "билет" },
+                        { id: "w32", target: "mapa", native: "карта" },
+                        { id: "w33", target: "mochila", native: "рюкзак" },
+                        { id: "w34", target: "colega", native: "коллега" },
+                        { id: "w35", target: "projeto", native: "проект" },
+
+                        { id: "w36", target: "vida", native: "жизнь" },
+                        { id: "w37", target: "objetivo", native: "цель" },
+                        { id: "w38", target: "motivaçao", native: "мотивация" },
+                        { id: "w39", target: "usar", native: "использовать" },
+                        { id: "w40", target: "falar", native: "говорить" },
+
+                        { id: "w41", target: "dizer", native: "сказать" },
+                        { id: "w42", target: "gostar", native: "нравиться" },
+                        { id: "w43", target: "partilhar", native: "делиться" },
+                        { id: "w44", target: "continuar", native: "продолжать" },
+                        { id: "w45", target: "observar", native: "наблюдать" },
+
+                        { id: "w46", target: "leve", native: "лёгкий" },
+                        { id: "w47", target: "pesado", native: "тяжёлый" },
+                        { id: "w48", target: "novo", native: "новый" },
+                        { id: "w49", target: "colorido", native: "цветной" },
+                        { id: "w50", target: "ajudar", native: "помогать" }
+                    ]
+                }
 
 
             ],

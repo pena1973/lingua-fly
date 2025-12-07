@@ -41,13 +41,17 @@ const dict: Dict = {
         en: "Modern SaaS products, Next.js, Node.js, UX design, architecture.",
     },
     promo_ad_title: {
-        ru: "Здесь может быть ваша реклама",
+        ru: "Курс португальского языка 32 евро / месяц",
         en: "Your advertisement could be here",
     },
     promo_ad_text: {
-        ru: "По вопросам размещения пишите:",
+        ru: "В группе до 6 человек. Только разговорная практика и упражнения на слух. Преподаватель: кандидат филологических наук (phD) Лариса Сутулина. Опыт преподавания: 20 лет.",
         en: "For advertising inquiries, please contact:",
     },
+    promo_ad_text_contact: {
+        ru: "WhatsApp +38095 55 70618, E-mail:  sutulinalarisa@gmail.com",
+        en: "ip.portu.me@gmail.com"
+    },      
     tagline: {
         en: "Vocabulary Trainer",
         ru: "Тренажёр словарного запаса"

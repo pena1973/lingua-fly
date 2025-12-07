@@ -28,7 +28,7 @@ export default function PromoBar() {
           <p>
             {t("promo_ad_text")}
             <br />
-            <strong>ip.portu.me@gmail.com</strong>
+            <strong> {t("promo_ad_text_contact")}</strong>
           </p>
         </a>
       </div>
