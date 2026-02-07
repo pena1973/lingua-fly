@@ -72,8 +72,8 @@ export default function HomePage() {
   }, [learningLang, uiLang]);
 
 
-  const [selectedText, setSelectedText] = useState<TextItem | null>(
-    lib.sections[0].texts[0]
+  const [selectedText, setSelectedText] = useState<TextItem | null>(   
+     lib.sections[0]?.texts[0] ?? null
   );
   const [mode, setMode] = useState<"read" | "learn">("read");
 

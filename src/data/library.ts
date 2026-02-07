@@ -7078,8 +7078,497 @@ export const libraryPTRU: Library = {
                         { id: "w49", target: "colorido", native: "цветной" },
                         { id: "w50", target: "ajudar", native: "помогать" }
                     ]
-                }
+                },
 
+                {
+                    id: "irregular_verbs1",
+
+                    rule: [
+                        "1 группа",
+                        "ser:  sou  és   é   somos  são - являться",
+                        "estar: estou estás está estamos estão - находиться в месте/состоянии",
+                        "ir:   vou  vais vai vamos vão - идти",
+                        "dar:  dou  dás dá damos dão - давать",
+
+                        "2 группа",
+                        "ter:   tenho tens  tem   temos   têm - иметь (у меня есть)",
+                        "vir:   venho vens  vem   vimos   vêm - приходить",
+                        "pôr:   ponho pões  põe   pomos   põem - класть (что-то)",
+
+                        "3 группа",
+                        "poder: posso podes pode podemos podem - мочь",
+                        "fazer:  faço   fazes  faz   fazemos  fazem - делать (что-то)",
+                        "dizer:  digo   dizes  diz   dizemos  dizem - говорить",
+                        "pedir:  peço   pedes  pede  pedimos  pedem - просить (что-то)",
+                        "perder: perco  perdes perde perdemos perdem - терять (что-то)",
+                        "dormir: durmo dormes dorme dormimos dormem - спать",
+
+                        "4 группа",
+                        "ler:   leio  lês  lê  lemos  lêem - читать",
+                        "ver:   vejo  vês  vê  vemos  veem - видеть",
+                        "saber: sei   sabes sabe sabemos sabem - знать",
+                        "querer: quero queres quer queremos querem - хотеть",
+                        "trazer: trago trazes traz trazemos trazem - приносить",
+                        "dizer:  digo dizes diz dizemos dizem - говорить",
+
+                    ].join("\n"),
+
+                    title: "Неправильные глаголы 1 часть",
+                    title_native: "Неправильные глаголы 1 часть",
+                    title_target: "Irregular Verbs 1st Part",
+
+                    sentences: [
+                        { target: "sou", native: "Я являюсь" },
+                        { target: "és", native: "Ты являешься" },
+                        { target: " é", native: "Он является" },
+                        { target: "somos", native: "Мы являемся" },
+                        { target: "são", native: "Они являются" },
+
+                        { target: "estou", native: "Я нахожусь в месте/состоянии" },
+                        { target: "estás", native: "Ты находишься в месте/состоянии" },
+                        { target: "está", native: "Он находится в месте/состоянии" },
+                        { target: "estamos", native: "Мы находимся в месте/состоянии" },
+                        { target: "estão", native: "Они находятся в месте/состоянии" },
+
+                        { target: "vou", native: "Я иду" },
+                        { target: "vais", native: "Ты идёшь" },
+                        { target: "vai", native: "Он идёт" },
+                        { target: "vamos", native: "Мы идём" },
+                        { target: "vão", native: "Они идут" },
+
+                        { target: "dou", native: "Я даю" },
+                        { target: "dás", native: "Ты даёшь" },
+                        { target: "dá", native: "Он/она даёт" },
+                        { target: "damos", native: "Мы даём" },
+                        { target: "dão", native: "Они дают" },
+
+                        { target: "tenho", native: "Я имею (у меня есть)" },
+                        { target: "tens", native: "Ты имеешь (у тебя есть)" },
+                        { target: "tem", native: "Он/она имеет (у него/нее есть)" },
+                        { target: "temos", native: "Мы имеем (у нас есть)" },
+                        { target: "têm", native: "Они имеют (у них есть)" },
+
+                        { target: "venho", native: "Я прихожу" },
+                        { target: "vens", native: "Ты приходишь" },
+                        { target: "vem", native: "Он/она приходит" },
+                        { target: "vimos", native: "Мы приходим" },
+                        { target: "vêm", native: "Они приходят" },
+
+
+                        { target: "ponho", native: "Я кладу (что-то)" },
+                        { target: "pões", native: "Ты кладёшь (что-то)" },
+                        { target: "põe", native: "Он/она кладёт (что-то)" },
+                        { target: "ponhamos", native: "Мы кладём (что-то)" },
+                        { target: "põem", native: "Они кладут (что-то)" },
+
+                        { target: "posso", native: "Я могу" },
+                        { target: "podes", native: "Ты можешь" },
+                        { target: "pode", native: "Он/она может" },
+                        { target: "podemos", native: "Мы можем" },
+                        { target: "podem", native: "Они могут" },
+
+                        { target: "faço", native: "Я делаю (что-то)" },
+                        { target: "fazes", native: "Ты делаешь (что-то)" },
+                        { target: "faz", native: "Он/она делает (что-то)" },
+                        { target: "fazemos", native: "Мы делаем (что-то)" },
+                        { target: "fazem", native: "Они делают (что-то)" },
+
+                        { target: "digo", native: "Я говорю" },
+                        { target: "dizes", native: "Ты говоришь" },
+                        { target: "diz", native: "Он/она говорит" },
+                        { target: "dizemos", native: "Мы говорим" },
+                        { target: "dizem", native: "Они говорят" },
+
+                        { target: "peço", native: "Я прошу (что-то)" },
+                        { target: "pedes", native: "Ты просишь (что-то)" },
+                        { target: "pede", native: "Он/она просит (что-то)" },
+                        { target: "pedimos", native: "Мы просим (что-то)" },
+                        { target: "pedem", native: "Они просят (что-то)" },
+
+                        { target: "perco", native: "Я теряю (что-то)" },
+                        { target: "perdes", native: "Ты теряешь (что-то)" },
+                        { target: "perde", native: "Он/она теряет (что-то)" },
+                        { target: "perdemos", native: "Мы теряем (что-то)" },
+                        { target: "perdem", native: "Они теряют (что-то)" },
+
+                        { target: "durmo", native: "Я сплю" },
+                        { target: "dormes", native: "Ты спишь" },
+                        { target: "dorme", native: "Он/она спит" },
+                        { target: "dormimos", native: "Мы спим" },
+                        { target: "dormem", native: "Они спят" },
+
+                        { target: "leio", native: "Я читаю" },
+                        { target: "lês", native: "Ты читаешь" },
+                        { target: "lê", native: "Он/она читает" },
+                        { target: "lêmos", native: "Мы читаем" },
+                        { target: "lêem", native: "Они читают" },
+
+                        { target: "vejo", native: "Я вижу (что-то)" },
+                        { target: "ves", native: "Ты видишь (что-то)" },
+                        { target: "vê", native: "Он/она видит (что-то)" },
+                        { target: "vemos", native: "Мы видим (что-то)" },
+                        { target: "vêm", native: "Они видят (что-то)" },
+
+                        { target: "sei", native: "Я знаю (что-то)" },
+                        { target: "sabes", native: "Ты знаешь (что-то)" },
+                        { target: "sabe", native: "Он/она знает (что-то)" },
+                        { target: "sabemos", native: "Мы знаем (        что-то)" },
+                        { target: "sabem", native: "Они знают (что-то)" },
+
+                        { target: "quero", native: "Я хочу (что-то)" },
+                        { target: "queres", native: "Ты хочешь (что-то)" },
+                        { target: "quer", native: "Он/она хочет (что-то)" },
+                        { target: "queremos", native: "Мы хотим (что-то)" },
+                        { target: "querem", native: "Они хотят (что-то)" },
+
+                        { target: "trago", native: "Я приношу (что-то)" },
+                        { target: "trazes", native: "Ты приносишь (что-то)" },
+                        { target: "traz", native: "Он/она приносит (что-то)" },
+                        { target: "trazemos", native: "Мы приносим (что-то)" },
+                        { target: "trazem", native: "Они приносят (что-то)" },
+
+                        { target: "digo", native: "Я говорю" },
+                        { target: "dizes", native: "Ты говоришь" },
+                        { target: "diz", native: "Он/она говорит" },
+                        { target: "dizemos", native: "Мы говорим" },
+                        { target: "dizem", native: "Они говорят" }
+
+                    ],
+
+                    words: [
+                        { id: "w1", target: "sou", native: "Я являюсь" },
+                        { id: "w2", target: "és", native: "Ты являешься" },
+                        { id: "w3", target: " é", native: "Он является" },
+                        { id: "w4", target: "somos", native: "Мы являемся" },
+                        { id: "w5", target: "são", native: "Они являются" },
+
+                        { id: "w6", target: "estou", native: "Я нахожусь в месте/состоянии" },
+                        { id: "w7", target: "estás", native: "Ты находишься в месте/состоянии" },
+                        { id: "w8", target: "está", native: "Он находится в месте/состоянии" },
+                        { id: "w9", target: "estamos", native: "Мы находимся в месте/состоянии" },
+                        { id: "w10", target: "estão", native: "Они находятся в месте/состоянии" },
+
+                        { id: "w11", target: "vou", native: "Я иду" },
+                        { id: "w12", target: "vais", native: "Ты идёшь" },
+                        { id: "w13", target: "vai", native: "Он идёт" },
+                        { id: "w14", target: "vamos", native: "Мы идём" },
+                        { id: "w15", target: "vão", native: "Они идут" },
+
+                        { id: "w16", target: "dou", native: "Я даю" },
+                        { id: "w17", target: "dás", native: "Ты даёшь" },
+                        { id: "w18", target: "dá", native: "Он/она даёт" },
+                        { id: "w19", target: "damos", native: "Мы даём" },
+                        { id: "w20", target: "dão", native: "Они дают" },
+
+                        { id: "w21", target: "tenho", native: "Я имею (у меня есть)" },
+                        { id: "w22", target: "tens", native: "Ты имеешь (у тебя есть)" },
+                        { id: "w23", target: "tem", native: "Он/она имеет (у него/нее есть)" },
+                        { id: "w24", target: "temos", native: "Мы имеем (у нас есть)" },
+                        { id: "w25", target: "têm", native: "Они имеют (у них есть)" },
+
+                        { id: "w26", target: "venho", native: "Я прихожу" },
+                        { id: "w27", target: "vens", native: "Ты приходишь" },
+                        { id: "w28", target: "vem", native: "Он/она приходит" },
+                        { id: "w29", target: "vimos", native: "Мы приходим" },
+                        { id: "w30", target: "vêm", native: "Они приходят" },
+
+
+                        { id: "w31", target: "ponho", native: "Я кладу (что-то)" },
+                        { id: "w32", target: "pões", native: "Ты кладёшь (что-то)" },
+                        { id: "w33", target: "ponde", native: "Он/она кладёт (что-то)" },
+                        { id: "w34", target: "ponhamos", native: "Мы кладём (что-то)" },
+                        { id: "w35", target: "põem", native: "Они кладут (что-то)" },
+
+                        { id: "w36", target: "posso", native: "Я могу" },
+                        { id: "w37", target: "podes", native: "Ты можешь" },
+                        { id: "w38", target: "pode", native: "Он/она может" },
+                        { id: "w39", target: "podemos", native: "Мы можем" },
+                        { id: "w40", target: "podem", native: "Они могут" },
+
+                        { id: "w41", target: "faço", native: "Я делаю (что-то)" },
+                        { id: "w42", target: "fazes", native: "Ты делаешь (что-то)" },
+                        { id: "w43", target: "faz", native: "Он/она делает (что-то)" },
+                        { id: "w44", target: "fazemos", native: "Мы делаем (что-то)" },
+                        { id: "w45", target: "fazem", native: "Они делают (что-то)" },
+
+                        { id: "w46", target: "digo", native: "Я говорю" },
+                        { id: "w47", target: "dizes", native: "Ты говоришь" },
+                        { id: "w48", target: "diz", native: "Он/она говорит" },
+                        { id: "w49", target: "dizemos", native: "Мы говорим" },
+                        { id: "w50", target: "dizem", native: "Они говорят" },
+
+                        { id: "w51", target: "peço", native: "Я прошу (что-то)" },
+                        { id: "w52", target: "pedes", native: "Ты просишь (что-то)" },
+                        { id: "w53", target: "pede", native: "Он/она просит (что-то)" },
+                        { id: "w54", target: "pedimos", native: "Мы просим (что-то)" },
+                        { id: "w55", target: "pedem", native: "Они просят (что-то)" },
+
+                        { id: "w56", target: "perco", native: "Я теряю (что-то)" },
+                        { id: "w57", target: "perdes", native: "Ты теряешь (что-то)" },
+                        { id: "w58", target: "perde", native: "Он/она теряет (что-то)" },
+                        { id: "w59", target: "perdemos", native: "Мы теряем (что-то)" },
+                        { id: "w60", target: "perdem", native: "Они теряют (что-то)" },
+
+                        { id: "w61", target: "durmo", native: "Я сплю" },
+                        { id: "w62", target: "dormes", native: "Ты спишь" },
+                        { id: "w63", target: "dorme", native: "Он/она спит" },
+                        { id: "w64", target: "dormimos", native: "Мы спим" },
+                        { id: "w65", target: "dormem", native: "Они спят" },
+
+                        { id: "w66", target: "leio", native: "Я читаю" },
+                        { id: "w67", target: "lês", native: "Ты читаешь" },
+                        { id: "w68", target: "lê", native: "Он/она читает" },
+                        { id: "w69", target: "lêmos", native: "Мы читаем" },
+                        { id: "w70", target: "lêem", native: "Они читают" },
+
+                        { id: "w71", target: "vejo", native: "Я вижу (что-то)" },
+                        { id: "w72", target: "ves", native: "Ты видишь (что-то)" },
+                        { id: "w73", target: "vê", native: "Он/она видит (что-то)" },
+                        { id: "w74", target: "vemos", native: "Мы видим (что-то)" },
+                        { id: "w75", target: "vêm", native: "Они видят (что-то)" },
+
+                        { id: "w76", target: "sei", native: "Я знаю (что-то)" },
+                        { id: "w77", target: "sabes", native: "Ты знаешь (что-то)" },
+                        { id: "w78", target: "sabe", native: "Он/она знает (что-то)" },
+                        { id: "w79", target: "sabemos", native: "Мы знаем (        что-то)" },
+                        { id: "w80", target: "sabem", native: "Они знают (что-то)" },
+
+                        { id: "w81", target: "quero", native: "Я хочу (что-то)" },
+                        { id: "w82", target: "queres", native: "Ты хочешь (что-то)" },
+                        { id: "w83", target: "quer", native: "Он/она хочет (что-то)" },
+                        { id: "w84", target: "queremos", native: "Мы хотим (что-то)" },
+                        { id: "w85", target: "querem", native: "Они хотят (что-то)" },
+
+                        { id: "w86", target: "trago", native: "Я приношу (что-то)" },
+                        { id: "w87", target: "trazes", native: "Ты приносишь (что-то)" },
+                        { id: "w88", target: "traz", native: "Он/она приносит (что-то)" },
+                        { id: "w89", target: "trazemos", native: "Мы приносим (что-то)" },
+                        { id: "w90", target: "trazem", native: "Они приносят (что-то)" },
+
+                        { id: "w91", target: "digo", native: "Я говорю" },
+                        { id: "w92", target: "dizes", native: "Ты говоришь" },
+                        { id: "w93", target: "diz", native: "Он/она говорит" },
+                        { id: "w94", target: "dizemos", native: "Мы говорим" },
+                        { id: "w95", target: "dizem", native: "Они говорят" }
+
+
+                    ]
+                },
+                {
+                    id: "irregular_verbs2",
+
+                    rule: [
+                        "6 группа",
+                        "vestir:     visto   vestes  veste   vestimos  vestem - одевать (что-то)",
+                        "preferir:  prefiro  preferes prefere preferimos preferem - предпочитать (что-то)",
+                        "conseguir: consigo  consegues consegue conseguimos conseguem - мочь (что-то сделать)",
+                        "sentir:    sinto    sentes  sente   sentimos  sentem - чувствовать (что-то)",
+                        "repetir:   repito   repetes repete  repetimos repetem - повторять (что-то)",
+                        "servir:    sirvo    serves  serve   servimos  servem - служить (кому-то)",
+                        "divertir:  divirto  divertes diverte divertimos divertem - развлекать (кого-то)",
+                        "conduzir:  conduzo  conduzes conduz conduzimos conduzem - водить (машину)",
+                        "traduzir:  traduzo  traduzes traduz traduzimos traduzem - переводить (текст)",
+                        "construir: construo constróis constrói construímos constroem - строить (дом)",
+
+
+                        "7 группа",
+                        "ouvir:  ouço  ouves  ouve  ouvimos  ouvem - слышать",
+                        "subir:  subo  sobes  sobe  subimos  sobem - подниматься",
+                        "sair:   saio  sais   sai   saímos saem - выходить",
+                        "rir:    rio   ris    ri    rimos  riem - смеяться",
+
+                        "8 группа",
+                        "doer:  —  does dói   —    doem -  болеть",
+
+                        
+                    ].join("\n"),
+
+                    title: "Неправильные глаголы 2 часть",
+                    title_native: "Неправильные глаголы 2 часть",
+                    title_target: "Irregular Verbs 2nd Part",
+
+                    sentences: [
+                        { target: "visto", native: "Я одеваю (что-то)" },
+                        { target: "vestes", native: "Ты одеваешь (что-то    )" },
+                        { target: "veste", native: "Он/она одевает (что-то)" },
+                        { target: "vestimos", native: "Мы одеваем (что-то)" },
+                        { target: "vestem", native: "Они одевают (что-то)" },
+
+                        { target: "prefiro", native: "Я предпочитаю (что-то)" },
+                        { target: "preferes", native: "Ты предпочитаешь (что-то)" },
+                        { target: "prefere", native: "Он/она предпочитает (что-то)" },
+                        { target: "preferimos", native: "Мы предпочитаем (что-то)" },
+                        { target: "preferem", native: "Они предпочитают (что-то)" },
+
+                        { target: "consigo", native: "Я могу (что-то сделать)" },
+                        { target: "consegues", native: "Ты можешь (что-то сделать   )" },
+                        { target: "consegue", native: "Он/она может (что-то сделать )" },
+                        { target: "conseguimos", native: "Мы можем (что-то сделать)" },
+                        { target: "conseguem", native: "Они могут (что-то сделать)" },
+
+                        { target: "sinto", native: "Я чувствую (что-то)" },
+                        { target: "sentes", native: "Ты чувствуешь (что-то)" },
+                        { target: "sente", native: "Он/она чувствует (что-то)" },
+                        { target: "sentimos", native: "Мы чувствуем (что-то)" },
+                        { target: "sentem", native: "Они чувствуют (что-то)" },
+
+                        { target: "repito", native: "Я повторяю (что-то)" },
+                        { target: "repetes", native: "Ты повторя    ешь (что-то)" },
+                        { target: "repete", native: "Он/она повторяет (что-то)" },
+                        { target: "repetimos", native: "Мы повторяем (что-то)" },
+                        { target: "repetem", native: "Они повторяют (что-то)" },
+
+                        { target: "sirvo", native: "Я служу (кому-то)" },
+                        { target: "serves", native: "Ты служишь (кому-то)" },
+                        { target: "serve", native: "Он/она служит (кому-то)" },
+                        { target: "servimos", native: "Мы служим (кому-то)" },
+                        { target: "servem", native: "Они служат (кому-то)" },
+
+                        { target: "divirto", native: "Я развлекаю (кого-то)" },
+                        { target: "divertes", native: "Ты развлекаешь (кого-то)" },
+                        { target: "diverte", native: "Он/она развлекает (кого-то)" },
+                        { target: "divertimos", native: "Мы развлекаем (кого-то)" },
+                        { target: "divertem", native: "Они развлекают (кого-то)" },
+
+                        { target: "conduzo", native: "Я вожу (машину)" },
+                        { target: "conduzes", native: "Ты водишь (машину)" },
+                        { target: "conduz", native: "Он/она водит (машину)" },
+                        { target: "conduzimos", native: "Мы водим (машину)" },
+                        { target: "conduzem", native: "Они водят (машину)" },
+
+                        { target: "traduzo", native: "Я перевожу (текст)" },
+                        { target: "traduzes", native: "Ты переводишь (текст)" },
+                        { target: "traduz", native: "Он/она переводит (текст)" },
+                        { target: "traduzimos", native: "Мы переводим (текст)" },
+                        { target: "traduzem", native: "Они переводят (текст)" },
+
+                        { target: "construo", native: "Я строю (дом)" },
+                        { target: "constróis", native: "Ты строишь (дом)" },
+                        { target: "constrói", native: "Он/она строит (дом)" },
+                        { target: "construímos", native: "Мы строим (дом)" },
+                        { target: "constroem", native: "Они строят (дом)" },
+
+                        { target: "ouço", native: "Я слышу" },
+                        { target: "ouves", native: "Ты слышишь" },
+                        { target: "ouve", native: "Он/она слышит" },
+                        { target: "ouvimos", native: "Мы слышим" },
+                        { target: "ouvem", native: "Они слышат" },
+
+                        { target: "subo", native: "Я поднимаюсь" },
+                        { target: "sobes", native: "Ты поднимаешься" },
+                        { target: "sobe", native: "Он/она поднимается" },
+                        { target: "subimos", native: "Мы поднимаемся" },
+                        { target: "sobem", native: "Они поднимаются" },
+
+                        { target: "saio", native: "Я выхожу" },
+                        { target: "sais", native: "Ты выходишь" },
+                        { target: "sai", native: "Он/она выходит" },
+                        { target: "saímos", native: "Мы выходим" },
+                        { target: "saem", native: "Они выходят" },
+
+                        { target: "rio", native: "Я смеюсь" },
+                        { target: "ris", native: "Ты смеёшься" },
+                        { target: "ri", native: "Он/она смеётся" },
+                        { target: "rimos", native: "Мы смеёмся" },
+                        { target: "riem", native: "Они смеются" },
+                        
+                        { target: "does", native: "Ты болишь" },
+                        { target: "dói", native: "Он/она болит" },
+                        { target: "doem", native: "Они болят" },
+
+                    ],
+
+                    words: [
+                         {id: "w1", target: "visto", native: "Я одеваю (что-то)" },
+                        { id: "w2",target: "vestes", native: "Ты одеваешь (что-то    )" },
+                        { id: "w3", target: "veste", native: "Он/она одевает (что-то)" },
+                        { id: "w4", target: "vestimos", native: "Мы одеваем (что-то)" },
+                        { id: "w5", target: "vestem", native: "Они одевают (что-то)" },
+
+                        { id: "w6", target: "prefiro", native: "Я предпочитаю (что-то)" },
+                        { id: "w7", target: "preferes", native: "Ты предпочитаешь (что-то)" },
+                        { id: "w8", target: "prefere", native: "Он/она предпочитает (что-то)" },
+                        { id: "w9", target: "preferimos", native: "Мы предпочитаем (что-то)" },
+                        { id: "w10", target: "preferem", native: "Они предпочитают (что-то)" },
+
+                        { id: "w11", target: "consigo", native: "Я могу (что-то сделать)" },
+                        { id: "w12", target: "consegues", native: "Ты можешь (что-то сделать   )" },
+                        { id: "w13", target: "consegue", native: "Он/она может (что-то сделать )" },
+                        { id: "w14", target: "conseguimos", native: "Мы можем (что-то сделать)" },
+                        { id: "w15", target: "conseguem", native: "Они могут (что-то сделать)" },
+
+                        { id: "w16", target: "sinto", native: "Я чувствую (что-то)" },
+                        { id: "w17", target: "sentes", native: "Ты чувствуешь (что-то)" },
+                        { id: "w18", target: "sente", native: "Он/она чувствует (что-то)" },
+                        { id: "w19", target: "sentimos", native: "Мы чувствуем (что-то)" },
+                        { id: "w20", target: "sentem", native: "Они чувствуют (что-то)" },
+
+                        { id: "w21", target: "repito", native: "Я повторяю (что-то)" },
+                        { id: "w22", target: "repetes", native: "Ты повторяешь (что-то)" },
+                        { id: "w23", target: "repete", native: "Он/она повторяет (что-то)" },
+                        { id: "w24", target: "repetimos", native: "Мы повторяем (что-то)" },
+                        { id: "w25", target: "repetem", native: "Они повторяют (что-то)" },
+
+                        { id: "w26", target: "sirvo", native: "Я служу (кому-то)" },
+                        { id: "w27", target: "serves", native: "Ты служишь (кому-то)" },
+                        { id: "w28", target: "serve", native: "Он/она служит (кому-то)" },
+                        { id: "w29", target: "servimos", native: "Мы служим (кому-то)" },
+                        { id: "w30", target: "servem", native: "Они служат (кому-то)" },
+
+                        { id: "w31", target: "divirto", native: "Я развлекаю (кого-то)" },
+                        { id: "w32", target: "divertes", native: "Ты развлекаешь (кого-то)" },
+                        { id: "w33", target: "diverte", native: "Он/она развлекает (кого-то)" },
+                        { id: "w34", target: "divertimos", native: "Мы развлекаем (кого-то)" },
+                        { id: "w35", target: "divertem", native: "Они развлекают (кого-то)" },
+
+                        { id: "w36", target: "conduzo", native: "Я вожу (машину)" },
+                        { id: "w37", target: "conduzes", native: "Ты водишь (машину)" },
+                        { id: "w38", target: "conduz", native: "Он/она водит (машину)" },
+                        { id: "w39", target: "conduzimos", native: "Мы водим (машину)" },
+                        { id: "w40", target: "conduzem", native: "Они водят (машину)" },
+
+                        { id: "w41", target: "traduzo", native: "Я перевожу (текст)" },
+                        { id: "w42", target: "traduzes", native: "Ты переводишь (текст)" },
+                        { id: "w43", target: "traduz", native: "Он/она переводит (текст)" },
+                        { id: "w44", target: "traduzimos", native: "Мы переводим (текст)" },
+                        { id: "w45", target: "traduzem", native: "Они переводят (текст)" },
+
+                        { id: "w46", target: "construo", native: "Я строю (дом)" },
+                        { id: "w47", target: "constróis", native: "Ты строишь (дом)" },
+                        { id: "w48", target: "constrói", native: "Он/она строит (дом)" },
+                        { id: "w49", target: "construímos", native: "Мы строим (дом)" },
+                        { id: "w50", target: "constroem", native: "Они строят (дом)" },
+
+                        { id: "w51", target: "ouço", native: "Я слышу" },
+                        { id: "w52", target: "ouves", native: "Ты слышишь" },
+                        { id: "w53", target: "ouve", native: "Он/она слышит" },
+                        { id: "w54", target: "ouvimos", native: "Мы слышим" },
+                        { id: "w55", target: "ouvem", native: "Они слышат" },
+
+                        { id: "w56", target: "subo", native: "Я поднимаюсь" },
+                        { id: "w57", target: "sobes", native: "Ты поднимаешься" },
+                        { id: "w58", target: "sobe", native: "Он/она поднимается" },
+                        { id: "w59", target: "subimos", native: "Мы поднимаемся" },
+                        { id: "w60", target: "sobem", native: "Они поднимаются" },
+
+                        { id: "w61", target: "saio", native: "Я выхожу" },
+                        { id: "w62", target: "sais", native: "Ты выходишь" },
+                        { id: "w63", target: "sai", native: "Он/она выходит" },
+                        { id: "w64", target: "saímos", native: "Мы выходим" },
+                        { id: "w65", target: "saem", native: "Они выходят" },
+
+                        { id: "w66", target: "rio", native: "Я смеюсь" },
+                        { id: "w67", target: "ris", native: "Ты смеёшься" },
+                        { id: "w68", target: "ri", native: "Он/она смеётся" },
+                        { id: "w69", target: "rimos", native: "Мы смеёмся" },
+                        { id: "w70", target: "riem", native: "Они смеются" },
+                        
+                        { id: "w71", target: "do", native: "Ты болишь" },
+                        { id: "w72", target: "dói", native: "Он/она болит" },
+                        { id: "w73", target: "doem", native: "Они болят" },
+
+                    ]
+                }
 
             ],
 

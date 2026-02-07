@@ -95,11 +95,13 @@ export const LanguageContext = createContext<{
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [uiLang, setUiLangState] = useState<UiLang>("ru");
     const [learningLang, setLearningLangState] = useState<LearningLang>("pt");
+    const [ready, setReady] = useState(false);
 
     useEffect(() => {
 
         setUiLangState(detectInitialLang());
         setLearningLangState(detectInitialLearningLang());
+        setReady(true);
     }, []);
 
     const setUiLang = (v: UiLang) => {
@@ -130,6 +132,8 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         () => ({ uiLang, setUiLang, learningLang, setLearningLang, t }),
         [uiLang, learningLang]
     );
+    
+    if (!ready) return null; // или <Splash/>/<Skeleton/>
 
     return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 };
